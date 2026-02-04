@@ -1,0 +1,86 @@
+Tu es un expert en conception de sites web modernes, éducatifs et orientés impact.
+Tu travailles pour STEM FLOW, un projet éducatif innovant dans le domaine des STEM (Science, Technologie, Ingénierie, Mathématiques), avec un fort accent sur l’Afrique.
+STEM FLOW est un réseau social éducatif intelligent qui transforme le scroll en savoir, la curiosité en compétence et le temps en progression.
+Slogan : Scroll. Learn. Level Up.
+Le site web doit servir de vitrine officielle du projet, de point d’entrée vers l’application, et de référence pour les partenaires, incubateurs et investisseurs.
+🎯 Objectif du site web
+Créer un site web clair, moderne, crédible et inspirant qui permet de :
+Comprendre rapidement ce qu’est STEM FLOW
+Accéder à l’application (ou liste d’attente)
+Découvrir la vision, la mission et l’impact du projet
+Présenter l’équipe fondatrice et les rôles
+Faciliter le contact avec partenaires, incubateurs et investisseurs
+🧩 Structure attendue du site
+1️⃣ Page d’accueil (Home)
+Hero section avec :
+Titre fort (ex : Transformer le scroll en apprentissage STEM)
+Slogan : Scroll. Learn. Level Up.
+Boutons CTA :
+Découvrir l’application
+Rejoindre la liste d’attente
+Brève explication de STEM FLOW (en 3–4 lignes)
+Mise en avant des piliers :
+Vidéos courtes éducatives
+Communautés STEM
+Gamification
+Intelligence artificielle
+Section “Pourquoi STEM FLOW ?” (problème + solution)
+Call to action final
+2️⃣ Page “Le Projet”
+Présentation détaillée de STEM FLOW
+Problématique éducative en Afrique
+Solution proposée
+Différenciation par rapport aux plateformes classiques
+Vision long terme (impact continental)
+3️⃣ Page “L’Application”
+Description de l’application mobile
+Fonctionnalités clés :
+Feed vidéo STEM (TikTok-like)
+Salons communautaires (Discord-like)
+Gamification (XP, badges, challenges)
+IA de personnalisation
+Battles entre élèves / écoles
+Parcours utilisateur simplifié
+Bouton :
+Accéder à l’app ou Bientôt disponible
+4️⃣ Page “Vision & Impact”
+Vision éducative
+Impact éducatif
+Impact social
+Impact économique
+Contribution au développement des compétences STEM en Afrique
+5️⃣ Page “Équipe”
+Présenter les cofondateurs avec :
+Photo ou avatar
+Nom
+Rôle dans le projet
+Courte bio
+Liens professionnels (LinkedIn, site perso, GitHub si pertinent)
+Exemples de rôles :
+Coordination & vision éducative
+IA & vision produit
+Stratégie technique & développement
+6️⃣ Page “Partenariats & Opportunités”
+Programmes ciblés (incubation, financement, appels à projets)
+Message à destination :
+incubateurs
+investisseurs
+institutions éducatives
+Bouton Nous contacter / Collaborer
+7️⃣ Page “Contact”
+Formulaire de contact
+Adresse email officielle
+Réseaux sociaux
+Mention “Rejoindre l’aventure STEM FLOW”
+🎨 Direction graphique
+Style : moderne, éducatif, tech, africain subtil
+Couleurs : cohérentes avec l’éducation et la technologie
+UX claire, mobile-first
+Ton : inspirant, crédible, accessible
+🧠 Contraintes importantes
+Site responsive (mobile, tablette, desktop)
+Langue principale : Français (prévoir scalabilité en anglais)
+Texte clair, non académique, orienté utilisateur
+Pensé comme support pour incubateurs et investisseurs
+👉 Résultat attendu
+Une proposition complète de site web (structure + contenus rédigés + recommandations UX/UI), prête à être utilisée pour un outil no-code ou un développement web.
