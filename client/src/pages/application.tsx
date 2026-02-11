@@ -28,92 +28,92 @@ const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
 const features = [
   {
     icon: Play,
-    title: "Feed vid\u00e9o STEM",
-    description: "Un flux de vid\u00e9os \u00e9ducatives courtes (30-90 secondes) style TikTok. Swipe pour apprendre, like pour sauvegarder, commente pour \u00e9changer. Algorithme IA pour des recommandations personnalis\u00e9es.",
+    title: "Feed vidéo STEM",
+    description: "Un flux de vidéos éducatives courtes (30-90 secondes) style TikTok. Swipe pour apprendre, like pour sauvegarder, commente pour échanger. Algorithme IA pour des recommandations personnalisées.",
     color: "text-primary",
     bgColor: "bg-primary/10",
   },
   {
     icon: MessageCircle,
     title: "Salons communautaires",
-    description: "Des espaces de discussion th\u00e9matiques inspir\u00e9s de Discord. Rejoins des communaut\u00e9s de math\u00e9maticiens, de codeurs, de scientifiques. Pose tes questions, partage tes d\u00e9couvertes.",
+    description: "Des espaces de discussion thématiques inspirés de Discord. Rejoins des communautés de mathématiciens, de codeurs, de scientifiques. Pose tes questions, partage tes découvertes.",
     color: "text-secondary",
     bgColor: "bg-secondary/10",
   },
   {
     icon: Trophy,
-    title: "Gamification compl\u00e8te",
-    description: "Syst\u00e8me XP \u00e0 chaque vid\u00e9o, badges de comp\u00e9tences, niveaux progressifs. Challenges quotidiens, s\u00e9ries d'apprentissage (streaks) et classements par \u00e9cole, ville et pays.",
+    title: "Gamification complète",
+    description: "Système XP à chaque vidéo, badges de compétences, niveaux progressifs. Challenges quotidiens, séries d'apprentissage (streaks) et classements par école, ville et pays.",
     color: "text-accent",
     bgColor: "bg-accent/10",
   },
   {
     icon: Brain,
     title: "IA de personnalisation",
-    description: "Notre algorithme apprend tes pr\u00e9f\u00e9rences et ton niveau pour te proposer le contenu parfait. Plus tu utilises l'app, mieux elle te conna\u00eet. Parcours adaptatif en temps r\u00e9el.",
+    description: "Notre algorithme apprend tes préférences et ton niveau pour te proposer le contenu parfait. Plus tu utilises l'app, mieux elle te connaît. Parcours adaptatif en temps réel.",
     color: "text-chart-4",
     bgColor: "bg-chart-4/10",
   },
   {
     icon: Swords,
-    title: "Battles & Comp\u00e9titions",
-    description: "Affronte d'autres \u00e9l\u00e8ves ou d'autres \u00e9coles dans des quiz chronom\u00e9tr\u00e9s. Repr\u00e9sente ton \u00e9tablissement dans les classements nationaux et panafricains.",
+    title: "Battles & Compétitions",
+    description: "Affronte d'autres élèves ou d'autres écoles dans des quiz chronométrés. Représente ton établissement dans les classements nationaux et panafricains.",
     color: "text-chart-5",
     bgColor: "bg-chart-5/10",
   },
   {
     icon: Target,
-    title: "Parcours structur\u00e9s",
-    description: "Des parcours d'apprentissage progressifs pour chaque discipline STEM : math\u00e9matiques, physique, chimie, biologie, informatique, ing\u00e9nierie. Du d\u00e9butant \u00e0 l'expert.",
+    title: "Parcours structurés",
+    description: "Des parcours d'apprentissage progressifs pour chaque discipline STEM : mathématiques, physique, chimie, biologie, informatique, ingénierie. Du débutant à l'expert.",
     color: "text-chart-2",
     bgColor: "bg-chart-2/10",
   },
 ];
 
 const techSpecs = [
-  { icon: Smartphone, title: "Mobile-First", desc: "Android & iOS, APK l\u00e9ger (<30 Mo)" },
-  { icon: Wifi, title: "Mode Hors-ligne", desc: "T\u00e9l\u00e9charge et apprends sans connexion" },
-  { icon: Languages, title: "Multilingue", desc: "Fran\u00e7ais, Anglais, langues locales" },
-  { icon: Shield, title: "S\u00e9curis\u00e9", desc: "Mod\u00e9ration et protection des donn\u00e9es" },
-  { icon: BarChart3, title: "Analytics", desc: "Tableau de bord de progression d\u00e9taill\u00e9" },
-  { icon: BookOpen, title: "Contenu v\u00e9rifi\u00e9", desc: "Valid\u00e9 par des \u00e9ducateurs certifi\u00e9s" },
+  { icon: Smartphone, title: "Mobile-First", desc: "Android & iOS, APK léger (<30 Mo)" },
+  { icon: Wifi, title: "Mode Hors-ligne", desc: "Télécharge et apprends sans connexion" },
+  { icon: Languages, title: "Multilingue", desc: "Français, Anglais, langues locales" },
+  { icon: Shield, title: "Sécurisé", desc: "Modération et protection des données" },
+  { icon: BarChart3, title: "Analytics", desc: "Tableau de bord de progression détaillé" },
+  { icon: BookOpen, title: "Contenu vérifié", desc: "Validé par des éducateurs certifiés" },
 ];
 
 const userJourney = [
   {
     step: 1,
-    title: "T\u00e9l\u00e9charge l'app",
-    description: "Disponible sur Android et iOS. Inscription gratuite en 30 secondes avec email ou num\u00e9ro de t\u00e9l\u00e9phone.",
+    title: "Télécharge l'app",
+    description: "Disponible sur Android et iOS. Inscription gratuite en 30 secondes avec email ou numéro de téléphone.",
   },
   {
     step: 2,
-    title: "Choisis ta langue et tes int\u00e9r\u00eats",
-    description: "S\u00e9lectionne ta langue pr\u00e9f\u00e9r\u00e9e et les disciplines STEM qui te passionnent. L'IA s'adapte imm\u00e9diatement.",
+    title: "Choisis ta langue et tes intérêts",
+    description: "Sélectionne ta langue préférée et les disciplines STEM qui te passionnent. L'IA s'adapte immédiatement.",
   },
   {
     step: 3,
-    title: "Explore le feed vid\u00e9o",
-    description: "Commence \u00e0 scroller et d\u00e9couvre des micro-le\u00e7ons passionnantes. Chaque vid\u00e9o te rapporte des XP.",
+    title: "Explore le feed vidéo",
+    description: "Commence à scroller et découvre des micro-leçons passionnantes. Chaque vidéo te rapporte des XP.",
   },
   {
     step: 4,
-    title: "Rejoins des communaut\u00e9s",
-    description: "Int\u00e8gre des groupes th\u00e9matiques, pose des questions, aide les autres et gagne des badges.",
+    title: "Rejoins des communautés",
+    description: "Intègre des groupes thématiques, pose des questions, aide les autres et gagne des badges.",
   },
   {
     step: 5,
-    title: "Progresse et comp\u00e9tionne",
-    description: "Accumule XP, monte en niveau, d\u00e9fie tes amis et repr\u00e9sente ton \u00e9cole dans les classements.",
+    title: "Progresse et compétionne",
+    description: "Accumule XP, monte en niveau, défie tes amis et représente ton école dans les classements.",
   },
 ];
 
 const disciplines = [
-  { name: "Math\u00e9matiques", emoji_alt: "Alg\u00e8bre, g\u00e9om\u00e9trie, statistiques", color: "bg-primary/10 text-primary" },
-  { name: "Physique", emoji_alt: "M\u00e9canique, optique, quantique", color: "bg-secondary/10 text-secondary" },
-  { name: "Chimie", emoji_alt: "Organique, mol\u00e9culaire, r\u00e9actions", color: "bg-accent/10 text-accent" },
+  { name: "Mathématiques", emoji_alt: "Algèbre, géométrie, statistiques", color: "bg-primary/10 text-primary" },
+  { name: "Physique", emoji_alt: "Mécanique, optique, quantique", color: "bg-secondary/10 text-secondary" },
+  { name: "Chimie", emoji_alt: "Organique, moléculaire, réactions", color: "bg-accent/10 text-accent" },
   { name: "Informatique", emoji_alt: "Python, algorithmes, web", color: "bg-chart-4/10 text-chart-4" },
-  { name: "Biologie", emoji_alt: "G\u00e9n\u00e9tique, \u00e9cologie, anatomie", color: "bg-chart-5/10 text-chart-5" },
-  { name: "Ing\u00e9nierie", emoji_alt: "\u00c9lectronique, m\u00e9canique, civil", color: "bg-chart-2/10 text-chart-2" },
+  { name: "Biologie", emoji_alt: "Génétique, écologie, anatomie", color: "bg-chart-5/10 text-chart-5" },
+  { name: "Ingénierie", emoji_alt: "Électronique, mécanique, civil", color: "bg-chart-2/10 text-chart-2" },
 ];
 
 export default function Application() {
@@ -128,7 +128,7 @@ export default function Application() {
             <div>
               <Badge className="mb-6" variant="outline" data-testid="badge-app">
                 <Smartphone className="h-3 w-3 mr-1" />
-                LearnXScience \u2014 STEM FLOW
+                LearnXScience — STEM FLOW
               </Badge>
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-testid="text-app-title">
                 L'apprentissage STEM dans ta{" "}
@@ -136,12 +136,12 @@ export default function Application() {
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed mb-4">
                 STEM FLOW est une application mobile qui transforme chaque moment 
-                libre en opportunit\u00e9 d'apprentissage. Interface intuitive, 
+                libre en opportunité d'apprentissage. Interface intuitive, 
                 contenu captivant, progression visible.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Con\u00e7ue pour fonctionner m\u00eame avec une connexion limit\u00e9e, 
-                disponible en fran\u00e7ais et en anglais, et totalement gratuite.
+                Conçue pour fonctionner même avec une connexion limitée, 
+                disponible en français et en anglais, et totalement gratuite.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href={APP_URL} target="_blank" rel="noopener noreferrer">
@@ -194,7 +194,7 @@ export default function Application() {
                           <div className="w-6 h-6 rounded bg-primary/20 flex items-center justify-center">
                             <Brain className="h-3 w-3 text-primary" />
                           </div>
-                          <span className="text-xs font-medium">Alg\u00e8bre lin\u00e9aire</span>
+                          <span className="text-xs font-medium">Algèbre linéaire</span>
                           <Badge variant="secondary" className="text-[8px] ml-auto">+10 XP</Badge>
                         </div>
                         <div className="h-20 bg-muted rounded flex items-center justify-center">
@@ -232,13 +232,13 @@ export default function Application() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4" variant="secondary">
-              Fonctionnalit\u00e9s Principales
+              Fonctionnalités Principales
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-features-title">
               Tout ce dont tu as besoin pour apprendre
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Une suite compl\u00e8te d'outils pour explorer, progresser et t'amuser 
+              Une suite complète d'outils pour explorer, progresser et t'amuser 
               dans toutes les disciplines STEM.
             </p>
           </div>
@@ -274,7 +274,7 @@ export default function Application() {
               Toutes les disciplines STEM couvertes
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Du coll\u00e8ge \u00e0 l'universit\u00e9, explore chaque domaine \u00e0 ton rythme.
+              Du collège à l'université, explore chaque domaine à ton rythme.
             </p>
           </div>
 
@@ -300,10 +300,10 @@ export default function Application() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Badge className="mb-4" variant="secondary">
-              Sp\u00e9cifications
+              Spécifications
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-specs-title">
-              Con\u00e7ue pour l'Afrique
+              Conçue pour l'Afrique
             </h2>
           </div>
 
@@ -330,10 +330,10 @@ export default function Application() {
               Parcours Utilisateur
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-journey-title">
-              Commence ton aventure STEM en 5 \u00e9tapes
+              Commence ton aventure STEM en 5 étapes
             </h2>
             <p className="text-muted-foreground text-lg">
-              De l'inscription \u00e0 la ma\u00eetrise, un parcours simple et engageant.
+              De l'inscription à la maîtrise, un parcours simple et engageant.
             </p>
           </div>
 
@@ -373,8 +373,8 @@ export default function Application() {
             Teste STEM FLOW maintenant
           </h2>
           <p className="text-accent-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
-            L'application est disponible en version d\u00e9mo. D\u00e9couvre l'exp\u00e9rience 
-            d'apprentissage STEM FLOW d\u00e8s aujourd'hui.
+            L'application est disponible en version démo. Découvre l'expérience 
+            d'apprentissage STEM FLOW dès aujourd'hui.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">

@@ -24,12 +24,12 @@ const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
 const teamMembers = [
   {
     name: "Souleymane Mahamat Saleh",
-    role: "Cofondateur & Ing\u00e9nieur G\u00e9nie Logiciel",
+    role: "Cofondateur & Ingénieur Génie Logiciel",
     initials: "SMS",
     color: "bg-primary",
     icon: Code,
-    bio: "Ing\u00e9nieur en g\u00e9nie logiciel, \u00e9ducateur num\u00e9rique et leader communautaire, Souleymane est le fondateur de Code For Chad, la communaut\u00e9 des d\u00e9veloppeurs tchadiens. Formateur en technologies et innovation \u00e9ducative, il poss\u00e8de une exp\u00e9rience significative dans la formation des jeunes aux comp\u00e9tences num\u00e9riques, la coordination de communaut\u00e9s \u00e9ducatives et technologiques, et la conception de projets \u00e9ducatifs ax\u00e9s sur l'employabilit\u00e9 et l'entrepreneuriat. R\u00e9cemment en partenariat avec l'Ambassade des \u00c9tats-Unis au Tchad dans le domaine STEM et le codage informatique, il accompagne les apprenants, \u00e9tudiants et autodidactes dans leur parcours acad\u00e9mique et professionnel.",
-    skills: ["G\u00e9nie Logiciel", "Formation STEM", "Leadership communautaire", "Innovation \u00e9ducative", "Entrepreneuriat"],
+    bio: "Ingénieur en génie logiciel, éducateur numérique et leader communautaire, Souleymane est le fondateur de Code For Chad, la communauté des développeurs tchadiens. Formateur en technologies et innovation éducative, il possède une expérience significative dans la formation des jeunes aux compétences numériques, la coordination de communautés éducatives et technologiques, et la conception de projets éducatifs axés sur l'employabilité et l'entrepreneuriat. Récemment en partenariat avec l'Ambassade des États-Unis au Tchad dans le domaine STEM et le codage informatique, il accompagne les apprenants, étudiants et autodidactes dans leur parcours académique et professionnel.",
+    skills: ["Génie Logiciel", "Formation STEM", "Leadership communautaire", "Innovation éducative", "Entrepreneuriat"],
     linkedin: "#",
     website: "https://www.codeforchad.net",
   },
@@ -39,8 +39,8 @@ const teamMembers = [
     initials: "CMS",
     color: "bg-accent",
     icon: Lightbulb,
-    bio: "De formation en math\u00e9matiques appliqu\u00e9es et informatique (Master 2 en mod\u00e9lisation et calcul scientifique) avec une sp\u00e9cialisation en Big Data, Cira Mamy Sow s'engage activement pour la promotion des STEM au S\u00e9n\u00e9gal et en Afrique. Form\u00e9e au sein du programme FORCE-N, elle a d\u00e9velopp\u00e9 des comp\u00e9tences en cr\u00e9ation de contenus de vulgarisation scientifique et en conception d'\u00e9valuations acad\u00e9miques. Elle dispense \u00e9galement des cours d'\u00e9ducation financi\u00e8re via la communaut\u00e9 60 Cr\u00e9dits. L'id\u00e9e de STEM FLOW est n\u00e9e lors d'un bootcamp en intelligence artificielle organis\u00e9 en partenariat avec le PNUD et UNIPOD Guin\u00e9e. Aujourd'hui, elle coordonne STEM FLOW avec l'ambition de transformer les usages num\u00e9riques en leviers d'apprentissage durable.",
-    skills: ["Math\u00e9matiques appliqu\u00e9es", "Big Data", "Vulgarisation scientifique", "P\u00e9dagogie STEM", "\u00c9ducation financi\u00e8re"],
+    bio: "De formation en mathématiques appliquées et informatique (Master 2 en modélisation et calcul scientifique) avec une spécialisation en Big Data, Cira Mamy Sow s'engage activement pour la promotion des STEM au Sénégal et en Afrique. Formée au sein du programme FORCE-N, elle a développé des compétences en création de contenus de vulgarisation scientifique et en conception d'évaluations académiques. Elle dispense également des cours d'éducation financière via la communauté 60 Crédits. L'idée de STEM FLOW est née lors d'un bootcamp en intelligence artificielle organisé en partenariat avec le PNUD et UNIPOD Guinée. Aujourd'hui, elle coordonne STEM FLOW avec l'ambition de transformer les usages numériques en leviers d'apprentissage durable.",
+    skills: ["Mathématiques appliquées", "Big Data", "Vulgarisation scientifique", "Pédagogie STEM", "Éducation financière"],
     linkedin: "#",
   },
 ];
@@ -49,49 +49,49 @@ const values = [
   {
     icon: Star,
     title: "Excellence",
-    description: "Nous visons l'excellence dans tout ce que nous faisons, de la qualit\u00e9 du code \u00e0 la rigueur p\u00e9dagogique de chaque contenu.",
+    description: "Nous visons l'excellence dans tout ce que nous faisons, de la qualité du code à la rigueur pédagogique de chaque contenu.",
   },
   {
     icon: Heart,
-    title: "Inclusivit\u00e9",
-    description: "STEM FLOW est pour tous les jeunes africains, quels que soient le genre, l'origine ethnique, la langue ou le niveau de d\u00e9part.",
+    title: "Inclusivité",
+    description: "STEM FLOW est pour tous les jeunes africains, quels que soient le genre, l'origine ethnique, la langue ou le niveau de départ.",
   },
   {
     icon: Lightbulb,
     title: "Innovation",
-    description: "Nous explorons constamment de nouvelles approches p\u00e9dagogiques et technologiques pour am\u00e9liorer l'exp\u00e9rience d'apprentissage.",
+    description: "Nous explorons constamment de nouvelles approches pédagogiques et technologiques pour améliorer l'expérience d'apprentissage.",
   },
   {
     icon: Target,
     title: "Impact mesurable",
-    description: "Chaque d\u00e9cision est guid\u00e9e par notre volont\u00e9 de maximiser l'impact \u00e9ducatif positif, mesur\u00e9 par des indicateurs concrets.",
+    description: "Chaque décision est guidée par notre volonté de maximiser l'impact éducatif positif, mesuré par des indicateurs concrets.",
   },
 ];
 
 const advisors = [
   {
-    title: "Comit\u00e9 P\u00e9dagogique",
-    description: "Enseignants et chercheurs africains qui valident la qualit\u00e9 acad\u00e9mique de nos contenus STEM.",
+    title: "Comité Pédagogique",
+    description: "Enseignants et chercheurs africains qui valident la qualité académique de nos contenus STEM.",
     icon: GraduationCap,
   },
   {
     title: "Mentors Tech",
-    description: "Entrepreneurs et ing\u00e9nieurs exp\u00e9riment\u00e9s du secteur tech africain qui nous guident dans notre croissance.",
+    description: "Entrepreneurs et ingénieurs expérimentés du secteur tech africain qui nous guident dans notre croissance.",
     icon: Rocket,
   },
   {
-    title: "Ambassadeurs \u00c9tudiants",
-    description: "\u00c9tudiants dans les universit\u00e9s africaines qui repr\u00e9sentent STEM FLOW et recueillent les retours terrain.",
+    title: "Ambassadeurs Étudiants",
+    description: "Étudiants dans les universités africaines qui représentent STEM FLOW et recueillent les retours terrain.",
     icon: Shield,
   },
 ];
 
 const hiring = [
-  "D\u00e9veloppeurs Mobile (React Native / Flutter)",
-  "Cr\u00e9ateurs de contenu STEM (vid\u00e9o)",
-  "Data Scientists / Ing\u00e9nieurs IA",
+  "Développeurs Mobile (React Native / Flutter)",
+  "Créateurs de contenu STEM (vidéo)",
+  "Data Scientists / Ingénieurs IA",
   "Community Managers Afrique",
-  "Sp\u00e9cialistes Marketing & Growth",
+  "Spécialistes Marketing & Growth",
   "Designers UX/UI",
 ];
 
@@ -106,17 +106,17 @@ export default function Team() {
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-6" variant="outline" data-testid="badge-team">
               <Users className="h-3 w-3 mr-1" />
-              LearnXScience \u2014 L'\u00c9quipe
+              LearnXScience — L'Équipe
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-testid="text-team-title">
               Les fondateurs de{" "}
               <span className="text-primary">LearnXScience</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              N\u00e9e lors d'un bootcamp en intelligence artificielle organis\u00e9 en partenariat avec le PNUD 
-              et UNIPOD Guin\u00e9e, LearnXScience est fond\u00e9e par une \u00e9quipe panafricaine passionn\u00e9e 
-              qui unit ing\u00e9nierie logicielle, math\u00e9matiques appliqu\u00e9es et \u00e9ducation num\u00e9rique 
-              pour construire les technologies \u00e9ducatives intelligentes de demain.
+              Née lors d'un bootcamp en intelligence artificielle organisé en partenariat avec le PNUD 
+              et UNIPOD Guinée, LearnXScience est fondée par une équipe panafricaine passionnée 
+              qui unit ingénierie logicielle, mathématiques appliquées et éducation numérique 
+              pour construire les technologies éducatives intelligentes de demain.
             </p>
           </div>
         </div>
@@ -126,13 +126,13 @@ export default function Team() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4" variant="secondary">
-              \u00c9quipe Fondatrice
+              Équipe Fondatrice
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-founders-title">
-              Une \u00e9quipe compl\u00e9mentaire
+              Une équipe complémentaire
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Deux profils compl\u00e9mentaires, une m\u00eame passion pour l'\u00e9ducation, 
+              Deux profils complémentaires, une même passion pour l'éducation, 
               la technologie et l'innovation africaine.
             </p>
           </div>
@@ -198,13 +198,13 @@ export default function Team() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4" variant="outline">
-              Notre \u00c9cosyst\u00e8me
+              Notre Écosystème
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-ecosystem-title">
-              Un r\u00e9seau de soutien panafricain
+              Un réseau de soutien panafricain
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Au-del\u00e0 de l'\u00e9quipe fondatrice, STEM FLOW s'appuie sur un \u00e9cosyst\u00e8me 
+              Au-delà de l'équipe fondatrice, STEM FLOW s'appuie sur un écosystème 
               d'experts et d'ambassadeurs.
             </p>
           </div>
@@ -258,13 +258,13 @@ export default function Team() {
             <div className="text-center mb-12">
               <Badge className="mb-4" variant="outline">
                 <Rocket className="h-3 w-3 mr-1" />
-                Rejoindre l'\u00e9quipe
+                Rejoindre l'équipe
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-hiring-title">
                 Nous recrutons des talents
               </h2>
               <p className="text-muted-foreground text-lg">
-                LearnXScience grandit et cherche des personnes passionn\u00e9es pour rejoindre l'aventure.
+                LearnXScience grandit et cherche des personnes passionnées pour rejoindre l'aventure.
               </p>
             </div>
 
@@ -298,13 +298,13 @@ export default function Team() {
             Envie de collaborer avec nous ?
           </h2>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
-            Nous cherchons des partenaires qui partagent notre vision d'une \u00e9ducation STEM 
-            accessible, engageante et de qualit\u00e9 pour tous les jeunes africains.
+            Nous cherchons des partenaires qui partagent notre vision d'une éducation STEM 
+            accessible, engageante et de qualité pour tous les jeunes africains.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/partenariats">
               <Button size="lg" variant="secondary" className="text-base px-8">
-                D\u00e9couvrir les opportunit\u00e9s
+                Découvrir les opportunités
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>

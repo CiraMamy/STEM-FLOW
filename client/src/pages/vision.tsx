@@ -28,50 +28,50 @@ const visionPoints = [
   {
     icon: Eye,
     title: "Notre Vision",
-    description: "Construire une nouvelle g\u00e9n\u00e9ration d'IA \u00e9ducatives africaines, capables de comprendre les profils cognitifs des apprenants, d'adapter dynamiquement les contenus, de mesurer la progression r\u00e9elle et de cr\u00e9er des environnements d'apprentissage sociaux et motivants.",
+    description: "Construire une nouvelle génération d'IA éducatives africaines, capables de comprendre les profils cognitifs des apprenants, d'adapter dynamiquement les contenus, de mesurer la progression réelle et de créer des environnements d'apprentissage sociaux et motivants.",
   },
   {
     icon: Target,
     title: "Notre Mission",
-    description: "D\u00e9velopper des syst\u00e8mes d'intelligence artificielle appliqu\u00e9s \u00e0 l'\u00e9ducation. Concevoir des algorithmes \u00e9ducatifs capables de personnaliser l'apprentissage, d'analyser les progr\u00e8s et de transformer l'engagement num\u00e9rique en progression acad\u00e9mique r\u00e9elle.",
+    description: "Développer des systèmes d'intelligence artificielle appliqués à l'éducation. Concevoir des algorithmes éducatifs capables de personnaliser l'apprentissage, d'analyser les progrès et de transformer l'engagement numérique en progression académique réelle.",
   },
   {
     icon: Heart,
     title: "Nos Valeurs",
-    description: "Excellence acad\u00e9mique, inclusivit\u00e9 totale, innovation continue, impact social mesurable et collaboration panafricaine guident chacune de nos d\u00e9cisions.",
+    description: "Excellence académique, inclusivité totale, innovation continue, impact social mesurable et collaboration panafricaine guident chacune de nos décisions.",
   },
 ];
 
 const whyWeExist = [
   {
     icon: Users,
-    title: "Usages num\u00e9riques ignor\u00e9s",
-    description: "L'\u00e9ducation traditionnelle ne tient pas compte des usages num\u00e9riques r\u00e9els des jeunes. Les \u00e9tudiants passent des heures \u00e0 scroller pendant que le syst\u00e8me \u00e9ducatif reste statique.",
+    title: "Usages numériques ignorés",
+    description: "L'éducation traditionnelle ne tient pas compte des usages numériques réels des jeunes. Les étudiants passent des heures à scroller pendant que le système éducatif reste statique.",
   },
   {
     icon: Brain,
     title: "Personnalisation cognitive absente",
-    description: "Les m\u00e9thodes classiques ignorent la personnalisation cognitive et l'engagement comportemental comme leviers d'apprentissage.",
+    description: "Les méthodes classiques ignorent la personnalisation cognitive et l'engagement comportemental comme leviers d'apprentissage.",
   },
   {
     icon: BarChart3,
-    title: "La data sous-exploit\u00e9e",
-    description: "Les donn\u00e9es d'apprentissage ne sont pas utilis\u00e9es comme levier d'am\u00e9lioration. La data peut r\u00e9volutionner la compr\u00e9hension des parcours \u00e9ducatifs.",
+    title: "La data sous-exploitée",
+    description: "Les données d'apprentissage ne sont pas utilisées comme levier d'amélioration. La data peut révolutionner la compréhension des parcours éducatifs.",
   },
 ];
 
 const impacts = [
   {
     icon: GraduationCap,
-    title: "Impact \u00c9ducatif",
+    title: "Impact Éducatif",
     color: "text-primary",
     bgColor: "bg-primary/10",
     points: [
-      "Am\u00e9lioration des r\u00e9sultats scolaires en sciences et math\u00e9matiques",
-      "D\u00e9veloppement de la pens\u00e9e critique, analytique et cr\u00e9ative",
-      "Apprentissage continu au-del\u00e0 de la salle de classe, 24h/24",
-      "Pr\u00e9paration aux \u00e9tudes sup\u00e9rieures et aux carri\u00e8res STEM",
-      "Acquisition des comp\u00e9tences du 21\u00e8me si\u00e8cle demand\u00e9es par les employeurs",
+      "Amélioration des résultats scolaires en sciences et mathématiques",
+      "Développement de la pensée critique, analytique et créative",
+      "Apprentissage continu au-delà de la salle de classe, 24h/24",
+      "Préparation aux études supérieures et aux carrières STEM",
+      "Acquisition des compétences du 21ème siècle demandées par les employeurs",
     ],
   },
   {
@@ -80,24 +80,24 @@ const impacts = [
     color: "text-secondary",
     bgColor: "bg-secondary/10",
     points: [
-      "R\u00e9duction des in\u00e9galit\u00e9s d'acc\u00e8s \u00e0 l'\u00e9ducation de qualit\u00e9 en STEM",
-      "Cr\u00e9ation de communaut\u00e9s d'entraide panafricaines entre \u00e9tudiants",
-      "Promotion de l'\u00e9galit\u00e9 des genres dans les fili\u00e8res STEM",
-      "Valorisation des talents africains et des mod\u00e8les de r\u00e9ussite locaux",
+      "Réduction des inégalités d'accès à l'éducation de qualité en STEM",
+      "Création de communautés d'entraide panafricaines entre étudiants",
+      "Promotion de l'égalité des genres dans les filières STEM",
+      "Valorisation des talents africains et des modèles de réussite locaux",
       "Renforcement des liens interculturels entre les 54 pays du continent",
     ],
   },
   {
     icon: Briefcase,
-    title: "Impact \u00c9conomique",
+    title: "Impact Économique",
     color: "text-accent",
     bgColor: "bg-accent/10",
     points: [
-      "Formation de la main-d'\u0153uvre STEM qualifi\u00e9e de demain",
+      "Formation de la main-d'œuvre STEM qualifiée de demain",
       "Stimulation de l'innovation et de l'entrepreneuriat technologique",
-      "D\u00e9veloppement du secteur tech africain et r\u00e9duction du brain drain",
-      "Cr\u00e9ation d'emplois dans l'\u00e9ducation num\u00e9rique et la cr\u00e9ation de contenu",
-      "Contribution directe \u00e0 la croissance du PIB continental",
+      "Développement du secteur tech africain et réduction du brain drain",
+      "Création d'emplois dans l'éducation numérique et la création de contenu",
+      "Contribution directe à la croissance du PIB continental",
     ],
   },
 ];
@@ -105,32 +105,32 @@ const impacts = [
 const stats = [
   { value: "1.4Md", label: "population africaine d'ici 2030" },
   { value: "60%", label: "de la population africaine a moins de 25 ans" },
-  { value: "2%", label: "des \u00e9tudiants africains sont en fili\u00e8re STEM" },
+  { value: "2%", label: "des étudiants africains sont en filière STEM" },
   { value: "500M+", label: "de smartphones en Afrique subsaharienne" },
 ];
 
 const sdgs = [
-  { number: 4, title: "\u00c9ducation de qualit\u00e9", description: "Assurer l'acc\u00e8s \u00e0 une \u00e9ducation de qualit\u00e9 pour tous" },
-  { number: 5, title: "\u00c9galit\u00e9 des genres", description: "Promouvoir les filles dans les fili\u00e8res STEM" },
-  { number: 8, title: "Travail d\u00e9cent", description: "Former la main-d'\u0153uvre qualifi\u00e9e de demain" },
+  { number: 4, title: "Éducation de qualité", description: "Assurer l'accès à une éducation de qualité pour tous" },
+  { number: 5, title: "Égalité des genres", description: "Promouvoir les filles dans les filières STEM" },
+  { number: 8, title: "Travail décent", description: "Former la main-d'œuvre qualifiée de demain" },
   { number: 9, title: "Innovation", description: "Favoriser l'innovation et les infrastructures" },
-  { number: 10, title: "R\u00e9duction des in\u00e9galit\u00e9s", description: "R\u00e9duire les disparit\u00e9s \u00e9ducatives" },
-  { number: 17, title: "Partenariats", description: "Renforcer les partenariats pour le d\u00e9veloppement" },
+  { number: 10, title: "Réduction des inégalités", description: "Réduire les disparités éducatives" },
+  { number: 17, title: "Partenariats", description: "Renforcer les partenariats pour le développement" },
 ];
 
 const milestones = [
-  { target: "2025", goal: "1 000 b\u00eata-testeurs actifs sur STEM FLOW" },
+  { target: "2025", goal: "1 000 bêta-testeurs actifs sur STEM FLOW" },
   { target: "2026", goal: "100 000 utilisateurs en Afrique de l'Ouest" },
   { target: "2027", goal: "1 million d'apprenants actifs" },
-  { target: "2028", goal: "Pr\u00e9sence dans 20 pays africains" },
-  { target: "2030", goal: "10 millions d'apprenants \u2014 algorithmes exportables \u00e0 l'international" },
+  { target: "2028", goal: "Présence dans 20 pays africains" },
+  { target: "2030", goal: "10 millions d'apprenants — algorithmes exportables à l'international" },
 ];
 
 const ambitions = [
-  "Devenir un acteur majeur des technologies \u00e9ducatives intelligentes en Afrique",
-  "D\u00e9velopper des algorithmes \u00e9ducatifs exportables \u00e0 l'international",
-  "Faire de l'Afrique une productrice de technologies \u00e9ducatives, pas seulement consommatrice",
-  "Construire un \u00e9cosyst\u00e8me EdTech africain de r\u00e9f\u00e9rence mondiale",
+  "Devenir un acteur majeur des technologies éducatives intelligentes en Afrique",
+  "Développer des algorithmes éducatifs exportables à l'international",
+  "Faire de l'Afrique une productrice de technologies éducatives, pas seulement consommatrice",
+  "Construire un écosystème EdTech africain de référence mondiale",
 ];
 
 export default function Vision() {
@@ -144,18 +144,18 @@ export default function Vision() {
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-6" variant="outline" data-testid="badge-vision">
               <Beaker className="h-3 w-3 mr-1" />
-              LearnXScience \u2014 Vision & Impact
+              LearnXScience — Vision & Impact
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-testid="text-vision-title">
               Construire les{" "}
-              <span className="text-primary">technologies \u00e9ducatives</span>{" "}
+              <span className="text-primary">technologies éducatives</span>{" "}
               intelligentes de demain
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              LearnXScience existe pour transformer les usages num\u00e9riques en leviers 
+              LearnXScience existe pour transformer les usages numériques en leviers 
               d'apprentissage intelligent. Notre ambition : devenir un acteur majeur 
-              des technologies \u00e9ducatives intelligentes en Afrique et d\u00e9velopper 
-              des algorithmes \u00e9ducatifs exportables \u00e0 l'international.
+              des technologies éducatives intelligentes en Afrique et développer 
+              des algorithmes éducatifs exportables à l'international.
             </p>
           </div>
         </div>
@@ -195,13 +195,13 @@ export default function Vision() {
                 Pourquoi LearnXScience existe
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                L'\u00e9ducation traditionnelle ne tient pas compte des usages num\u00e9riques r\u00e9els 
+                L'éducation traditionnelle ne tient pas compte des usages numériques réels 
                 des jeunes, de la personnalisation cognitive, de l'engagement comportemental, 
-                ni de la data comme levier d'am\u00e9lioration.
+                ni de la data comme levier d'amélioration.
               </p>
               <p className="text-lg font-medium text-foreground max-w-2xl mx-auto mt-4 leading-relaxed">
-                Pendant que les jeunes passent des heures \u00e0 scroller, le syst\u00e8me \u00e9ducatif 
-                reste statique. Nous existons pour combler ce foss\u00e9.
+                Pendant que les jeunes passent des heures à scroller, le système éducatif 
+                reste statique. Nous existons pour combler ce fossé.
               </p>
             </div>
 
@@ -243,11 +243,11 @@ export default function Vision() {
               Triple Impact
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-impact-title">
-              Un impact \u00e0 plusieurs dimensions
+              Un impact à plusieurs dimensions
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              LearnXScience, \u00e0 travers STEM FLOW, g\u00e9n\u00e8re un impact positif mesurable 
-              sur l'\u00e9ducation, la soci\u00e9t\u00e9 et l'\u00e9conomie africaines.
+              LearnXScience, à travers STEM FLOW, génère un impact positif mesurable 
+              sur l'éducation, la société et l'économie africaines.
             </p>
           </div>
 
@@ -278,10 +278,10 @@ export default function Vision() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4" data-testid="text-stats-title">
-              L'opportunit\u00e9 africaine en chiffres
+              L'opportunité africaine en chiffres
             </h2>
             <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg">
-              Des donn\u00e9es qui d\u00e9montrent l'immense potentiel du continent et l'urgence d'agir.
+              Des données qui démontrent l'immense potentiel du continent et l'urgence d'agir.
             </p>
           </div>
 
@@ -306,14 +306,14 @@ export default function Vision() {
             <div className="text-center mb-12">
               <Badge className="mb-4" variant="outline">
                 <Lightbulb className="h-3 w-3 mr-1" />
-                Objectifs de D\u00e9veloppement Durable
+                Objectifs de Développement Durable
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-sdg-title">
                 Notre contribution aux ODD de l'ONU
               </h2>
               <p className="text-muted-foreground text-lg">
                 LearnXScience s'inscrit dans l'Agenda 2063 de l'Union Africaine et contribue 
-                directement \u00e0 6 Objectifs de D\u00e9veloppement Durable.
+                directement à 6 Objectifs de Développement Durable.
               </p>
             </div>
 
@@ -379,22 +379,22 @@ export default function Vision() {
                 </div>
                 <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
                   <p className="text-foreground font-medium">
-                    L'Afrique poss\u00e8de la population la plus jeune au monde, avec 60% 
+                    L'Afrique possède la population la plus jeune au monde, avec 60% 
                     de sa population ayant moins de 25 ans. C'est un atout immense, 
-                    \u00e0 condition de pouvoir former cette jeunesse aux comp\u00e9tences du futur.
+                    à condition de pouvoir former cette jeunesse aux compétences du futur.
                   </p>
                   <p>
                     LearnXScience s'inscrit dans l'Agenda 2063 de l'Union Africaine et 
-                    contribue directement aux Objectifs de D\u00e9veloppement Durable, 
-                    notamment l'ODD 4 (\u00c9ducation de qualit\u00e9), l'ODD 5 (\u00c9galit\u00e9 des genres) 
+                    contribue directement aux Objectifs de Développement Durable, 
+                    notamment l'ODD 4 (Éducation de qualité), l'ODD 5 (Égalité des genres) 
                     et l'ODD 9 (Innovation).
                   </p>
                   <p>
-                    En formant les scientifiques, ing\u00e9nieurs et innovateurs de demain 
-                    \u00e0 travers STEM FLOW, nous participons \u00e0 la construction d'une Afrique 
-                    plus prosp\u00e8re, plus r\u00e9siliente et plus connect\u00e9e au reste du monde.
+                    En formant les scientifiques, ingénieurs et innovateurs de demain 
+                    à travers STEM FLOW, nous participons à la construction d'une Afrique 
+                    plus prospère, plus résiliente et plus connectée au reste du monde.
                     Notre approche mobile-first permet de toucher des populations 
-                    traditionnellement exclues des syst\u00e8mes \u00e9ducatifs formels.
+                    traditionnellement exclues des systèmes éducatifs formels.
                   </p>
                 </div>
               </CardContent>
@@ -406,16 +406,16 @@ export default function Vision() {
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            D\u00e9couvrez l'\u00e9quipe derri\u00e8re LearnXScience
+            Découvrez l'équipe derrière LearnXScience
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg">
-            Des passionn\u00e9s d'\u00e9ducation et de technologie, unis par une vision commune 
+            Des passionnés d'éducation et de technologie, unis par une vision commune 
             de transformer l'Afrique par le savoir.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/equipe">
               <Button size="lg" className="text-base px-8">
-                Rencontrer l'\u00e9quipe
+                Rencontrer l'équipe
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>

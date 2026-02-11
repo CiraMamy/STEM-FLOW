@@ -23,20 +23,20 @@ const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
 
 const challenges = [
   {
-    title: "Acc\u00e8s in\u00e9gal \u00e0 l'\u00e9ducation STEM",
-    description: "Seulement 2% des \u00e9tudiants africains poursuivent des \u00e9tudes STEM, contre 20% en Asie. L'Afrique ne forme que 25% des ing\u00e9nieurs dont elle a besoin pour son d\u00e9veloppement.",
+    title: "Accès inégal à l'éducation STEM",
+    description: "Seulement 2% des étudiants africains poursuivent des études STEM, contre 20% en Asie. L'Afrique ne forme que 25% des ingénieurs dont elle a besoin pour son développement.",
   },
   {
-    title: "Manque de ressources adapt\u00e9es",
-    description: "90% des contenus \u00e9ducatifs STEM de qualit\u00e9 sont en anglais et con\u00e7us pour des contextes occidentaux. Les r\u00e9alit\u00e9s africaines sont rarement prises en compte.",
+    title: "Manque de ressources adaptées",
+    description: "90% des contenus éducatifs STEM de qualité sont en anglais et conçus pour des contextes occidentaux. Les réalités africaines sont rarement prises en compte.",
   },
   {
-    title: "D\u00e9connexion g\u00e9n\u00e9rationnelle",
-    description: "Les m\u00e9thodes d'enseignement traditionnelles n'engagent pas la g\u00e9n\u00e9ration Z. 78% des jeunes africains pr\u00e9f\u00e8rent le contenu vid\u00e9o court aux formats classiques.",
+    title: "Déconnexion générationnelle",
+    description: "Les méthodes d'enseignement traditionnelles n'engagent pas la génération Z. 78% des jeunes africains préfèrent le contenu vidéo court aux formats classiques.",
   },
   {
-    title: "Barri\u00e8res linguistiques et culturelles",
-    description: "La majorit\u00e9 des ressources STEM de qualit\u00e9 sont en anglais uniquement, excluant des centaines de millions de francophones et locuteurs de langues africaines.",
+    title: "Barrières linguistiques et culturelles",
+    description: "La majorité des ressources STEM de qualité sont en anglais uniquement, excluant des centaines de millions de francophones et locuteurs de langues africaines.",
   },
 ];
 
@@ -44,44 +44,44 @@ const solutions = [
   {
     icon: Smartphone,
     title: "Mobile-First & Low-Data",
-    description: "Application ultra-l\u00e9g\u00e8re (<30 Mo), optimis\u00e9e pour les r\u00e9seaux 2G/3G africains, avec mode hors-ligne complet pour les zones sans connectivit\u00e9.",
+    description: "Application ultra-légère (<30 Mo), optimisée pour les réseaux 2G/3G africains, avec mode hors-ligne complet pour les zones sans connectivité.",
   },
   {
     icon: BookOpen,
-    title: "Contenus localis\u00e9s & multilingues",
-    description: "Des vid\u00e9os et exercices cr\u00e9\u00e9s par des \u00e9ducateurs africains, disponibles en fran\u00e7ais, anglais et langues locales. Exemples concrets tir\u00e9s du quotidien africain.",
+    title: "Contenus localisés & multilingues",
+    description: "Des vidéos et exercices créés par des éducateurs africains, disponibles en français, anglais et langues locales. Exemples concrets tirés du quotidien africain.",
   },
   {
     icon: Users,
     title: "Apprentissage social & collaboratif",
-    description: "Une communaut\u00e9 d'entraide panafricaine o\u00f9 chaque apprenant peut devenir mentor. Tutorat par les pairs, groupes d'\u00e9tude et challenges collectifs.",
+    description: "Une communauté d'entraide panafricaine où chaque apprenant peut devenir mentor. Tutorat par les pairs, groupes d'étude et challenges collectifs.",
   },
 ];
 
 const differentiators = [
-  "Format TikTok-like adapt\u00e9 aux habitudes de consommation des jeunes",
-  "Gamification inspir\u00e9e de Duolingo et des meilleurs jeux mobiles",
-  "IA de personnalisation pour un parcours sur mesure adapt\u00e9 \u00e0 chaque apprenant",
-  "Communaut\u00e9s th\u00e9matiques Discord-like pour chaque discipline STEM",
-  "Battles et challenges entre \u00e9coles, villes et pays africains",
-  "Parcours certifiants reconnus par des partenaires \u00e9ducatifs",
-  "Mode hors-ligne pour les zones \u00e0 faible connectivit\u00e9",
-  "Contenu cr\u00e9\u00e9 et valid\u00e9 par des enseignants africains",
+  "Format TikTok-like adapté aux habitudes de consommation des jeunes",
+  "Gamification inspirée de Duolingo et des meilleurs jeux mobiles",
+  "IA de personnalisation pour un parcours sur mesure adapté à chaque apprenant",
+  "Communautés thématiques Discord-like pour chaque discipline STEM",
+  "Battles et challenges entre écoles, villes et pays africains",
+  "Parcours certifiants reconnus par des partenaires éducatifs",
+  "Mode hors-ligne pour les zones à faible connectivité",
+  "Contenu créé et validé par des enseignants africains",
 ];
 
 const timeline = [
-  { year: "2024", event: "Id\u00e9ation et recherche utilisateur", status: "done" },
-  { year: "2025", event: "D\u00e9veloppement MVP et b\u00eata test", status: "current" },
+  { year: "2024", event: "Idéation et recherche utilisateur", status: "done" },
+  { year: "2025", event: "Développement MVP et bêta test", status: "current" },
   { year: "2026", event: "Lancement Afrique de l'Ouest francophone", status: "next" },
   { year: "2027", event: "Expansion Afrique de l'Est anglophone", status: "next" },
   { year: "2028-2030", event: "Couverture panafricaine - 54 pays", status: "next" },
 ];
 
 const comparisons = [
-  { platform: "Khan Academy", weakness: "Contenu long, pas mobile-first, pas adapt\u00e9 \u00e0 l'Afrique" },
-  { platform: "Coursera / edX", weakness: "Cours longs, payants, barri\u00e8re linguistique" },
-  { platform: "Duolingo", weakness: "Mod\u00e8le gamifi\u00e9 mais limit\u00e9 aux langues" },
-  { platform: "TikTok", weakness: "Format engageant mais contenu non \u00e9ducatif" },
+  { platform: "Khan Academy", weakness: "Contenu long, pas mobile-first, pas adapté à l'Afrique" },
+  { platform: "Coursera / edX", weakness: "Cours longs, payants, barrière linguistique" },
+  { platform: "Duolingo", weakness: "Modèle gamifié mais limité aux langues" },
+  { platform: "TikTok", weakness: "Format engageant mais contenu non éducatif" },
 ];
 
 export default function Project() {
@@ -95,16 +95,16 @@ export default function Project() {
           <div className="max-w-3xl">
             <Badge className="mb-6" variant="outline" data-testid="badge-project">
               <Target className="h-3 w-3 mr-1" />
-              LearnXScience \u2014 Le Projet
+              LearnXScience — Le Projet
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-testid="text-project-title">
-              STEM FLOW : la premi\u00e8re{" "}
+              STEM FLOW : la première{" "}
               <span className="text-primary">innovation</span> de LearnXScience
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              STEM FLOW est la premi\u00e8re application d\u00e9velopp\u00e9e par LearnXScience. 
-              Un r\u00e9seau social \u00e9ducatif mobile-first qui combine les codes des r\u00e9seaux sociaux, 
-              la puissance de nos algorithmes d'IA et la gamification pour rendre l'apprentissage irr\u00e9sistible.
+              STEM FLOW est la première application développée par LearnXScience. 
+              Un réseau social éducatif mobile-first qui combine les codes des réseaux sociaux, 
+              la puissance de nos algorithmes d'IA et la gamification pour rendre l'apprentissage irrésistible.
             </p>
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">
               <Button size="lg" data-testid="button-try-project">
@@ -120,14 +120,14 @@ export default function Project() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <Badge className="mb-4" variant="secondary">
-              La Probl\u00e9matique
+              La Problématique
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-challenge-title">
-              Les d\u00e9fis de l'\u00e9ducation STEM en Afrique
+              Les défis de l'éducation STEM en Afrique
             </h2>
             <p className="text-muted-foreground text-lg">
-              Malgr\u00e9 un potentiel immense et la population la plus jeune au monde, 
-              l'Afrique fait face \u00e0 des obstacles majeurs dans le d\u00e9veloppement des comp\u00e9tences STEM.
+              Malgré un potentiel immense et la population la plus jeune au monde, 
+              l'Afrique fait face à des obstacles majeurs dans le développement des compétences STEM.
             </p>
           </div>
 
@@ -159,11 +159,11 @@ export default function Project() {
               Notre Solution
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-solution-title">
-              Une approche innovante et adapt\u00e9e
+              Une approche innovante et adaptée
             </h2>
             <p className="text-muted-foreground text-lg">
-              STEM FLOW combine technologie, p\u00e9dagogie et compr\u00e9hension culturelle 
-              pour cr\u00e9er une exp\u00e9rience d'apprentissage unique en son genre.
+              STEM FLOW combine technologie, pédagogie et compréhension culturelle 
+              pour créer une expérience d'apprentissage unique en son genre.
             </p>
           </div>
 
@@ -194,9 +194,9 @@ export default function Project() {
                 STEM FLOW vs plateformes classiques
               </h2>
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                Contrairement aux plateformes classiques, STEM FLOW est con\u00e7u 
-                sp\u00e9cifiquement pour engager la g\u00e9n\u00e9ration Z africaine 
-                avec les codes qu'elle conna\u00eet et aime.
+                Contrairement aux plateformes classiques, STEM FLOW est conçu 
+                spécifiquement pour engager la génération Z africaine 
+                avec les codes qu'elle connaît et aime.
               </p>
 
               <div className="space-y-3 mb-8">
@@ -235,7 +235,7 @@ export default function Project() {
                     <div>
                       <h4 className="font-medium text-sm text-primary">STEM FLOW</h4>
                       <p className="text-xs text-muted-foreground mt-1">
-                        Format court + gamification + IA + communaut\u00e9 + mobile-first + multilingue + adapt\u00e9 \u00e0 l'Afrique
+                        Format court + gamification + IA + communauté + mobile-first + multilingue + adapté à l'Afrique
                       </p>
                     </div>
                   </div>
@@ -294,10 +294,10 @@ export default function Project() {
       <section className="py-20 lg:py-28 bg-gradient-to-br from-secondary via-secondary to-secondary/90">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary-foreground mb-6">
-            D\u00e9couvrez STEM FLOW par LearnXScience
+            Découvrez STEM FLOW par LearnXScience
           </h2>
           <p className="text-secondary-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
-            Testez d\u00e8s maintenant notre premi\u00e8re application et explorez toutes les fonctionnalit\u00e9s.
+            Testez dès maintenant notre première application et explorez toutes les fonctionnalités.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">

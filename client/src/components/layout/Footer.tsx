@@ -9,7 +9,7 @@ const footerLinks = {
     { href: "/projet", label: "Le Projet" },
     { href: "/application", label: "L'Application" },
     { href: "/vision", label: "Vision & Impact" },
-    { href: "/equipe", label: "L'\u00c9quipe" },
+    { href: "/equipe", label: "L'Équipe" },
   ],
   ressources: [
     { href: "/partenariats", label: "Partenariats" },
@@ -35,8 +35,8 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              LearnXScience d\u00e9veloppe des syst\u00e8mes d'intelligence artificielle appliqu\u00e9s \u00e0 l'\u00e9ducation. 
-              Notre premi\u00e8re application, STEM FLOW, est un r\u00e9seau social \u00e9ducatif qui rend les sciences accessibles, 
+              LearnXScience développe des systèmes d'intelligence artificielle appliqués à l'éducation. 
+              Notre première application, STEM FLOW, est un réseau social éducatif qui rend les sciences accessibles, 
               interactives et mesurables.
             </p>
             <p className="text-lg font-semibold text-primary">
@@ -89,7 +89,7 @@ export function Footer() {
                   className="text-sm text-muted-foreground underline-offset-4 hover:underline transition-colors inline-flex items-center gap-1"
                   data-testid="footer-ressource-app"
                 >
-                  Acc\u00e9der \u00e0 STEM FLOW
+                  Accéder à STEM FLOW
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </li>
@@ -135,8 +135,8 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} LearnXScience. Tous droits r\u00e9serv\u00e9s.</p>
-          <p>Construire les technologies \u00e9ducatives intelligentes de demain</p>
+          <p>&copy; {new Date().getFullYear()} LearnXScience. Tous droits réservés.</p>
+          <p>Construire les technologies éducatives intelligentes de demain</p>
         </div>
       </div>
     </footer>

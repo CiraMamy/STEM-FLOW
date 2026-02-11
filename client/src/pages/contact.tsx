@@ -44,10 +44,10 @@ import {
 const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
 
 const contactFormSchema = insertContactSchema.extend({
-  name: z.string().min(2, "Le nom doit contenir au moins 2 caract\u00e8res"),
+  name: z.string().min(2, "Le nom doit contenir au moins 2 caractères"),
   email: z.string().email("Veuillez entrer une adresse email valide"),
-  type: z.string().min(1, "Veuillez s\u00e9lectionner un type de demande"),
-  message: z.string().min(10, "Le message doit contenir au moins 10 caract\u00e8res"),
+  type: z.string().min(1, "Veuillez sélectionner un type de demande"),
+  message: z.string().min(10, "Le message doit contenir au moins 10 caractères"),
 });
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
@@ -55,11 +55,11 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 const contactTypes = [
   { value: "waitlist", label: "Rejoindre la liste d'attente" },
   { value: "partnership", label: "Proposition de partenariat" },
-  { value: "investment", label: "Opportunit\u00e9 d'investissement" },
-  { value: "incubator", label: "Programme d'incubation / acc\u00e9l\u00e9ration" },
-  { value: "education", label: "Institution \u00e9ducative / ONG" },
-  { value: "media", label: "Presse / M\u00e9dias / Interview" },
-  { value: "talent", label: "Candidature / Rejoindre l'\u00e9quipe" },
+  { value: "investment", label: "Opportunité d'investissement" },
+  { value: "incubator", label: "Programme d'incubation / accélération" },
+  { value: "education", label: "Institution éducative / ONG" },
+  { value: "media", label: "Presse / Médias / Interview" },
+  { value: "talent", label: "Candidature / Rejoindre l'équipe" },
   { value: "other", label: "Autre demande" },
 ];
 
@@ -71,10 +71,10 @@ const socialLinks = [
 ];
 
 const faqs = [
-  { q: "STEM FLOW est-il gratuit ?", a: "Oui, l'application est enti\u00e8rement gratuite pour les apprenants. Nous proposons des mod\u00e8les B2B et sponsoring pour les institutions et entreprises." },
-  { q: "Dans quels pays l'app est-elle disponible ?", a: "STEM FLOW est actuellement en phase de b\u00eata test et sera lanc\u00e9 d'abord en Afrique de l'Ouest francophone (2026), puis \u00e0 l'\u00e9chelle panafricaine." },
-  { q: "Comment devenir cr\u00e9ateur de contenu ?", a: "Contactez-nous via le formulaire en s\u00e9lectionnant 'Candidature'. Nous recherchons des enseignants et experts STEM pour cr\u00e9er des micro-le\u00e7ons." },
-  { q: "Quel est le d\u00e9lai de r\u00e9ponse ?", a: "Nous r\u00e9pondons g\u00e9n\u00e9ralement sous 48 \u00e0 72 heures ouvr\u00e9es. Pour les demandes urgentes, \u00e9crivez-nous directement par email." },
+  { q: "STEM FLOW est-il gratuit ?", a: "Oui, l'application est entièrement gratuite pour les apprenants. Nous proposons des modèles B2B et sponsoring pour les institutions et entreprises." },
+  { q: "Dans quels pays l'app est-elle disponible ?", a: "STEM FLOW est actuellement en phase de bêta test et sera lancé d'abord en Afrique de l'Ouest francophone (2026), puis à l'échelle panafricaine." },
+  { q: "Comment devenir créateur de contenu ?", a: "Contactez-nous via le formulaire en sélectionnant 'Candidature'. Nous recherchons des enseignants et experts STEM pour créer des micro-leçons." },
+  { q: "Quel est le délai de réponse ?", a: "Nous répondons généralement sous 48 à 72 heures ouvrées. Pour les demandes urgentes, écrivez-nous directement par email." },
 ];
 
 export default function Contact() {
@@ -100,15 +100,15 @@ export default function Contact() {
     onSuccess: () => {
       setIsSubmitted(true);
       toast({
-        title: "Message envoy\u00e9 !",
-        description: "Nous vous r\u00e9pondrons dans les plus brefs d\u00e9lais.",
+        title: "Message envoyé !",
+        description: "Nous vous répondrons dans les plus brefs délais.",
       });
       form.reset();
     },
     onError: () => {
       toast({
         title: "Erreur",
-        description: "Une erreur s'est produite. Veuillez r\u00e9essayer.",
+        description: "Une erreur s'est produite. Veuillez réessayer.",
         variant: "destructive",
       });
     },
@@ -128,7 +128,7 @@ export default function Contact() {
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-6" variant="outline" data-testid="badge-contact">
               <Mail className="h-3 w-3 mr-1" />
-              LearnXScience \u2014 Contact & Collaboration
+              LearnXScience — Contact & Collaboration
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-testid="text-contact-title">
               Rejoignez l'aventure{" "}
@@ -136,7 +136,7 @@ export default function Contact() {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               Que vous souhaitiez tester STEM FLOW, devenir partenaire, investir, 
-              rejoindre l'\u00e9quipe ou simplement en savoir plus, nous serions ravis d'\u00e9changer avec vous.
+              rejoindre l'équipe ou simplement en savoir plus, nous serions ravis d'échanger avec vous.
             </p>
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">
               <Button variant="outline" data-testid="button-demo-contact">
@@ -167,10 +167,10 @@ export default function Contact() {
                     </div>
                     <h3 className="text-xl font-semibold mb-2">Merci pour votre message !</h3>
                     <p className="text-muted-foreground mb-4">
-                      Nous avons bien re\u00e7u votre demande et vous r\u00e9pondrons sous 48 \u00e0 72 heures.
+                      Nous avons bien reçu votre demande et vous répondrons sous 48 à 72 heures.
                     </p>
                     <p className="text-sm text-muted-foreground mb-6">
-                      En attendant, d\u00e9couvrez notre application :
+                      En attendant, découvrez notre application :
                     </p>
                     <div className="flex flex-col gap-3">
                       <a href={APP_URL} target="_blank" rel="noopener noreferrer">
@@ -259,7 +259,7 @@ export default function Contact() {
                                 >
                                   <FormControl>
                                     <SelectTrigger data-testid="select-type">
-                                      <SelectValue placeholder="S\u00e9lectionnez..." />
+                                      <SelectValue placeholder="Sélectionnez..." />
                                     </SelectTrigger>
                                   </FormControl>
                                   <SelectContent>
@@ -284,7 +284,7 @@ export default function Contact() {
                               <FormLabel>Message *</FormLabel>
                               <FormControl>
                                 <Textarea
-                                  placeholder="D\u00e9crivez votre demande, vos int\u00e9r\u00eats ou votre proposition..."
+                                  placeholder="Décrivez votre demande, vos intérêts ou votre proposition..."
                                   rows={5}
                                   {...field}
                                   data-testid="input-message"
@@ -323,7 +323,7 @@ export default function Contact() {
 
             <div>
               <Badge className="mb-4" variant="outline">
-                Coordonn\u00e9es
+                Coordonnées
               </Badge>
               <h2 className="text-3xl font-bold mb-6" data-testid="text-coords-title">
                 Autres moyens de nous contacter
@@ -354,10 +354,10 @@ export default function Contact() {
                         <MapPin className="h-5 w-5 text-secondary" />
                       </div>
                       <div>
-                        <div className="font-medium mb-2">Bas\u00e9s en Afrique</div>
+                        <div className="font-medium mb-2">Basés en Afrique</div>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                          STEM FLOW est une startup panafricaine avec des \u00e9quipes 
-                          r\u00e9parties sur le continent. Nous travaillons en remote-first 
+                          STEM FLOW est une startup panafricaine avec des équipes 
+                          réparties sur le continent. Nous travaillons en remote-first 
                           pour toucher le plus grand nombre de pays.
                         </p>
                       </div>
@@ -372,10 +372,10 @@ export default function Contact() {
                         <Clock className="h-5 w-5 text-accent" />
                       </div>
                       <div>
-                        <div className="font-medium mb-2">D\u00e9lai de r\u00e9ponse</div>
+                        <div className="font-medium mb-2">Délai de réponse</div>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                          Nous r\u00e9pondons g\u00e9n\u00e9ralement sous 48 \u00e0 72 heures ouvr\u00e9es. 
-                          Pour les demandes urgentes, pr\u00e9cisez-le dans votre message.
+                          Nous répondons généralement sous 48 à 72 heures ouvrées. 
+                          Pour les demandes urgentes, précisez-le dans votre message.
                         </p>
                       </div>
                     </div>
@@ -391,7 +391,7 @@ export default function Contact() {
                       <div>
                         <div className="font-medium mb-2">Testez l'application</div>
                         <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                          D\u00e9couvrez STEM FLOW en action avant de nous contacter.
+                          Découvrez STEM FLOW en action avant de nous contacter.
                         </p>
                         <a href={APP_URL} target="_blank" rel="noopener noreferrer">
                           <Button size="sm" variant="outline" data-testid="button-app-sidebar">
@@ -418,7 +418,7 @@ export default function Contact() {
                 FAQ
               </Badge>
               <h2 className="text-3xl font-bold mb-4" data-testid="text-faq-title">
-                Questions fr\u00e9quentes
+                Questions fréquentes
               </h2>
             </div>
 
@@ -442,8 +442,8 @@ export default function Contact() {
             Rejoignez le mouvement STEM FLOW
           </h2>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
-            Ensemble, transformons l'\u00e9ducation STEM en Afrique et 
-            cr\u00e9ons des opportunit\u00e9s pour des millions de jeunes.
+            Ensemble, transformons l'éducation STEM en Afrique et 
+            créons des opportunités pour des millions de jeunes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">

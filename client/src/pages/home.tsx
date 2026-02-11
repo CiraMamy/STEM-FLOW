@@ -32,29 +32,29 @@ const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
 const pillars = [
   {
     icon: Play,
-    title: "Vid\u00e9os courtes \u00e9ducatives",
-    description: "Des micro-le\u00e7ons STEM de 30 \u00e0 90 secondes au format vertical. Swipe pour d\u00e9couvrir, like pour sauvegarder, commente pour \u00e9changer avec la communaut\u00e9.",
+    title: "Vidéos courtes éducatives",
+    description: "Des micro-leçons STEM de 30 à 90 secondes au format vertical. Swipe pour découvrir, like pour sauvegarder, commente pour échanger avec la communauté.",
     color: "text-primary",
     bgColor: "bg-primary/10",
   },
   {
     icon: Users,
-    title: "Communaut\u00e9s STEM",
-    description: "Des salons th\u00e9matiques inspir\u00e9s de Discord pour chaque discipline : math\u00e9matiques, physique, informatique, biologie, ing\u00e9nierie et plus.",
+    title: "Communautés STEM",
+    description: "Des salons thématiques inspirés de Discord pour chaque discipline : mathématiques, physique, informatique, biologie, ingénierie et plus.",
     color: "text-secondary",
     bgColor: "bg-secondary/10",
   },
   {
     icon: Trophy,
-    title: "Gamification avanc\u00e9e",
-    description: "Syst\u00e8me XP, badges de comp\u00e9tences, classements nationaux, battles entre \u00e9coles, challenges quotidiens et s\u00e9ries d'apprentissage.",
+    title: "Gamification avancée",
+    description: "Système XP, badges de compétences, classements nationaux, battles entre écoles, challenges quotidiens et séries d'apprentissage.",
     color: "text-accent",
     bgColor: "bg-accent/10",
   },
   {
     icon: Brain,
-    title: "IA Personnalis\u00e9e",
-    description: "Un algorithme d'intelligence artificielle qui s'adapte \u00e0 ton niveau, tes pr\u00e9f\u00e9rences et ton rythme pour cr\u00e9er un parcours sur mesure.",
+    title: "IA Personnalisée",
+    description: "Un algorithme d'intelligence artificielle qui s'adapte à ton niveau, tes préférences et ton rythme pour créer un parcours sur mesure.",
     color: "text-chart-4",
     bgColor: "bg-chart-4/10",
   },
@@ -63,18 +63,18 @@ const pillars = [
 const problems = [
   {
     icon: Target,
-    title: "Acc\u00e8s limit\u00e9 \u00e0 l'\u00e9ducation STEM",
-    description: "Seulement 2% des \u00e9tudiants africains poursuivent des \u00e9tudes STEM, contre 20% en Asie et 15% en Europe. L'Afrique forme moins de 25% des ing\u00e9nieurs n\u00e9cessaires.",
+    title: "Accès limité à l'éducation STEM",
+    description: "Seulement 2% des étudiants africains poursuivent des études STEM, contre 20% en Asie et 15% en Europe. L'Afrique forme moins de 25% des ingénieurs nécessaires.",
   },
   {
     icon: TrendingUp,
-    title: "D\u00e9sengagement des jeunes",
-    description: "78% des jeunes africains passent plus de 3h par jour sur leur smartphone, principalement sur les r\u00e9seaux sociaux. Ce temps peut devenir un levier d'apprentissage.",
+    title: "Désengagement des jeunes",
+    description: "78% des jeunes africains passent plus de 3h par jour sur leur smartphone, principalement sur les réseaux sociaux. Ce temps peut devenir un levier d'apprentissage.",
   },
   {
     icon: Lightbulb,
-    title: "Potentiel inexploit\u00e9",
-    description: "L'Afrique compte 60% de sa population de moins de 25 ans, soit le plus grand vivier de talents au monde, mais les outils \u00e9ducatifs adapt\u00e9s manquent cruellement.",
+    title: "Potentiel inexploité",
+    description: "L'Afrique compte 60% de sa population de moins de 25 ans, soit le plus grand vivier de talents au monde, mais les outils éducatifs adaptés manquent cruellement.",
   },
 ];
 
@@ -82,35 +82,35 @@ const keyNumbers = [
   { value: "1.4Md", label: "d'Africains d'ici 2030", icon: Globe },
   { value: "60%", label: "ont moins de 25 ans", icon: Users },
   { value: "500M+", label: "de smartphones en Afrique", icon: Smartphone },
-  { value: "2%", label: "en fili\u00e8re STEM", icon: GraduationCap },
-  { value: "$130Md", label: "march\u00e9 EdTech mondial", icon: BarChart3 },
-  { value: "54", label: "pays cibl\u00e9s", icon: Target },
+  { value: "2%", label: "en filière STEM", icon: GraduationCap },
+  { value: "$130Md", label: "marché EdTech mondial", icon: BarChart3 },
+  { value: "54", label: "pays ciblés", icon: Target },
 ];
 
 const advantages = [
-  { icon: Smartphone, text: "App mobile-first optimis\u00e9e pour les r\u00e9seaux africains" },
-  { icon: BookOpen, text: "Contenu multilingue : Fran\u00e7ais, Anglais et langues locales" },
-  { icon: Wifi, text: "Mode hors-ligne pour les zones \u00e0 faible connectivit\u00e9" },
-  { icon: Shield, text: "Environnement s\u00e9curis\u00e9 et mod\u00e9r\u00e9 pour les apprenants" },
-  { icon: Rocket, text: "Parcours progressifs du d\u00e9butant \u00e0 l'expert" },
-  { icon: GraduationCap, text: "Certifications reconnues par nos partenaires \u00e9ducatifs" },
+  { icon: Smartphone, text: "App mobile-first optimisée pour les réseaux africains" },
+  { icon: BookOpen, text: "Contenu multilingue : Français, Anglais et langues locales" },
+  { icon: Wifi, text: "Mode hors-ligne pour les zones à faible connectivité" },
+  { icon: Shield, text: "Environnement sécurisé et modéré pour les apprenants" },
+  { icon: Rocket, text: "Parcours progressifs du débutant à l'expert" },
+  { icon: GraduationCap, text: "Certifications reconnues par nos partenaires éducatifs" },
 ];
 
 const companyPillars = [
   {
     icon: Brain,
     title: "Intelligence Artificielle",
-    description: "Algorithmes \u00e9ducatifs capables de personnaliser l'apprentissage et d'analyser les progr\u00e8s en temps r\u00e9el.",
+    description: "Algorithmes éducatifs capables de personnaliser l'apprentissage et d'analyser les progrès en temps réel.",
   },
   {
     icon: Database,
-    title: "Science des Donn\u00e9es",
+    title: "Science des Données",
     description: "Analyse comportementale et cognitive pour optimiser les parcours d'apprentissage de chaque apprenant.",
   },
   {
     icon: Cpu,
     title: "Sciences Cognitives",
-    description: "Mod\u00e8les d'engagement inspir\u00e9s des neurosciences pour maximiser la r\u00e9tention et la compr\u00e9hension.",
+    description: "Modèles d'engagement inspirés des neurosciences pour maximiser la rétention et la compréhension.",
   },
 ];
 
@@ -126,20 +126,20 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6" variant="outline" data-testid="badge-hero">
               <Beaker className="h-3 w-3 mr-1" />
-              LearnXScience \u2014 Technologies \u00c9ducatives Intelligentes
+              LearnXScience — Technologies Éducatives Intelligentes
             </Badge>
             
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6" data-testid="text-hero-title">
               Transformer l'engagement{" "}
-              <span className="text-primary">num\u00e9rique</span> en{" "}
+              <span className="text-primary">numérique</span> en{" "}
               <span className="text-secondary">progression</span>{" "}
-              <span className="text-accent">acad\u00e9mique</span>
+              <span className="text-accent">académique</span>
             </h1>
             
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6 leading-relaxed">
-              <span className="font-semibold text-foreground">LearnXScience</span> d\u00e9veloppe des syst\u00e8mes d'intelligence artificielle 
-              appliqu\u00e9s \u00e0 l'\u00e9ducation. Nous concevons des algorithmes \u00e9ducatifs capables de personnaliser 
-              l'apprentissage, d'analyser les progr\u00e8s et de transformer l'engagement num\u00e9rique en progression acad\u00e9mique r\u00e9elle.
+              <span className="font-semibold text-foreground">LearnXScience</span> développe des systèmes d'intelligence artificielle 
+              appliqués à l'éducation. Nous concevons des algorithmes éducatifs capables de personnaliser 
+              l'apprentissage, d'analyser les progrès et de transformer l'engagement numérique en progression académique réelle.
             </p>
 
             <p className="text-2xl md:text-3xl font-semibold text-primary mb-8" data-testid="text-slogan">
@@ -149,7 +149,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={APP_URL} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="text-base px-8" data-testid="button-try-app">
-                  D\u00e9couvrir STEM FLOW
+                  Découvrir STEM FLOW
                   <ExternalLink className="ml-2 h-5 w-5" />
                 </Button>
               </a>
@@ -171,12 +171,12 @@ export default function Home() {
               Notre Expertise
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-expertise-title">
-              \u00c0 l'intersection de l'IA, des maths et de la p\u00e9dagogie
+              À l'intersection de l'IA, des maths et de la pédagogie
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              LearnXScience est une entreprise technologique sp\u00e9cialis\u00e9e dans le d\u00e9veloppement 
-              de solutions num\u00e9riques \u00e9ducatives et d'algorithmes d'apprentissage intelligents. 
-              Nous concevons des plateformes propuls\u00e9es par l'IA, la science des donn\u00e9es et les sciences cognitives.
+              LearnXScience est une entreprise technologique spécialisée dans le développement 
+              de solutions numériques éducatives et d'algorithmes d'apprentissage intelligents. 
+              Nous concevons des plateformes propulsées par l'IA, la science des données et les sciences cognitives.
             </p>
           </div>
 
@@ -201,17 +201,17 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center mb-12">
             <Badge className="mb-4" variant="secondary">
               <Rocket className="h-3 w-3 mr-1" />
-              Notre Premi\u00e8re Innovation
+              Notre Première Innovation
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-stemflow-intro">
-              STEM FLOW \u2014 Le r\u00e9seau social \u00e9ducatif
+              STEM FLOW — Le réseau social éducatif
             </h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-              STEM FLOW est la premi\u00e8re application d\u00e9velopp\u00e9e par LearnXScience. 
-              Un r\u00e9seau social \u00e9ducatif mobile-first qui combine un feed vid\u00e9o interactif, 
-              des salons communautaires STEM, un syst\u00e8me de gamification, une IA de personnalisation 
-              et des battles entre \u00e9l\u00e8ves et \u00e9coles. STEM FLOW transforme le temps de scrolling 
-              en acquisition de comp\u00e9tences STEM mesurable.
+              STEM FLOW est la première application développée par LearnXScience. 
+              Un réseau social éducatif mobile-first qui combine un feed vidéo interactif, 
+              des salons communautaires STEM, un système de gamification, une IA de personnalisation 
+              et des battles entre élèves et écoles. STEM FLOW transforme le temps de scrolling 
+              en acquisition de compétences STEM mesurable.
             </p>
           </div>
 
@@ -248,7 +248,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-bold mb-2" data-testid="text-numbers-title">
-              L'opportunit\u00e9 africaine en chiffres
+              L'opportunité africaine en chiffres
             </h2>
             <p className="text-muted-foreground">Pourquoi l'Afrique a besoin de LearnXScience maintenant</p>
           </div>
@@ -278,9 +278,9 @@ export default function Home() {
                 Pourquoi LearnXScience ?
               </h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                L'\u00e9ducation traditionnelle ne tient pas compte des usages num\u00e9riques r\u00e9els 
+                L'éducation traditionnelle ne tient pas compte des usages numériques réels 
                 des jeunes, de la personnalisation cognitive, de l'engagement comportemental, 
-                ni de la data comme levier d'am\u00e9lioration.
+                ni de la data comme levier d'amélioration.
               </p>
               <Card className="border-primary/20 bg-primary/5 mb-8">
                 <CardContent className="p-6 flex items-start gap-4">
@@ -288,8 +288,8 @@ export default function Home() {
                     <Zap className="h-5 w-5 text-primary" />
                   </div>
                   <p className="text-lg leading-relaxed font-medium text-foreground">
-                    Pendant que les jeunes passent des heures \u00e0 scroller, le syst\u00e8me \u00e9ducatif 
-                    reste statique. Nous existons pour transformer les usages num\u00e9riques en 
+                    Pendant que les jeunes passent des heures à scroller, le système éducatif 
+                    reste statique. Nous existons pour transformer les usages numériques en 
                     leviers d'apprentissage intelligent.
                   </p>
                 </CardContent>
@@ -322,21 +322,21 @@ export default function Home() {
                     <div className="space-y-4 text-muted-foreground leading-relaxed text-left mt-6">
                       <div className="flex items-start gap-3">
                         <Sparkles className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <p>Chaque minute en ligne peut devenir une opportunit\u00e9 de progression</p>
+                        <p>Chaque minute en ligne peut devenir une opportunité de progression</p>
                       </div>
                       <div className="flex items-start gap-3">
                         <Brain className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                        <p>L'intelligence artificielle peut d\u00e9mocratiser l'excellence acad\u00e9mique</p>
+                        <p>L'intelligence artificielle peut démocratiser l'excellence académique</p>
                       </div>
                       <div className="flex items-start gap-3">
                         <Globe className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                        <p>L'Afrique peut devenir productrice de technologies \u00e9ducatives, pas seulement consommatrice</p>
+                        <p>L'Afrique peut devenir productrice de technologies éducatives, pas seulement consommatrice</p>
                       </div>
                     </div>
                     <div className="grid grid-cols-3 gap-4 text-center mt-8 mb-6 pt-6 border-t">
                       <div>
                         <div className="text-3xl font-bold text-primary">10M+</div>
-                        <div className="text-xs text-muted-foreground">Apprenants cibl\u00e9s d'ici 2030</div>
+                        <div className="text-xs text-muted-foreground">Apprenants ciblés d'ici 2030</div>
                       </div>
                       <div>
                         <div className="text-3xl font-bold text-secondary">54</div>
@@ -349,7 +349,7 @@ export default function Home() {
                     </div>
                     <a href={APP_URL} target="_blank" rel="noopener noreferrer">
                       <Button className="w-full" data-testid="button-try-solution">
-                        D\u00e9couvrir STEM FLOW
+                        Découvrir STEM FLOW
                         <ExternalLink className="ml-2 h-4 w-4" />
                       </Button>
                     </a>
@@ -369,10 +369,10 @@ export default function Home() {
               Avantages
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-advantages-title">
-              Con\u00e7u pour l'Afrique, par l'Afrique
+              Conçu pour l'Afrique, par l'Afrique
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Chaque fonctionnalit\u00e9 de STEM FLOW a \u00e9t\u00e9 pens\u00e9e pour les r\u00e9alit\u00e9s du continent.
+              Chaque fonctionnalité de STEM FLOW a été pensée pour les réalités du continent.
             </p>
           </div>
 
@@ -392,11 +392,11 @@ export default function Home() {
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary via-primary to-primary/90">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6" data-testid="text-cta-title">
-            Construire les technologies \u00e9ducatives de demain
+            Construire les technologies éducatives de demain
           </h2>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
-            LearnXScience d\u00e9veloppe des algorithmes \u00e9ducatifs exportables \u00e0 l'international. 
-            D\u00e9couvrez STEM FLOW, notre premi\u00e8re innovation, et rejoignez le mouvement.
+            LearnXScience développe des algorithmes éducatifs exportables à l'international. 
+            Découvrez STEM FLOW, notre première innovation, et rejoignez le mouvement.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">

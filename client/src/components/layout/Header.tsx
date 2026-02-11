@@ -11,7 +11,7 @@ const navLinks = [
   { href: "/projet", label: "Le Projet" },
   { href: "/application", label: "L'Application" },
   { href: "/vision", label: "Vision & Impact" },
-  { href: "/equipe", label: "L'\u00c9quipe" },
+  { href: "/equipe", label: "L'Équipe" },
   { href: "/partenariats", label: "Partenariats" },
   { href: "/contact", label: "Contact" },
 ];
