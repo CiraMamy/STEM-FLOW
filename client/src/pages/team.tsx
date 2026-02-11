@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import ciraPhoto from "@assets/WhatsApp_Image_2026-02-11_at_18.28.14_1770832210656.jpeg";
+import narcissePhoto from "@assets/WhatsApp_Image_2026-02-11_at_13.55.57_1770832255727.jpeg";
 import {
   Users,
   Linkedin,
@@ -31,6 +32,7 @@ const ceo = {
   initials: "AKN",
   color: "bg-primary",
   icon: Brain,
+  photo: narcissePhoto,
   bio: "Diplômé d'une licence en mathématiques fondamentales de l'Université d'Abomey-Calavi, ATTIOU K. Narcisse évolue à l'intersection des mathématiques appliquées, de l'intelligence artificielle et de la robotique. Son expertise porte particulièrement sur la vision par ordinateur et l'apprentissage automatique, avec une approche orientée recherche et innovation technologique.",
   achievements: [
     "Projet de classification médicale de la myosteatose basé sur YOLOv11, impliquant l'annotation et l'analyse de plusieurs milliers d'images ainsi que le fine-tuning avancé du modèle pour optimiser la détection automatique.",
@@ -162,6 +164,7 @@ export default function Team() {
             <CardContent className="p-0">
               <div className="bg-primary p-8 text-center rounded-t-xl">
                 <Avatar className="h-28 w-28 mx-auto mb-4 border-4 border-primary-foreground/20">
+                  <AvatarImage src={ceo.photo} alt={ceo.name} className="object-cover" />
                   <AvatarFallback className="text-3xl font-bold bg-primary-foreground/20 text-primary-foreground">
                     {ceo.initials}
                   </AvatarFallback>
