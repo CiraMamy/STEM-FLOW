@@ -2,7 +2,8 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import ciraPhoto from "@assets/WhatsApp_Image_2026-02-11_at_18.28.14_1770832210656.jpeg";
 import {
   Users,
   Linkedin,
@@ -58,6 +59,7 @@ const teamMembers = [
     initials: "CMS",
     color: "bg-accent",
     icon: Lightbulb,
+    photo: ciraPhoto,
     bio: "De formation en mathématiques appliquées et informatique (Master 2 en modélisation et calcul scientifique) avec une spécialisation en Big Data, Cira Mamy Sow s'engage activement pour la promotion des STEM au Sénégal et en Afrique. Formée au sein du programme FORCE-N, elle a développé des compétences en création de contenus de vulgarisation scientifique et en conception d'évaluations académiques. Elle dispense également des cours d'éducation financière via la communauté 60 Crédits. L'idée de STEM FLOW est née lors d'un bootcamp en intelligence artificielle organisé en partenariat avec le PNUD et UNIPOD Guinée. Aujourd'hui, elle coordonne STEM FLOW avec l'ambition de transformer les usages numériques en leviers d'apprentissage durable.",
     skills: ["Mathématiques appliquées", "Big Data", "Vulgarisation scientifique", "Pédagogie STEM", "Éducation financière"],
     linkedin: "#",
@@ -248,6 +250,9 @@ export default function Team() {
                 <CardContent className="p-0">
                   <div className={`${member.color} p-8 text-center rounded-t-xl`}>
                     <Avatar className="h-24 w-24 mx-auto mb-4 border-4 border-primary-foreground/20">
+                      {member.photo && (
+                        <AvatarImage src={member.photo} alt={member.name} className="object-cover" />
+                      )}
                       <AvatarFallback className="text-2xl font-bold bg-primary-foreground/20 text-primary-foreground">
                         {member.initials}
                       </AvatarFallback>
