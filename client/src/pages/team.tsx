@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import ciraPhoto from "@assets/WhatsApp_Image_2026-02-11_at_18.28.14_1770832210656.jpeg";
 import narcissePhoto from "@assets/WhatsApp_Image_2026-02-11_at_13.55.57_1770832255727.jpeg";
+import souleymanePhoto from "@assets/WhatsApp_Image_2026-02-10_at_21.40.43_1770832294047.jpeg";
 import {
   Users,
   Linkedin,
@@ -50,6 +51,7 @@ const teamMembers = [
     initials: "SMS",
     color: "bg-primary",
     icon: Code,
+    photo: souleymanePhoto,
     bio: "Ingénieur en génie logiciel, éducateur numérique et leader communautaire, Souleymane est le fondateur de Code For Chad, la communauté des développeurs tchadiens. Formateur en technologies et innovation éducative, il possède une expérience significative dans la formation des jeunes aux compétences numériques, la coordination de communautés éducatives et technologiques, et la conception de projets éducatifs axés sur l'employabilité et l'entrepreneuriat. Récemment en partenariat avec l'Ambassade des États-Unis au Tchad dans le domaine STEM et le codage informatique, il accompagne les apprenants, étudiants et autodidactes dans leur parcours académique et professionnel.",
     skills: ["Génie Logiciel", "Formation STEM", "Leadership communautaire", "Innovation éducative", "Entrepreneuriat"],
     linkedin: "#",
