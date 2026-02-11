@@ -1,5 +1,6 @@
 import { Link } from "wouter";
-import { Mail, Linkedin, Twitter, Instagram, ExternalLink, Beaker } from "lucide-react";
+import { Mail, Linkedin, Twitter, Instagram, ExternalLink } from "lucide-react";
+import learnxLogo from "@assets/WhatsApp_Image_2026-02-11_at_19.45.03_1770835532970.jpeg";
 import { Button } from "@/components/ui/button";
 
 const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
@@ -24,12 +25,10 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2" data-testid="footer-logo">
-              <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary">
-                <Beaker className="h-5 w-5 text-primary-foreground" />
-              </div>
+              <img src={learnxLogo} alt="LearnXScience" className="h-10 w-auto" />
               <div className="flex flex-col leading-none">
                 <span className="text-base font-bold tracking-tight">
-                  Learn<span className="text-primary">X</span>Science
+                  <span className="text-primary">Learn</span><span className="text-primary font-extrabold">X</span><span className="text-secondary">Science</span>
                 </span>
                 <span className="text-[10px] text-muted-foreground tracking-wide">STEM FLOW</span>
               </div>

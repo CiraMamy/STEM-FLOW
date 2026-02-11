@@ -17,9 +17,12 @@ import {
   CheckCircle2,
   Sparkles,
   Rocket,
-  Beaker,
   Brain,
   BarChart3,
+  Sprout,
+  Settings,
+  Globe2,
+  Crosshair,
 } from "lucide-react";
 
 const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
@@ -118,12 +121,58 @@ const sdgs = [
   { number: 17, title: "Partenariats", description: "Renforcer les partenariats pour le développement" },
 ];
 
-const milestones = [
-  { target: "2025", goal: "1 000 bêta-testeurs actifs sur STEM FLOW" },
-  { target: "2026", goal: "100 000 utilisateurs en Afrique de l'Ouest" },
-  { target: "2027", goal: "1 million d'apprenants actifs" },
-  { target: "2028", goal: "Présence dans 20 pays africains" },
-  { target: "2030", goal: "10 millions d'apprenants — algorithmes exportables à l'international" },
+const roadmapPhases = [
+  {
+    icon: Sprout,
+    phase: "Phase 1",
+    title: "Lancement & Validation",
+    timeline: "0 - 6 mois",
+    color: "text-secondary",
+    bgColor: "bg-secondary/10",
+    borderColor: "border-secondary/30",
+    steps: [
+      "Déploiement de la version MVP de la plateforme",
+      "Intégration des premiers modules STEM interactifs",
+      "Tests utilisateurs avec élèves, étudiants et jeunes professionnels",
+      "Collecte de feedback et amélioration continue",
+      "Mise en place des premiers partenariats éducatifs",
+    ],
+    result: "Validation du produit, premiers utilisateurs actifs, premiers indicateurs d'impact.",
+  },
+  {
+    icon: Settings,
+    phase: "Phase 2",
+    title: "Accélération & Croissance",
+    timeline: "6 - 18 mois",
+    color: "text-primary",
+    bgColor: "bg-primary/10",
+    borderColor: "border-primary/30",
+    steps: [
+      "Déploiement complet de la plateforme (web & mobile)",
+      "Intégration d'outils intelligents (IA, suivi personnalisé, analytics)",
+      "Développement d'un catalogue élargi de contenus STEM",
+      "Expansion dans plusieurs pays africains",
+      "Structuration du modèle économique (B2C, B2B, partenariats institutionnels)",
+    ],
+    result: "Croissance rapide des utilisateurs et consolidation du positionnement régional.",
+  },
+  {
+    icon: Globe2,
+    phase: "Phase 3",
+    title: "Impact Continental",
+    timeline: "18 - 36 mois",
+    color: "text-accent",
+    bgColor: "bg-accent/10",
+    borderColor: "border-accent/30",
+    steps: [
+      "Accessibilité dans les zones rurales et sous-connectées",
+      "Déploiement de programmes certifiants",
+      "Partenariats stratégiques avec institutions, ONG et entreprises",
+      "Création d'un écosystème d'innovation (communauté, hackathons, incubations)",
+      "Mesure et reporting d'impact aligné sur les ODD",
+    ],
+    result: "Des milliers (puis millions) de jeunes formés aux compétences STEM.",
+  },
 ];
 
 const ambitions = [
@@ -143,7 +192,7 @@ export default function Vision() {
         <div className="container relative mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-6" variant="outline" data-testid="badge-vision">
-              <Beaker className="h-3 w-3 mr-1" />
+              <Sparkles className="h-3 w-3 mr-1" />
               LearnXScience — Vision & Impact
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-testid="text-vision-title">
@@ -338,30 +387,73 @@ export default function Vision() {
 
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
               <Badge className="mb-4" variant="secondary">
                 <Rocket className="h-3 w-3 mr-1" />
-                Objectifs de Croissance
+                Notre Feuille de Route
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-milestones-title">
-                Nos jalons vers 10 millions d'apprenants
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-roadmap-title">
+                De la validation au déploiement continental
               </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                Une stratégie en trois phases pour construire, accélérer et impacter 
+                l'éducation STEM à travers l'Afrique.
+              </p>
             </div>
 
-            <div className="space-y-4">
-              {milestones.map((milestone, index) => (
-                <div key={index} className="flex items-center gap-4 p-4 rounded-lg bg-background border">
-                  <Badge variant={index === 0 ? "default" : "secondary"} className="text-sm font-bold min-w-[80px] justify-center">
-                    {milestone.target}
-                  </Badge>
-                  <div className="flex-1 flex items-center gap-3">
-                    <CheckCircle2 className={`h-5 w-5 flex-shrink-0 ${index === 0 ? "text-primary" : "text-muted-foreground/40"}`} />
-                    <span className="text-sm">{milestone.goal}</span>
-                  </div>
-                </div>
+            <div className="space-y-8">
+              {roadmapPhases.map((phase, index) => (
+                <Card key={index} className={`border ${phase.borderColor} overflow-visible`} data-testid={`roadmap-phase-${index}`}>
+                  <CardContent className="p-6 md:p-8">
+                    <div className="flex flex-col md:flex-row md:items-start gap-6">
+                      <div className="flex-shrink-0 flex flex-col items-center gap-2">
+                        <div className={`w-14 h-14 rounded-xl ${phase.bgColor} flex items-center justify-center`}>
+                          <phase.icon className={`h-7 w-7 ${phase.color}`} />
+                        </div>
+                        <Badge variant="outline" className="text-xs">
+                          {phase.timeline}
+                        </Badge>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold mb-1">
+                          <span className={phase.color}>{phase.phase}</span> — {phase.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground mb-4">
+                          Objectif : {phase.title === "Lancement & Validation" ? "Construire une base solide et valider le marché" : phase.title === "Accélération & Croissance" ? "Structurer et scaler la solution" : "Devenir un acteur majeur de l'éducation STEM en Afrique"}
+                        </p>
+                        <ul className="space-y-2 mb-4">
+                          {phase.steps.map((step, stepIndex) => (
+                            <li key={stepIndex} className="flex items-start gap-3 text-sm">
+                              <CheckCircle2 className={`h-4 w-4 ${phase.color} flex-shrink-0 mt-0.5`} />
+                              <span>{step}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <div className={`${phase.bgColor} rounded-md p-3`}>
+                          <p className="text-sm">
+                            <span className="font-semibold">Résultat attendu :</span>{" "}
+                            <span className="text-muted-foreground">{phase.result}</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
+
+            <Card className="mt-8 border-primary/20 bg-primary/5">
+              <CardContent className="p-6 md:p-8 text-center">
+                <Crosshair className="h-8 w-8 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-3">Vision Long Terme</h3>
+                <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                  Faire de STEM FLOW la plateforme de référence pour la démocratisation 
+                  des sciences en Afrique, en formant une génération capable d'innover 
+                  et de résoudre les défis du continent.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

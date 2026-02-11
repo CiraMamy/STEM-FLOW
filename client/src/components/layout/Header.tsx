@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, ExternalLink, Beaker } from "lucide-react";
+import { Menu, ExternalLink } from "lucide-react";
+import learnxLogo from "@assets/WhatsApp_Image_2026-02-11_at_19.45.03_1770835532970.jpeg";
 
 const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
 
@@ -24,12 +25,10 @@ export function Header() {
     <header className="sticky top-0 z-[9999] w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4">
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary" data-testid="logo-icon">
-            <Beaker className="h-5 w-5 text-primary-foreground" />
-          </div>
+          <img src={learnxLogo} alt="LearnXScience" className="h-10 w-auto" data-testid="logo-image" />
           <div className="flex flex-col leading-none">
             <span className="text-base font-bold tracking-tight" data-testid="logo-text">
-              Learn<span className="text-primary">X</span>Science
+              <span className="text-primary">Learn</span><span className="text-primary font-extrabold">X</span><span className="text-secondary">Science</span>
             </span>
             <span className="text-[10px] text-muted-foreground tracking-wide">STEM FLOW</span>
           </div>
