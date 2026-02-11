@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, ExternalLink } from "lucide-react";
-import stemFlowLogo from "@assets/a7f9fef0-ccda-4856-80a4-17e64300d515_(1)_1770832424837.png";
+import { Menu, ExternalLink, Beaker } from "lucide-react";
 
 const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
 
@@ -25,7 +24,9 @@ export function Header() {
     <header className="sticky top-0 z-[9999] w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4">
         <Link href="/" className="flex items-center gap-2">
-          <img src={stemFlowLogo} alt="STEM FLOW" className="h-10 w-auto" data-testid="logo-image" />
+          <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary" data-testid="logo-icon">
+            <Beaker className="h-5 w-5 text-primary-foreground" />
+          </div>
           <div className="flex flex-col leading-none">
             <span className="text-base font-bold tracking-tight" data-testid="logo-text">
               Learn<span className="text-primary">X</span>Science
