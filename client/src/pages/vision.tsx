@@ -17,6 +17,9 @@ import {
   CheckCircle2,
   Sparkles,
   Rocket,
+  Beaker,
+  Brain,
+  BarChart3,
 } from "lucide-react";
 
 const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
@@ -25,17 +28,35 @@ const visionPoints = [
   {
     icon: Eye,
     title: "Notre Vision",
-    description: "Un continent o\u00f9 chaque jeune africain a acc\u00e8s \u00e0 une \u00e9ducation STEM de classe mondiale depuis son smartphone, quel que soit son pays, sa langue ou son niveau de revenus.",
+    description: "Construire une nouvelle g\u00e9n\u00e9ration d'IA \u00e9ducatives africaines, capables de comprendre les profils cognitifs des apprenants, d'adapter dynamiquement les contenus, de mesurer la progression r\u00e9elle et de cr\u00e9er des environnements d'apprentissage sociaux et motivants.",
   },
   {
     icon: Target,
     title: "Notre Mission",
-    description: "D\u00e9mocratiser l'apprentissage STEM en Afrique en le rendant engageant gr\u00e2ce \u00e0 la gamification, accessible gr\u00e2ce au mobile-first, et personnalis\u00e9 gr\u00e2ce \u00e0 l'intelligence artificielle.",
+    description: "D\u00e9velopper des syst\u00e8mes d'intelligence artificielle appliqu\u00e9s \u00e0 l'\u00e9ducation. Concevoir des algorithmes \u00e9ducatifs capables de personnaliser l'apprentissage, d'analyser les progr\u00e8s et de transformer l'engagement num\u00e9rique en progression acad\u00e9mique r\u00e9elle.",
   },
   {
     icon: Heart,
     title: "Nos Valeurs",
     description: "Excellence acad\u00e9mique, inclusivit\u00e9 totale, innovation continue, impact social mesurable et collaboration panafricaine guident chacune de nos d\u00e9cisions.",
+  },
+];
+
+const whyWeExist = [
+  {
+    icon: Users,
+    title: "Usages num\u00e9riques ignor\u00e9s",
+    description: "L'\u00e9ducation traditionnelle ne tient pas compte des usages num\u00e9riques r\u00e9els des jeunes. Les \u00e9tudiants passent des heures \u00e0 scroller pendant que le syst\u00e8me \u00e9ducatif reste statique.",
+  },
+  {
+    icon: Brain,
+    title: "Personnalisation cognitive absente",
+    description: "Les m\u00e9thodes classiques ignorent la personnalisation cognitive et l'engagement comportemental comme leviers d'apprentissage.",
+  },
+  {
+    icon: BarChart3,
+    title: "La data sous-exploit\u00e9e",
+    description: "Les donn\u00e9es d'apprentissage ne sont pas utilis\u00e9es comme levier d'am\u00e9lioration. La data peut r\u00e9volutionner la compr\u00e9hension des parcours \u00e9ducatifs.",
   },
 ];
 
@@ -98,11 +119,18 @@ const sdgs = [
 ];
 
 const milestones = [
-  { target: "2025", goal: "1 000 b\u00eata-testeurs actifs" },
+  { target: "2025", goal: "1 000 b\u00eata-testeurs actifs sur STEM FLOW" },
   { target: "2026", goal: "100 000 utilisateurs en Afrique de l'Ouest" },
   { target: "2027", goal: "1 million d'apprenants actifs" },
   { target: "2028", goal: "Pr\u00e9sence dans 20 pays africains" },
-  { target: "2030", goal: "10 millions d'apprenants dans les 54 pays" },
+  { target: "2030", goal: "10 millions d'apprenants \u2014 algorithmes exportables \u00e0 l'international" },
+];
+
+const ambitions = [
+  "Devenir un acteur majeur des technologies \u00e9ducatives intelligentes en Afrique",
+  "D\u00e9velopper des algorithmes \u00e9ducatifs exportables \u00e0 l'international",
+  "Faire de l'Afrique une productrice de technologies \u00e9ducatives, pas seulement consommatrice",
+  "Construire un \u00e9cosyst\u00e8me EdTech africain de r\u00e9f\u00e9rence mondiale",
 ];
 
 export default function Vision() {
@@ -115,17 +143,19 @@ export default function Vision() {
         <div className="container relative mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-6" variant="outline" data-testid="badge-vision">
-              <Globe className="h-3 w-3 mr-1" />
-              Vision & Impact
+              <Beaker className="h-3 w-3 mr-1" />
+              LearnXScience \u2014 Vision & Impact
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-testid="text-vision-title">
-              Construire l'avenir{" "}
-              <span className="text-primary">STEM</span> de l'Afrique
+              Construire les{" "}
+              <span className="text-primary">technologies \u00e9ducatives</span>{" "}
+              intelligentes de demain
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              STEM FLOW n'est pas qu'une application. C'est un mouvement pour 
-              transformer l'\u00e9ducation et lib\u00e9rer le potentiel de millions de jeunes africains, 
-              en contribuant directement aux Objectifs de D\u00e9veloppement Durable des Nations Unies.
+              LearnXScience existe pour transformer les usages num\u00e9riques en leviers 
+              d'apprentissage intelligent. Notre ambition : devenir un acteur majeur 
+              des technologies \u00e9ducatives intelligentes en Afrique et d\u00e9velopper 
+              des algorithmes \u00e9ducatifs exportables \u00e0 l'international.
             </p>
           </div>
         </div>
@@ -155,6 +185,54 @@ export default function Vision() {
 
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge className="mb-4" variant="secondary">
+                <Lightbulb className="h-3 w-3 mr-1" />
+                Notre Raison d'Exister
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-why-exist-title">
+                Pourquoi LearnXScience existe
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                Pendant que les jeunes passent des heures \u00e0 scroller, le syst\u00e8me \u00e9ducatif reste statique. 
+                Nous existons pour combler ce foss\u00e9.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {whyWeExist.map((item, index) => (
+                <Card key={index} className="border-0 shadow-sm hover-elevate">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 rounded-lg bg-destructive/10 flex items-center justify-center mb-4">
+                      <item.icon className="h-6 w-6 text-destructive" />
+                    </div>
+                    <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <Card className="mt-8 border-primary/20 bg-primary/5">
+              <CardContent className="p-8">
+                <h3 className="font-bold text-xl mb-6 text-center">Notre Ambition</h3>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {ambitions.map((ambition, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <Rocket className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm">{ambition}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 lg:py-28 bg-muted/30">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4" variant="secondary">
               Triple Impact
@@ -163,8 +241,8 @@ export default function Vision() {
               Un impact \u00e0 plusieurs dimensions
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              STEM FLOW g\u00e9n\u00e8re un impact positif mesurable sur l'\u00e9ducation, 
-              la soci\u00e9t\u00e9 et l'\u00e9conomie africaines.
+              LearnXScience, \u00e0 travers STEM FLOW, g\u00e9n\u00e8re un impact positif mesurable 
+              sur l'\u00e9ducation, la soci\u00e9t\u00e9 et l'\u00e9conomie africaines.
             </p>
           </div>
 
@@ -229,7 +307,7 @@ export default function Vision() {
                 Notre contribution aux ODD de l'ONU
               </h2>
               <p className="text-muted-foreground text-lg">
-                STEM FLOW s'inscrit dans l'Agenda 2063 de l'Union Africaine et contribue 
+                LearnXScience s'inscrit dans l'Agenda 2063 de l'Union Africaine et contribue 
                 directement \u00e0 6 Objectifs de D\u00e9veloppement Durable.
               </p>
             </div>
@@ -291,7 +369,7 @@ export default function Vision() {
                 <div className="text-center mb-8">
                   <Sparkles className="h-10 w-10 text-primary mx-auto mb-4" />
                   <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                    L'Afrique, terre d'avenir STEM
+                    L'Afrique, terre d'avenir pour l'EdTech
                   </h2>
                 </div>
                 <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
@@ -301,17 +379,17 @@ export default function Vision() {
                     \u00e0 condition de pouvoir former cette jeunesse aux comp\u00e9tences du futur.
                   </p>
                   <p>
-                    STEM FLOW s'inscrit dans l'Agenda 2063 de l'Union Africaine et 
+                    LearnXScience s'inscrit dans l'Agenda 2063 de l'Union Africaine et 
                     contribue directement aux Objectifs de D\u00e9veloppement Durable, 
                     notamment l'ODD 4 (\u00c9ducation de qualit\u00e9), l'ODD 5 (\u00c9galit\u00e9 des genres) 
                     et l'ODD 9 (Innovation).
                   </p>
                   <p>
-                    En formant les scientifiques, ing\u00e9nieurs et innovateurs de demain, 
-                    nous participons \u00e0 la construction d'une Afrique plus prosp\u00e8re, 
-                    plus r\u00e9siliente et plus connect\u00e9e au reste du monde. Notre approche 
-                    mobile-first permet de toucher des populations traditionnellement 
-                    exclues des syst\u00e8mes \u00e9ducatifs formels.
+                    En formant les scientifiques, ing\u00e9nieurs et innovateurs de demain 
+                    \u00e0 travers STEM FLOW, nous participons \u00e0 la construction d'une Afrique 
+                    plus prosp\u00e8re, plus r\u00e9siliente et plus connect\u00e9e au reste du monde.
+                    Notre approche mobile-first permet de toucher des populations 
+                    traditionnellement exclues des syst\u00e8mes \u00e9ducatifs formels.
                   </p>
                 </div>
               </CardContent>
@@ -323,7 +401,7 @@ export default function Vision() {
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            D\u00e9couvrez l'\u00e9quipe derri\u00e8re STEM FLOW
+            D\u00e9couvrez l'\u00e9quipe derri\u00e8re LearnXScience
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg">
             Des passionn\u00e9s d'\u00e9ducation et de technologie, unis par une vision commune 
@@ -338,7 +416,7 @@ export default function Vision() {
             </Link>
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="text-base px-8" data-testid="button-app-vision">
-                Tester l'Application
+                Tester STEM FLOW
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
             </a>

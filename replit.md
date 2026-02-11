@@ -1,12 +1,18 @@
-# STEM FLOW - Educational STEM Platform
+# LearnXScience - STEM FLOW Platform
 
 ## Overview
 
-STEM FLOW is an educational social network platform focused on STEM learning in Africa. The project combines short-form video content (TikTok-style), community features (Discord-style), gamification, and AI personalization to make STEM education engaging and accessible via mobile devices.
+**LearnXScience** is a technology company specializing in the development of educational digital solutions and intelligent learning algorithms. The company develops AI-powered educational platforms using artificial intelligence, data science, and cognitive sciences.
 
-The website serves as the official showcase for the STEM FLOW project, providing information about the platform, the team, vision, and partnership opportunities. It includes a waitlist signup system and contact form for potential partners and investors.
+**STEM FLOW** is LearnXScience's first application — an educational social network focused on STEM learning in Africa. It combines short-form video content (TikTok-style), community features (Discord-style), gamification, and AI personalization to make STEM education engaging and accessible via mobile devices.
+
+The website serves as the official corporate showcase for LearnXScience and its flagship product STEM FLOW, providing information about the company, the platform, the team, vision, and partnership opportunities. It includes a waitlist signup system and contact form for potential partners and investors.
+
+**Company relationship:** LearnXScience → STEM FLOW (like OpenAI → ChatGPT)
 
 **Slogan:** Scroll. Learn. Level Up.
+**Live App URL:** https://attached-assets-souleymanemaha2.replit.app
+**Partners:** Code For Chad (codeforchad.net), 60 Crédits
 
 ## User Preferences
 

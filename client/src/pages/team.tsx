@@ -106,17 +106,17 @@ export default function Team() {
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-6" variant="outline" data-testid="badge-team">
               <Users className="h-3 w-3 mr-1" />
-              L'\u00c9quipe
+              LearnXScience \u2014 L'\u00c9quipe
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-testid="text-team-title">
-              Les visages derri\u00e8re{" "}
-              <span className="text-primary">STEM FLOW</span>
+              Les fondateurs de{" "}
+              <span className="text-primary">LearnXScience</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               N\u00e9e lors d'un bootcamp en intelligence artificielle organis\u00e9 en partenariat avec le PNUD 
-              et UNIPOD Guin\u00e9e, STEM FLOW est port\u00e9e par une \u00e9quipe panafricaine passionn\u00e9e 
+              et UNIPOD Guin\u00e9e, LearnXScience est fond\u00e9e par une \u00e9quipe panafricaine passionn\u00e9e 
               qui unit ing\u00e9nierie logicielle, math\u00e9matiques appliqu\u00e9es et \u00e9ducation num\u00e9rique 
-              pour rendre le savoir STEM accessible \u00e0 tous.
+              pour construire les technologies \u00e9ducatives intelligentes de demain.
             </p>
           </div>
         </div>
@@ -264,7 +264,7 @@ export default function Team() {
                 Nous recrutons des talents
               </h2>
               <p className="text-muted-foreground text-lg">
-                STEM FLOW grandit et cherche des personnes passionn\u00e9es pour rejoindre l'aventure.
+                LearnXScience grandit et cherche des personnes passionn\u00e9es pour rejoindre l'aventure.
               </p>
             </div>
 
@@ -310,7 +310,7 @@ export default function Team() {
             </Link>
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="text-base px-8 border-primary-foreground/30 text-primary-foreground bg-primary-foreground/5">
-                Tester l'App
+                Tester STEM FLOW
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
             </a>

@@ -128,7 +128,7 @@ export default function Application() {
             <div>
               <Badge className="mb-6" variant="outline" data-testid="badge-app">
                 <Smartphone className="h-3 w-3 mr-1" />
-                L'Application STEM FLOW
+                LearnXScience \u2014 STEM FLOW
               </Badge>
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-testid="text-app-title">
                 L'apprentissage STEM dans ta{" "}

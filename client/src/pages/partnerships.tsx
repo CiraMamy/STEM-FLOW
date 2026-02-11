@@ -113,15 +113,15 @@ export default function Partnerships() {
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-6" variant="outline" data-testid="badge-partnerships">
               <Handshake className="h-3 w-3 mr-1" />
-              Partenariats & Investissement
+              LearnXScience \u2014 Partenariats & Investissement
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-testid="text-partnerships-title">
-              Construisons ensemble l'avenir de l'
-              <span className="text-primary">\u00e9ducation STEM</span> en Afrique
+              Construisons ensemble l'avenir des{" "}
+              <span className="text-primary">technologies \u00e9ducatives</span> en Afrique
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              STEM FLOW recherche des partenaires strat\u00e9giques pour acc\u00e9l\u00e9rer 
-              son d\u00e9veloppement et toucher 10 millions d'apprenants d'ici 2030. 
+              LearnXScience recherche des partenaires strat\u00e9giques pour acc\u00e9l\u00e9rer 
+              le d\u00e9ploiement de STEM FLOW et toucher 10 millions d'apprenants d'ici 2030. 
               Incubateurs, investisseurs, institutions \u00e9ducatives : rejoignez le mouvement.
             </p>
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">
@@ -173,7 +173,7 @@ export default function Partnerships() {
               Pour Qui ?
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-audiences-title">
-              Pourquoi s'associer \u00e0 STEM FLOW ?
+              Pourquoi s'associer \u00e0 LearnXScience ?
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               Des avantages concrets selon votre profil de partenaire.
@@ -407,7 +407,7 @@ export default function Partnerships() {
       <section className="py-20 lg:py-28 bg-gradient-to-br from-secondary via-secondary to-secondary/90">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary-foreground mb-6">
-            Collaborer avec STEM FLOW
+            Collaborer avec LearnXScience
           </h2>
           <p className="text-secondary-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
             Que vous soyez incubateur, investisseur, institution \u00e9ducative ou entreprise tech, 

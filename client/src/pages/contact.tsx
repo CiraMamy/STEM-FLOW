@@ -64,10 +64,10 @@ const contactTypes = [
 ];
 
 const socialLinks = [
-  { icon: Mail, label: "Email", href: "mailto:contact@stemflow.africa", value: "contact@stemflow.africa" },
-  { icon: Linkedin, label: "LinkedIn", href: "#", value: "linkedin.com/company/stemflow" },
-  { icon: Twitter, label: "Twitter / X", href: "#", value: "@stemflow_africa" },
-  { icon: Instagram, label: "Instagram", href: "#", value: "@stemflow.africa" },
+  { icon: Mail, label: "Email", href: "mailto:contact@learnxscience.com", value: "contact@learnxscience.com" },
+  { icon: Linkedin, label: "LinkedIn", href: "#", value: "linkedin.com/company/learnxscience" },
+  { icon: Twitter, label: "Twitter / X", href: "#", value: "@learnxscience" },
+  { icon: Instagram, label: "Instagram", href: "#", value: "@learnxscience" },
 ];
 
 const faqs = [
@@ -128,14 +128,14 @@ export default function Contact() {
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-6" variant="outline" data-testid="badge-contact">
               <Mail className="h-3 w-3 mr-1" />
-              Contact & Collaboration
+              LearnXScience \u2014 Contact & Collaboration
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-testid="text-contact-title">
               Rejoignez l'aventure{" "}
-              <span className="text-primary">STEM FLOW</span>
+              <span className="text-primary">LearnXScience</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Que vous souhaitiez tester l'application, devenir partenaire, investir, 
+              Que vous souhaitiez tester STEM FLOW, devenir partenaire, investir, 
               rejoindre l'\u00e9quipe ou simplement en savoir plus, nous serions ravis d'\u00e9changer avec vous.
             </p>
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">

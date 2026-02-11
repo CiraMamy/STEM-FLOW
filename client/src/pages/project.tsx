@@ -95,16 +95,16 @@ export default function Project() {
           <div className="max-w-3xl">
             <Badge className="mb-6" variant="outline" data-testid="badge-project">
               <Target className="h-3 w-3 mr-1" />
-              Le Projet
+              LearnXScience \u2014 Le Projet
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-testid="text-project-title">
-              STEM FLOW : L'\u00e9ducation STEM{" "}
-              <span className="text-primary">r\u00e9invent\u00e9e</span> pour l'Afrique
+              STEM FLOW : la premi\u00e8re{" "}
+              <span className="text-primary">innovation</span> de LearnXScience
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Nous croyons que chaque jeune africain m\u00e9rite d'avoir acc\u00e8s \u00e0 une \u00e9ducation 
-              STEM de classe mondiale. STEM FLOW combine les codes des r\u00e9seaux sociaux, 
-              la puissance de l'IA et la gamification pour rendre l'apprentissage irr\u00e9sistible.
+              STEM FLOW est la premi\u00e8re application d\u00e9velopp\u00e9e par LearnXScience. 
+              Un r\u00e9seau social \u00e9ducatif mobile-first qui combine les codes des r\u00e9seaux sociaux, 
+              la puissance de nos algorithmes d'IA et la gamification pour rendre l'apprentissage irr\u00e9sistible.
             </p>
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">
               <Button size="lg" data-testid="button-try-project">
@@ -294,10 +294,10 @@ export default function Project() {
       <section className="py-20 lg:py-28 bg-gradient-to-br from-secondary via-secondary to-secondary/90">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary-foreground mb-6">
-            D\u00e9couvrez l'application STEM FLOW
+            D\u00e9couvrez STEM FLOW par LearnXScience
           </h2>
           <p className="text-secondary-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
-            Testez d\u00e8s maintenant notre application et explorez toutes les fonctionnalit\u00e9s.
+            Testez d\u00e8s maintenant notre premi\u00e8re application et explorez toutes les fonctionnalit\u00e9s.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">

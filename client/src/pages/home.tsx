@@ -21,6 +21,9 @@ import {
   GraduationCap,
   BarChart3,
   Shield,
+  Beaker,
+  Database,
+  Cpu,
 } from "lucide-react";
 
 const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
@@ -92,6 +95,24 @@ const advantages = [
   { icon: GraduationCap, text: "Certifications reconnues par nos partenaires \u00e9ducatifs" },
 ];
 
+const companyPillars = [
+  {
+    icon: Brain,
+    title: "Intelligence Artificielle",
+    description: "Algorithmes \u00e9ducatifs capables de personnaliser l'apprentissage et d'analyser les progr\u00e8s en temps r\u00e9el.",
+  },
+  {
+    icon: Database,
+    title: "Science des Donn\u00e9es",
+    description: "Analyse comportementale et cognitive pour optimiser les parcours d'apprentissage de chaque apprenant.",
+  },
+  {
+    icon: Cpu,
+    title: "Sciences Cognitives",
+    description: "Mod\u00e8les d'engagement inspir\u00e9s des neurosciences pour maximiser la r\u00e9tention et la compr\u00e9hension.",
+  },
+];
+
 export default function Home() {
   return (
     <div className="flex flex-col">
@@ -103,31 +124,31 @@ export default function Home() {
         <div className="container relative mx-auto px-4 py-20 lg:py-32">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6" variant="outline" data-testid="badge-hero">
-              <Sparkles className="h-3 w-3 mr-1" />
-              Le 1er R\u00e9seau Social \u00c9ducatif STEM d'Afrique
+              <Beaker className="h-3 w-3 mr-1" />
+              LearnXScience \u2014 Technologies \u00c9ducatives Intelligentes
             </Badge>
             
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6" data-testid="text-hero-title">
-              Transformer le{" "}
-              <span className="text-primary">scroll</span> en{" "}
-              <span className="text-secondary">apprentissage</span>{" "}
-              <span className="text-accent">STEM</span>
+              Transformer l'engagement{" "}
+              <span className="text-primary">num\u00e9rique</span> en{" "}
+              <span className="text-secondary">progression</span>{" "}
+              <span className="text-accent">acad\u00e9mique</span>
             </h1>
             
-            <p className="text-2xl md:text-3xl font-semibold text-primary mb-6" data-testid="text-slogan">
-              Scroll. Learn. Level Up.
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6 leading-relaxed">
+              <span className="font-semibold text-foreground">LearnXScience</span> d\u00e9veloppe des syst\u00e8mes d'intelligence artificielle 
+              appliqu\u00e9s \u00e0 l'\u00e9ducation. Nous concevons des algorithmes \u00e9ducatifs capables de personnaliser 
+              l'apprentissage, d'analyser les progr\u00e8s et de transformer l'engagement num\u00e9rique en progression acad\u00e9mique r\u00e9elle.
             </p>
-            
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-              STEM FLOW transforme chaque moment de scroll en opportunit\u00e9 d'apprentissage. 
-              Sciences, technologie, ing\u00e9nierie et math\u00e9matiques \u00e0 travers une exp\u00e9rience 
-              mobile-first, ludique et personnalis\u00e9e par l'IA, con\u00e7ue pour la jeunesse africaine.
+
+            <p className="text-2xl md:text-3xl font-semibold text-primary mb-8" data-testid="text-slogan">
+              Scroll. Learn. Level Up.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={APP_URL} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="text-base px-8" data-testid="button-try-app">
-                  Tester l'Application
+                  D\u00e9couvrir STEM FLOW
                   <ExternalLink className="ml-2 h-5 w-5" />
                 </Button>
               </a>
@@ -141,21 +162,32 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-20 bg-muted/30">
+      <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold mb-2" data-testid="text-numbers-title">
-              L'opportunit\u00e9 africaine en chiffres
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <Badge className="mb-4" variant="outline">
+              <Beaker className="h-3 w-3 mr-1" />
+              Notre Expertise
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-expertise-title">
+              \u00c0 l'intersection de l'IA, des maths et de la p\u00e9dagogie
             </h2>
-            <p className="text-muted-foreground">Pourquoi l'Afrique a besoin de STEM FLOW maintenant</p>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              LearnXScience est une entreprise technologique sp\u00e9cialis\u00e9e dans le d\u00e9veloppement 
+              de solutions num\u00e9riques \u00e9ducatives et d'algorithmes d'apprentissage intelligents. 
+              Nous concevons des plateformes propuls\u00e9es par l'IA, la science des donn\u00e9es et les sciences cognitives.
+            </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {keyNumbers.map((stat, index) => (
-              <Card key={index} className="border-0 shadow-sm text-center">
-                <CardContent className="p-4">
-                  <stat.icon className="h-6 w-6 text-primary mx-auto mb-2" />
-                  <div className="text-2xl md:text-3xl font-bold text-foreground">{stat.value}</div>
-                  <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {companyPillars.map((pillar, index) => (
+              <Card key={index} className="border-0 shadow-sm hover-elevate">
+                <CardContent className="p-6 text-center">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <pillar.icon className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">{pillar.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{pillar.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -165,16 +197,20 @@ export default function Home() {
 
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-12">
             <Badge className="mb-4" variant="secondary">
-              Les 4 Piliers
+              <Rocket className="h-3 w-3 mr-1" />
+              Notre Premi\u00e8re Innovation
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-pillars-title">
-              Une exp\u00e9rience d'apprentissage compl\u00e8te
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-stemflow-intro">
+              STEM FLOW \u2014 Le r\u00e9seau social \u00e9ducatif
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              STEM FLOW combine les meilleurs outils pour cr\u00e9er un \u00e9cosyst\u00e8me \u00e9ducatif unique, 
-              en s'inspirant des codes des applications que les jeunes utilisent d\u00e9j\u00e0.
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+              STEM FLOW est la premi\u00e8re application d\u00e9velopp\u00e9e par LearnXScience. 
+              Un r\u00e9seau social \u00e9ducatif mobile-first qui combine un feed vid\u00e9o interactif, 
+              des salons communautaires STEM, un syst\u00e8me de gamification, une IA de personnalisation 
+              et des battles entre \u00e9l\u00e8ves et \u00e9coles. STEM FLOW transforme le temps de scrolling 
+              en acquisition de comp\u00e9tences STEM mesurable.
             </p>
           </div>
 
@@ -195,24 +231,59 @@ export default function Home() {
               </Card>
             ))}
           </div>
+
+          <div className="text-center mt-10">
+            <a href={APP_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="text-base px-8" data-testid="button-try-stemflow">
+                Tester STEM FLOW
+                <ExternalLink className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+          </div>
         </div>
       </section>
 
-      <section className="py-20 lg:py-28 bg-muted/30">
+      <section className="py-16 lg:py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2" data-testid="text-numbers-title">
+              L'opportunit\u00e9 africaine en chiffres
+            </h2>
+            <p className="text-muted-foreground">Pourquoi l'Afrique a besoin de LearnXScience maintenant</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {keyNumbers.map((stat, index) => (
+              <Card key={index} className="border-0 shadow-sm text-center">
+                <CardContent className="p-4">
+                  <stat.icon className="h-6 w-6 text-primary mx-auto mb-2" />
+                  <div className="text-2xl md:text-3xl font-bold text-foreground">{stat.value}</div>
+                  <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-4" variant="outline">
                 <Globe className="h-3 w-3 mr-1" />
-                Le D\u00e9fi
+                Notre Raison d'Exister
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-6" data-testid="text-why-title">
-                Pourquoi STEM FLOW ?
+                Pourquoi LearnXScience ?
               </h2>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                L'Afrique poss\u00e8de la population la plus jeune au monde et un potentiel immense, 
-                mais l'acc\u00e8s \u00e0 une \u00e9ducation STEM de qualit\u00e9 reste un d\u00e9fi majeur. 
-                STEM FLOW apporte une solution innovante qui parle le langage de la g\u00e9n\u00e9ration Z.
+              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+                L'\u00e9ducation traditionnelle ne tient pas compte des usages num\u00e9riques r\u00e9els des jeunes, 
+                de la personnalisation cognitive, de l'engagement comportemental, ni de la data 
+                comme levier d'am\u00e9lioration.
+              </p>
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed font-medium text-foreground">
+                Pendant que les jeunes passent des heures \u00e0 scroller, le syst\u00e8me \u00e9ducatif reste statique. 
+                Nous existons pour transformer les usages num\u00e9riques en leviers d'apprentissage intelligent.
               </p>
 
               <div className="space-y-6">
@@ -238,13 +309,22 @@ export default function Home() {
                     <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
                       <Sparkles className="h-10 w-10 text-primary" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-4">La Solution STEM FLOW</h3>
-                    <p className="text-muted-foreground leading-relaxed mb-6">
-                      Une application mobile qui utilise les codes de TikTok, Discord et Duolingo 
-                      pour transformer le temps d'\u00e9cran en temps d'apprentissage. Gratuite, 
-                      multilingue et optimis\u00e9e pour les r\u00e9seaux africains.
-                    </p>
-                    <div className="grid grid-cols-3 gap-4 text-center mb-6">
+                    <h3 className="text-2xl font-bold mb-2">Nous croyons que</h3>
+                    <div className="space-y-4 text-muted-foreground leading-relaxed text-left mt-6">
+                      <div className="flex items-start gap-3">
+                        <Sparkles className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <p>Chaque minute en ligne peut devenir une opportunit\u00e9 de progression</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Brain className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
+                        <p>L'intelligence artificielle peut d\u00e9mocratiser l'excellence acad\u00e9mique</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Globe className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                        <p>L'Afrique peut devenir productrice de technologies \u00e9ducatives, pas seulement consommatrice</p>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-3 gap-4 text-center mt-8 mb-6 pt-6 border-t">
                       <div>
                         <div className="text-3xl font-bold text-primary">10M+</div>
                         <div className="text-xs text-muted-foreground">Apprenants cibl\u00e9s d'ici 2030</div>
@@ -260,7 +340,7 @@ export default function Home() {
                     </div>
                     <a href={APP_URL} target="_blank" rel="noopener noreferrer">
                       <Button className="w-full" data-testid="button-try-solution">
-                        D\u00e9couvrir l'application
+                        D\u00e9couvrir STEM FLOW
                         <ExternalLink className="ml-2 h-4 w-4" />
                       </Button>
                     </a>
@@ -272,7 +352,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4" variant="outline">
@@ -289,7 +369,7 @@ export default function Home() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {advantages.map((item, index) => (
-              <div key={index} className="flex items-start gap-3 p-4 rounded-lg bg-muted/50">
+              <div key={index} className="flex items-start gap-3 p-4 rounded-lg bg-background">
                 <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <item.icon className="h-5 w-5 text-primary" />
                 </div>
@@ -303,16 +383,16 @@ export default function Home() {
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary via-primary to-primary/90">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6" data-testid="text-cta-title">
-            Pr\u00eat \u00e0 transformer ton apprentissage ?
+            Construire les technologies \u00e9ducatives de demain
           </h2>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
-            Teste d\u00e8s maintenant STEM FLOW et rejoins la communaut\u00e9 
-            de la r\u00e9volution \u00e9ducative en Afrique.
+            LearnXScience d\u00e9veloppe des algorithmes \u00e9ducatifs exportables \u00e0 l'international. 
+            D\u00e9couvrez STEM FLOW, notre premi\u00e8re innovation, et rejoignez le mouvement.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary" className="text-base px-8" data-testid="button-cta-try">
-                Tester l'Application
+                Tester STEM FLOW
                 <ExternalLink className="ml-2 h-5 w-5" />
               </Button>
             </a>

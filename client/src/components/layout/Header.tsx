@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Zap, ExternalLink } from "lucide-react";
+import { Menu, Beaker, ExternalLink } from "lucide-react";
 
 const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
 
@@ -11,7 +11,7 @@ const navLinks = [
   { href: "/projet", label: "Le Projet" },
   { href: "/application", label: "L'Application" },
   { href: "/vision", label: "Vision & Impact" },
-  { href: "/equipe", label: "L'Équipe" },
+  { href: "/equipe", label: "L'\u00c9quipe" },
   { href: "/partenariats", label: "Partenariats" },
   { href: "/contact", label: "Contact" },
 ];
@@ -25,11 +25,14 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4">
         <Link href="/" className="flex items-center gap-2">
           <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary">
-            <Zap className="h-5 w-5 text-primary-foreground" />
+            <Beaker className="h-5 w-5 text-primary-foreground" />
           </div>
-          <span className="text-xl font-bold tracking-tight" data-testid="logo-text">
-            STEM<span className="text-primary">FLOW</span>
-          </span>
+          <div className="flex flex-col leading-none">
+            <span className="text-base font-bold tracking-tight" data-testid="logo-text">
+              Learn<span className="text-primary">X</span>Science
+            </span>
+            <span className="text-[10px] text-muted-foreground tracking-wide">STEM FLOW</span>
+          </div>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1" data-testid="nav-desktop">
@@ -50,7 +53,7 @@ export function Header() {
         <div className="hidden lg:flex items-center gap-2">
           <a href={APP_URL} target="_blank" rel="noopener noreferrer">
             <Button data-testid="button-cta-header">
-              Tester l'App
+              Tester STEM FLOW
               <ExternalLink className="ml-2 h-4 w-4" />
             </Button>
           </a>
@@ -79,7 +82,7 @@ export function Header() {
               <div className="mt-4 pt-4 border-t">
                 <a href={APP_URL} target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
                   <Button className="w-full" data-testid="button-cta-mobile">
-                    Tester l'App
+                    Tester STEM FLOW
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
                 </a>

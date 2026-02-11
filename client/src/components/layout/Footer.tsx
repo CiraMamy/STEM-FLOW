@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Zap, Mail, Linkedin, Twitter, Instagram, ExternalLink } from "lucide-react";
+import { Beaker, Mail, Linkedin, Twitter, Instagram, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
@@ -9,7 +9,7 @@ const footerLinks = {
     { href: "/projet", label: "Le Projet" },
     { href: "/application", label: "L'Application" },
     { href: "/vision", label: "Vision & Impact" },
-    { href: "/equipe", label: "L'Équipe" },
+    { href: "/equipe", label: "L'\u00c9quipe" },
   ],
   ressources: [
     { href: "/partenariats", label: "Partenariats" },
@@ -25,21 +25,26 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2" data-testid="footer-logo">
               <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary">
-                <Zap className="h-5 w-5 text-primary-foreground" />
+                <Beaker className="h-5 w-5 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold tracking-tight">
-                STEM<span className="text-primary">FLOW</span>
-              </span>
+              <div className="flex flex-col leading-none">
+                <span className="text-base font-bold tracking-tight">
+                  Learn<span className="text-primary">X</span>Science
+                </span>
+                <span className="text-[10px] text-muted-foreground tracking-wide">STEM FLOW</span>
+              </div>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Le premier r\u00e9seau social \u00e9ducatif STEM d'Afrique. Transformer le scroll en savoir, la curiosit\u00e9 en comp\u00e9tence et le temps en progression.
+              LearnXScience d\u00e9veloppe des syst\u00e8mes d'intelligence artificielle appliqu\u00e9s \u00e0 l'\u00e9ducation. 
+              Notre premi\u00e8re application, STEM FLOW, est un r\u00e9seau social \u00e9ducatif qui rend les sciences accessibles, 
+              interactives et mesurables.
             </p>
             <p className="text-lg font-semibold text-primary">
               Scroll. Learn. Level Up.
             </p>
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">
               <Button size="sm" className="mt-2" data-testid="footer-button-app">
-                Tester l'App
+                Tester STEM FLOW
                 <ExternalLink className="ml-2 h-3 w-3" />
               </Button>
             </a>
@@ -84,7 +89,7 @@ export function Footer() {
                   className="text-sm text-muted-foreground underline-offset-4 hover:underline transition-colors inline-flex items-center gap-1"
                   data-testid="footer-ressource-app"
                 >
-                  Acc\u00e9der \u00e0 l'App
+                  Acc\u00e9der \u00e0 STEM FLOW
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </li>
@@ -95,7 +100,7 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Suivez-nous</h3>
             <div className="flex gap-3">
               <a
-                href="mailto:contact@stemflow.africa"
+                href="mailto:contact@learnxscience.com"
                 className="flex h-10 w-10 items-center justify-center rounded-md bg-muted hover-elevate transition-colors"
                 data-testid="social-email"
               >
@@ -124,14 +129,14 @@ export function Footer() {
               </a>
             </div>
             <p className="text-xs text-muted-foreground mt-4">
-              contact@stemflow.africa
+              contact@learnxscience.com
             </p>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} STEM FLOW. Tous droits r\u00e9serv\u00e9s.</p>
-          <p>Fait avec passion depuis l'Afrique</p>
+          <p>&copy; {new Date().getFullYear()} LearnXScience. Tous droits r\u00e9serv\u00e9s.</p>
+          <p>Construire les technologies \u00e9ducatives intelligentes de demain</p>
         </div>
       </div>
     </footer>
