@@ -125,53 +125,78 @@ const roadmapPhases = [
   {
     icon: Sprout,
     phase: "Phase 1",
-    title: "Lancement & Validation",
-    timeline: "0 - 6 mois",
+    title: "Fondation & Construction",
+    timeline: "Déc. 2025 — Fév. 2026",
+    status: "done",
     color: "text-secondary",
     bgColor: "bg-secondary/10",
     borderColor: "border-secondary/30",
     steps: [
-      "Déploiement de la version MVP de la plateforme",
-      "Intégration des premiers modules STEM interactifs",
-      "Tests utilisateurs avec élèves, étudiants et jeunes professionnels",
-      "Collecte de feedback et amélioration continue",
-      "Mise en place des premiers partenariats éducatifs",
+      { text: "Constitution d'une équipe solide et complémentaire (tech, éducation, design)", done: true },
+      { text: "Conception de l'architecture technique et du design système de la plateforme", done: true },
+      { text: "Développement et lancement du site vitrine LearnXScience", done: true },
+      { text: "Développement de la version bêta de l'application STEM FLOW", done: true },
+      { text: "Partenariats stratégiques signés : Code For Chad & 60 Crédits", done: true },
+      { text: "Définition du business model et de la stratégie de croissance", done: true },
     ],
-    result: "Validation du produit, premiers utilisateurs actifs, premiers indicateurs d'impact.",
+    result: "Équipe opérationnelle, site vitrine en ligne, version bêta fonctionnelle, premiers partenariats actifs.",
   },
   {
     icon: Settings,
     phase: "Phase 2",
-    title: "Accélération & Croissance",
-    timeline: "6 - 18 mois",
+    title: "Tests, Itération & Lancement",
+    timeline: "Mars — Août 2026",
+    status: "current",
     color: "text-primary",
     bgColor: "bg-primary/10",
     borderColor: "border-primary/30",
     steps: [
-      "Déploiement complet de la plateforme (web & mobile)",
-      "Intégration d'outils intelligents (IA, suivi personnalisé, analytics)",
-      "Développement d'un catalogue élargi de contenus STEM",
-      "Expansion dans plusieurs pays africains",
-      "Structuration du modèle économique (B2C, B2B, partenariats institutionnels)",
+      { text: "Tests utilisateurs intensifs avec étudiants et enseignants", done: false },
+      { text: "Itérations continues basées sur les retours terrain (UX, contenu, performance)", done: false },
+      { text: "Intégration des premiers modules STEM interactifs (vidéos, quiz, défis)", done: false },
+      { text: "Déploiement de l'IA de personnalisation des parcours d'apprentissage", done: false },
+      { text: "Lancement officiel de STEM FLOW au Tchad et dans la sous-région", done: false },
+      { text: "Premiers indicateurs d'impact mesurés et partagés", done: false },
     ],
-    result: "Croissance rapide des utilisateurs et consolidation du positionnement régional.",
+    result: "Produit validé par le terrain, premiers utilisateurs actifs, métriques d'engagement et de progression.",
+  },
+  {
+    icon: Rocket,
+    phase: "Phase 3",
+    title: "Accélération & Croissance",
+    timeline: "Sept. 2026 — Déc. 2027",
+    status: "upcoming",
+    color: "text-primary",
+    bgColor: "bg-primary/10",
+    borderColor: "border-primary/30",
+    steps: [
+      { text: "Déploiement mobile complet (iOS & Android) avec mode hors-ligne", done: false },
+      { text: "Expansion dans 5+ pays africains francophones", done: false },
+      { text: "Catalogue élargi de contenus STEM (mathématiques, physique, chimie, informatique)", done: false },
+      { text: "Structuration du modèle économique (B2C, B2B, partenariats institutionnels)", done: false },
+      { text: "Intégration d'analytics avancés et d'outils de suivi pédagogique", done: false },
+      { text: "Levée de fonds pour accélérer la croissance", done: false },
+    ],
+    result: "Croissance rapide des utilisateurs, modèle économique validé, positionnement régional consolidé.",
   },
   {
     icon: Globe2,
-    phase: "Phase 3",
+    phase: "Phase 4",
     title: "Impact Continental",
-    timeline: "18 - 36 mois",
+    timeline: "2028 et au-delà",
+    status: "upcoming",
     color: "text-accent",
     bgColor: "bg-accent/10",
     borderColor: "border-accent/30",
     steps: [
-      "Accessibilité dans les zones rurales et sous-connectées",
-      "Déploiement de programmes certifiants",
-      "Partenariats stratégiques avec institutions, ONG et entreprises",
-      "Création d'un écosystème d'innovation (communauté, hackathons, incubations)",
-      "Mesure et reporting d'impact aligné sur les ODD",
+      { text: "Accessibilité dans les zones rurales et sous-connectées", done: false },
+      { text: "Programmes certifiants reconnus par les institutions éducatives", done: false },
+      { text: "Partenariats avec universités, ONG et gouvernements africains", done: false },
+      { text: "Écosystème d'innovation : communauté, hackathons, incubation de talents", done: false },
+      { text: "Mesure et reporting d'impact aligné sur les ODD de l'ONU", done: false },
+      { text: "Expansion vers l'Afrique anglophone et lusophone", done: false },
     ],
-    result: "Des milliers (puis millions) de jeunes formés aux compétences STEM.",
+    result: "Des millions de jeunes formés aux compétences STEM, LearnXScience comme référence EdTech africaine.",
   },
 ];
 
@@ -394,11 +419,11 @@ export default function Vision() {
                 Notre Feuille de Route
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-roadmap-title">
-                De la validation au déploiement continental
+                Un projet en marche depuis décembre 2025
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                Une stratégie en trois phases pour construire, accélérer et impacter 
-                l'éducation STEM à travers l'Afrique.
+                Nous ne sommes pas au stade de l'idée. Nous construisons, testons 
+                et améliorons chaque jour. Voici notre trajectoire.
               </p>
             </div>
 
@@ -411,28 +436,33 @@ export default function Vision() {
                         <div className={`w-14 h-14 rounded-xl ${phase.bgColor} flex items-center justify-center`}>
                           <phase.icon className={`h-7 w-7 ${phase.color}`} />
                         </div>
-                        <Badge variant="outline" className="text-xs">
-                          {phase.timeline}
+                        <Badge 
+                          variant={phase.status === "done" ? "default" : "outline"} 
+                          className={`text-xs ${phase.status === "done" ? "bg-secondary text-secondary-foreground" : phase.status === "current" ? "border-primary text-primary" : ""}`}
+                        >
+                          {phase.status === "done" ? "Accompli" : phase.status === "current" ? "En cours" : "A venir"}
                         </Badge>
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold mb-1">
-                          <span className={phase.color}>{phase.phase}</span> — {phase.title}
-                        </h3>
+                        <div className="flex flex-wrap items-center gap-3 mb-1">
+                          <h3 className="text-xl font-bold">
+                            <span className={phase.color}>{phase.phase}</span> — {phase.title}
+                          </h3>
+                        </div>
                         <p className="text-sm text-muted-foreground mb-4">
-                          Objectif : {phase.title === "Lancement & Validation" ? "Construire une base solide et valider le marché" : phase.title === "Accélération & Croissance" ? "Structurer et scaler la solution" : "Devenir un acteur majeur de l'éducation STEM en Afrique"}
+                          {phase.timeline}
                         </p>
                         <ul className="space-y-2 mb-4">
                           {phase.steps.map((step, stepIndex) => (
                             <li key={stepIndex} className="flex items-start gap-3 text-sm">
-                              <CheckCircle2 className={`h-4 w-4 ${phase.color} flex-shrink-0 mt-0.5`} />
-                              <span>{step}</span>
+                              <CheckCircle2 className={`h-4 w-4 flex-shrink-0 mt-0.5 ${step.done ? "text-secondary" : "text-muted-foreground/40"}`} />
+                              <span className={step.done ? "font-medium" : "text-muted-foreground"}>{step.text}</span>
                             </li>
                           ))}
                         </ul>
                         <div className={`${phase.bgColor} rounded-md p-3`}>
                           <p className="text-sm">
-                            <span className="font-semibold">Résultat attendu :</span>{" "}
+                            <span className="font-semibold">{phase.status === "done" ? "Résultat :" : "Résultat attendu :"}</span>{" "}
                             <span className="text-muted-foreground">{phase.result}</span>
                           </p>
                         </div>
@@ -446,11 +476,12 @@ export default function Vision() {
             <Card className="mt-8 border-primary/20 bg-primary/5">
               <CardContent className="p-6 md:p-8 text-center">
                 <Crosshair className="h-8 w-8 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">Vision Long Terme</h3>
+                <h3 className="text-xl font-bold mb-3">Notre Engagement</h3>
                 <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                  Faire de STEM FLOW la plateforme de référence pour la démocratisation 
-                  des sciences en Afrique, en formant une génération capable d'innover 
-                  et de résoudre les défis du continent.
+                  Nous avançons chaque jour. Chaque ligne de code, chaque test utilisateur, 
+                  chaque partenariat nous rapproche de notre objectif : faire de STEM FLOW 
+                  la plateforme de référence pour la démocratisation des sciences en Afrique, 
+                  en formant une génération capable d'innover et de résoudre les défis du continent.
                 </p>
               </CardContent>
             </Card>
