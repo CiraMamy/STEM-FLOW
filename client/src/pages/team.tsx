@@ -61,7 +61,7 @@ const teamMembers = [
     name: "Cira Mamy Sow",
     role: "Cofondatrice & Coordinatrice",
     initials: "CMS",
-    color: "bg-accent",
+    color: "bg-secondary",
     icon: Lightbulb,
     photo: ciraPhoto,
     bio: "De formation en mathématiques appliquées et informatique (Master 2 en modélisation et calcul scientifique) avec une spécialisation en Big Data, Cira Mamy Sow s'engage activement pour la promotion des STEM au Sénégal et en Afrique. Formée au sein du programme FORCE-N, elle a développé des compétences en création de contenus de vulgarisation scientifique et en conception d'évaluations académiques. Elle dispense également des cours d'éducation financière via la communauté 60 Crédits. L'idée de STEM FLOW est née lors d'un bootcamp en intelligence artificielle organisé en partenariat avec le PNUD et UNIPOD Guinée. Aujourd'hui, elle coordonne STEM FLOW avec l'ambition de transformer les usages numériques en leviers d'apprentissage durable.",

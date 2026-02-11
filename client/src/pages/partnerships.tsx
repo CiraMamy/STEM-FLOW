@@ -73,7 +73,7 @@ const audiences = [
   {
     icon: GraduationCap,
     title: "Institutions Éducatives & ONG",
-    color: "bg-accent",
+    color: "bg-secondary",
     points: [
       "Partenariat pédagogique gagnant-gagnant",
       "Intégration de STEM FLOW dans vos programmes scolaires",

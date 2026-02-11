@@ -1,5 +1,6 @@
 import { Link } from "wouter";
-import { Beaker, Mail, Linkedin, Twitter, Instagram, ExternalLink } from "lucide-react";
+import { Mail, Linkedin, Twitter, Instagram, ExternalLink } from "lucide-react";
+import stemFlowLogo from "@assets/a7f9fef0-ccda-4856-80a4-17e64300d515_(1)_1770832424837.png";
 import { Button } from "@/components/ui/button";
 
 const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
@@ -24,9 +25,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2" data-testid="footer-logo">
-              <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary">
-                <Beaker className="h-5 w-5 text-primary-foreground" />
-              </div>
+              <img src={stemFlowLogo} alt="STEM FLOW" className="h-10 w-auto" />
               <div className="flex flex-col leading-none">
                 <span className="text-base font-bold tracking-tight">
                   Learn<span className="text-primary">X</span>Science
