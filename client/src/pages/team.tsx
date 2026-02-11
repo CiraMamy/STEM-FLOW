@@ -17,9 +17,28 @@ import {
   Target,
   Rocket,
   Shield,
+  Brain,
+  Award,
+  Eye,
 } from "lucide-react";
 
 const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
+
+const ceo = {
+  name: "ATTIOU K. Narcisse",
+  role: "CEO – LearnXScience",
+  initials: "AKN",
+  color: "bg-primary",
+  icon: Brain,
+  bio: "Diplômé d'une licence en mathématiques fondamentales de l'Université d'Abomey-Calavi, ATTIOU K. Narcisse évolue à l'intersection des mathématiques appliquées, de l'intelligence artificielle et de la robotique. Son expertise porte particulièrement sur la vision par ordinateur et l'apprentissage automatique, avec une approche orientée recherche et innovation technologique.",
+  achievements: [
+    "Projet de classification médicale de la myosteatose basé sur YOLOv11, impliquant l'annotation et l'analyse de plusieurs milliers d'images ainsi que le fine-tuning avancé du modèle pour optimiser la détection automatique.",
+    "Ambassadeur de l'International Competition in Science and Computer (ICSC) — a accompagné cinq étudiants vers la qualification dès sa première année d'engagement.",
+  ],
+  vision: "En tant que CEO de LearnXScience, il porte la vision technologique de l'entreprise : concevoir des algorithmes éducatifs intelligents et des solutions numériques capables de transformer l'apprentissage grâce à l'intelligence artificielle. Son ambition à long terme est de devenir ingénieur-chercheur en IA appliquée à la robotique et de développer des systèmes intelligents à fort impact scientifique et sociétal.",
+  skills: ["Mathématiques appliquées", "Intelligence Artificielle", "Vision par ordinateur", "Machine Learning", "Data Science", "Modélisation mathématique"],
+  linkedin: "https://www.linkedin.com/in/kotcholé-narcisse-attiou-9b6641285",
+};
 
 const teamMembers = [
   {
@@ -114,8 +133,8 @@ export default function Team() {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Née lors d'un bootcamp en intelligence artificielle organisé en partenariat avec le PNUD 
-              et UNIPOD Guinée, LearnXScience est fondée par une équipe panafricaine passionnée 
-              qui unit ingénierie logicielle, mathématiques appliquées et éducation numérique 
+              et UNIPOD Guinée, LearnXScience réunit une équipe panafricaine passionnée 
+              qui unit mathématiques, intelligence artificielle, ingénierie logicielle et éducation numérique 
               pour construire les technologies éducatives intelligentes de demain.
             </p>
           </div>
@@ -124,15 +143,101 @@ export default function Team() {
 
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge className="mb-4" variant="secondary">
+              <Star className="h-3 w-3 mr-1" />
+              Direction
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-ceo-title">
+              Notre CEO
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Mathématicien, Data Scientist et Ingénieur IA spécialisé en vision par ordinateur.
+            </p>
+          </div>
+
+          <Card className="max-w-4xl mx-auto border-0 shadow-sm overflow-visible mb-8">
+            <CardContent className="p-0">
+              <div className="bg-primary p-8 text-center rounded-t-xl">
+                <Avatar className="h-28 w-28 mx-auto mb-4 border-4 border-primary-foreground/20">
+                  <AvatarFallback className="text-3xl font-bold bg-primary-foreground/20 text-primary-foreground">
+                    {ceo.initials}
+                  </AvatarFallback>
+                </Avatar>
+                <h3 className="text-2xl font-bold text-primary-foreground" data-testid="text-ceo-name">
+                  {ceo.name}
+                </h3>
+                <div className="flex items-center justify-center gap-2 mt-2">
+                  <Brain className="h-4 w-4 text-primary-foreground/80" />
+                  <span className="text-primary-foreground/80">{ceo.role}</span>
+                </div>
+              </div>
+              <div className="p-8">
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  {ceo.bio}
+                </p>
+
+                <div className="space-y-4 mb-6">
+                  <h4 className="font-semibold flex items-center gap-2">
+                    <Award className="h-4 w-4 text-secondary" />
+                    Réalisations clés
+                  </h4>
+                  {ceo.achievements.map((achievement, index) => (
+                    <div key={index} className="flex gap-3 pl-2">
+                      <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-primary mt-2.5" />
+                      <p className="text-muted-foreground text-sm leading-relaxed">{achievement}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-semibold flex items-center gap-2 mb-3">
+                    <Eye className="h-4 w-4 text-primary" />
+                    Vision
+                  </h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {ceo.vision}
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-1 mb-6">
+                  {ceo.skills.map((skill, skillIndex) => (
+                    <Badge key={skillIndex} variant="secondary" className="text-xs">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+
+                <div className="flex justify-center">
+                  <a
+                    href={ceo.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid="social-linkedin-ceo"
+                  >
+                    <Button variant="outline" size="sm">
+                      <Linkedin className="h-4 w-4 mr-2" />
+                      LinkedIn
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section className="py-20 lg:py-28 bg-muted/30">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4" variant="secondary">
               Équipe Fondatrice
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-founders-title">
-              Une équipe complémentaire
+              Les cofondateurs
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Deux profils complémentaires, une même passion pour l'éducation, 
+              Des profils complémentaires, une même passion pour l'éducation, 
               la technologie et l'innovation africaine.
             </p>
           </div>
