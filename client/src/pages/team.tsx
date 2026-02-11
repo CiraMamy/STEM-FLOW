@@ -6,12 +6,10 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
   Users,
   Linkedin,
-  Github,
   Globe,
   ArrowRight,
   Lightbulb,
   Code,
-  Compass,
   ExternalLink,
   GraduationCap,
   Heart,
@@ -25,36 +23,25 @@ const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
 
 const teamMembers = [
   {
-    name: "Souleymanemaha",
-    role: "Fondateur & CEO",
-    initials: "SM",
+    name: "Souleymane Mahamat Saleh",
+    role: "Cofondateur & Ing\u00e9nieur G\u00e9nie Logiciel",
+    initials: "SMS",
     color: "bg-primary",
-    icon: Compass,
-    bio: "Visionnaire et entrepreneur passionn\u00e9 par l'\u00e9ducation et la technologie en Afrique. Souleymanemaha porte la vision de STEM FLOW : rendre l'\u00e9ducation STEM accessible \u00e0 chaque jeune africain gr\u00e2ce au mobile et \u00e0 l'IA. Il dirige la strat\u00e9gie globale du projet et les relations avec les partenaires.",
-    skills: ["Strat\u00e9gie", "Leadership", "EdTech", "Innovation sociale"],
-    linkedin: "#",
-  },
-  {
-    name: "Directeur Technique",
-    role: "CTO & Architecture IA",
-    initials: "DT",
-    color: "bg-secondary",
     icon: Code,
-    bio: "Expert en intelligence artificielle et en d\u00e9veloppement mobile, le CTO con\u00e7oit l'architecture technique de STEM FLOW. Il d\u00e9veloppe l'algorithme de personnalisation qui adapte le contenu \u00e0 chaque apprenant et supervise l'int\u00e9gralit\u00e9 de la stack technique.",
-    skills: ["IA/ML", "React Native", "Node.js", "Architecture cloud"],
+    bio: "Ing\u00e9nieur en g\u00e9nie logiciel, \u00e9ducateur num\u00e9rique et leader communautaire, Souleymane est le fondateur de Code For Chad, la communaut\u00e9 des d\u00e9veloppeurs tchadiens. Formateur en technologies et innovation \u00e9ducative, il poss\u00e8de une exp\u00e9rience significative dans la formation des jeunes aux comp\u00e9tences num\u00e9riques, la coordination de communaut\u00e9s \u00e9ducatives et technologiques, et la conception de projets \u00e9ducatifs ax\u00e9s sur l'employabilit\u00e9 et l'entrepreneuriat. R\u00e9cemment en partenariat avec l'Ambassade des \u00c9tats-Unis au Tchad dans le domaine STEM et le codage informatique, il accompagne les apprenants, \u00e9tudiants et autodidactes dans leur parcours acad\u00e9mique et professionnel.",
+    skills: ["G\u00e9nie Logiciel", "Formation STEM", "Leadership communautaire", "Innovation \u00e9ducative", "Entrepreneuriat"],
     linkedin: "#",
-    github: "#",
+    website: "https://www.codeforchad.net",
   },
   {
-    name: "Directrice P\u00e9dagogique",
-    role: "CPO & Vision \u00c9ducative",
-    initials: "DP",
+    name: "Cira Mamy Sow",
+    role: "Cofondatrice & Coordinatrice",
+    initials: "CMS",
     color: "bg-accent",
     icon: Lightbulb,
-    bio: "Sp\u00e9cialiste en p\u00e9dagogie num\u00e9rique et en conception de contenus \u00e9ducatifs, elle s'assure que chaque micro-le\u00e7on sur STEM FLOW respecte les standards acad\u00e9miques tout en restant engageante. Elle coordonne les \u00e9quipes de cr\u00e9ation de contenu dans plusieurs pays.",
-    skills: ["P\u00e9dagogie", "UX Design", "Curricula STEM", "Multilingue"],
+    bio: "De formation en math\u00e9matiques appliqu\u00e9es et informatique (Master 2 en mod\u00e9lisation et calcul scientifique) avec une sp\u00e9cialisation en Big Data, Cira Mamy Sow s'engage activement pour la promotion des STEM au S\u00e9n\u00e9gal et en Afrique. Form\u00e9e au sein du programme FORCE-N, elle a d\u00e9velopp\u00e9 des comp\u00e9tences en cr\u00e9ation de contenus de vulgarisation scientifique et en conception d'\u00e9valuations acad\u00e9miques. Elle dispense \u00e9galement des cours d'\u00e9ducation financi\u00e8re via la communaut\u00e9 60 Cr\u00e9dits. L'id\u00e9e de STEM FLOW est n\u00e9e lors d'un bootcamp en intelligence artificielle organis\u00e9 en partenariat avec le PNUD et UNIPOD Guin\u00e9e. Aujourd'hui, elle coordonne STEM FLOW avec l'ambition de transformer les usages num\u00e9riques en leviers d'apprentissage durable.",
+    skills: ["Math\u00e9matiques appliqu\u00e9es", "Big Data", "Vulgarisation scientifique", "P\u00e9dagogie STEM", "\u00c9ducation financi\u00e8re"],
     linkedin: "#",
-    website: "#",
   },
 ];
 
@@ -126,9 +113,10 @@ export default function Team() {
               <span className="text-primary">STEM FLOW</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Une \u00e9quipe panafricaine passionn\u00e9e, exp\u00e9riment\u00e9e et d\u00e9termin\u00e9e \u00e0 transformer 
-              l'\u00e9ducation STEM en Afrique. Nous sommes unis par une vision commune : 
-              rendre le savoir STEM accessible \u00e0 tous.
+              N\u00e9e lors d'un bootcamp en intelligence artificielle organis\u00e9 en partenariat avec le PNUD 
+              et UNIPOD Guin\u00e9e, STEM FLOW est port\u00e9e par une \u00e9quipe panafricaine passionn\u00e9e 
+              qui unit ing\u00e9nierie logicielle, math\u00e9matiques appliqu\u00e9es et \u00e9ducation num\u00e9rique 
+              pour rendre le savoir STEM accessible \u00e0 tous.
             </p>
           </div>
         </div>
@@ -144,12 +132,12 @@ export default function Team() {
               Une \u00e9quipe compl\u00e9mentaire
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Trois profils diff\u00e9rents, une m\u00eame passion pour l'\u00e9ducation, 
+              Deux profils compl\u00e9mentaires, une m\u00eame passion pour l'\u00e9ducation, 
               la technologie et l'innovation africaine.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {teamMembers.map((member, index) => (
               <Card key={index} className="border-0 shadow-sm overflow-visible">
                 <CardContent className="p-0">
@@ -186,15 +174,6 @@ export default function Team() {
                           data-testid={`social-linkedin-${index}`}
                         >
                           <Linkedin className="h-4 w-4" />
-                        </a>
-                      )}
-                      {member.github && (
-                        <a
-                          href={member.github}
-                          className="flex h-9 w-9 items-center justify-center rounded-md bg-muted hover-elevate transition-colors"
-                          data-testid={`social-github-${index}`}
-                        >
-                          <Github className="h-4 w-4" />
                         </a>
                       )}
                       {member.website && (
