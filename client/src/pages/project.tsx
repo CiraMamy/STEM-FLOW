@@ -70,11 +70,12 @@ const differentiators = [
 ];
 
 const timeline = [
-  { year: "2024", event: "Idéation et recherche utilisateur", status: "done" },
-  { year: "2025", event: "Développement MVP et bêta test", status: "current" },
-  { year: "2026", event: "Lancement Afrique de l'Ouest francophone", status: "next" },
-  { year: "2027", event: "Expansion Afrique de l'Est anglophone", status: "next" },
-  { year: "2028-2030", event: "Couverture panafricaine - 54 pays", status: "next" },
+  { year: "Déc. 2025", event: "Création de LearnXScience — Constitution de l'équipe fondatrice", status: "done" },
+  { year: "Jan. 2026", event: "Conception technique, design système et architecture de la plateforme STEM FLOW", status: "done" },
+  { year: "Fév. 2026", event: "Site vitrine en ligne, version bêta de STEM FLOW fonctionnelle, premiers partenariats signés", status: "done" },
+  { year: "Mars — Août 2026", event: "Tests utilisateurs, itérations continues, intégration IA, lancement officiel au Tchad", status: "current" },
+  { year: "Sept. 2026 — 2027", event: "Déploiement mobile complet, expansion dans 5+ pays francophones, levée de fonds", status: "next" },
+  { year: "2028+", event: "Impact continental — programmes certifiants, partenariats institutionnels, couverture panafricaine", status: "next" },
 ];
 
 const comparisons = [
@@ -252,11 +253,14 @@ export default function Project() {
             <div className="text-center mb-12">
               <Badge className="mb-4" variant="outline">
                 <Clock className="h-3 w-3 mr-1" />
-                Roadmap
+                Feuille de Route
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-roadmap-title">
-                Notre feuille de route
+                Un projet en marche depuis décembre 2025
               </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                Nous avançons chaque jour : nous construisons, testons et améliorons continuellement.
+              </p>
             </div>
 
             <div className="relative">
