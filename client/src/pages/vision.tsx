@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import {
   Eye,
   GraduationCap,
@@ -153,12 +154,12 @@ const roadmapPhases = [
     steps: [
       { text: "Tests utilisateurs intensifs avec étudiants et enseignants", done: false },
       { text: "Itérations continues basées sur les retours terrain (UX, contenu, performance)", done: false },
-      { text: "Intégration des premiers modules STEM interactifs (vidéos, quiz, défis)", done: false },
-      { text: "Déploiement de l'IA de personnalisation des parcours d'apprentissage", done: false },
-      { text: "Lancement officiel de STEM FLOW au Tchad et dans la sous-région", done: false },
+      { text: "Intégration de l'IA de personnalisation des parcours d'apprentissage", done: false },
+      { text: "Lancement officiel de STEM FLOW dans les trois pays : Bénin, Tchad, Sénégal", done: false },
+      { text: "Levée de fonds (Mars et Août 2026)", done: false },
       { text: "Premiers indicateurs d'impact mesurés et partagés", done: false },
     ],
-    result: "Produit validé par le terrain, premiers utilisateurs actifs, métriques d'engagement et de progression.",
+    result: "Produit validé par le terrain, premiers utilisateurs actifs dans trois pays, métriques d'engagement et de progression.",
   },
   {
     icon: Rocket,
@@ -171,11 +172,10 @@ const roadmapPhases = [
     borderColor: "border-primary/30",
     steps: [
       { text: "Déploiement mobile complet (iOS & Android) avec mode hors-ligne", done: false },
-      { text: "Expansion dans 5+ pays africains francophones", done: false },
+      { text: "Expansion dans 5+ pays francophones à partir de septembre 2026", done: false },
       { text: "Catalogue élargi de contenus STEM (mathématiques, physique, chimie, informatique)", done: false },
       { text: "Structuration du modèle économique (B2C, B2B, partenariats institutionnels)", done: false },
       { text: "Intégration d'analytics avancés et d'outils de suivi pédagogique", done: false },
-      { text: "Levée de fonds pour accélérer la croissance", done: false },
     ],
     result: "Croissance rapide des utilisateurs, modèle économique validé, positionnement régional consolidé.",
   },
@@ -239,19 +239,21 @@ export default function Vision() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             {visionPoints.map((point, index) => (
-              <Card key={index} className="border-0 shadow-sm text-center">
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                    <point.icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-xl mb-4" data-testid={`text-vision-point-${index}`}>
-                    {point.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {point.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <ScrollReveal key={index} delay={index * 100} direction="up">
+                <Card className="border-0 shadow-sm text-center h-full">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                      <point.icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-xl mb-4" data-testid={`text-vision-point-${index}`}>
+                      {point.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {point.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -260,89 +262,99 @@ export default function Vision() {
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge className="mb-4" variant="secondary">
-                <Lightbulb className="h-3 w-3 mr-1" />
-                Notre Raison d'Exister
-              </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-why-exist-title">
-                Pourquoi LearnXScience existe
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                L'éducation traditionnelle ne tient pas compte des usages numériques réels 
-                des jeunes, de la personnalisation cognitive, de l'engagement comportemental, 
-                ni de la data comme levier d'amélioration.
-              </p>
-              <p className="text-lg font-medium text-foreground max-w-2xl mx-auto mt-4 leading-relaxed">
-                Pendant que les jeunes passent des heures à scroller, le système éducatif 
-                reste statique. Nous existons pour combler ce fossé.
-              </p>
-            </div>
+            <ScrollReveal>
+              <div className="text-center mb-12">
+                <Badge className="mb-4" variant="secondary">
+                  <Lightbulb className="h-3 w-3 mr-1" />
+                  Notre Raison d'Exister
+                </Badge>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-why-exist-title">
+                  Pourquoi LearnXScience existe
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                  L'éducation traditionnelle ne tient pas compte des usages numériques réels 
+                  des jeunes, de la personnalisation cognitive, de l'engagement comportemental, 
+                  ni de la data comme levier d'amélioration.
+                </p>
+                <p className="text-lg font-medium text-foreground max-w-2xl mx-auto mt-4 leading-relaxed">
+                  Pendant que les jeunes passent des heures à scroller, le système éducatif 
+                  reste statique. Nous existons pour combler ce fossé.
+                </p>
+              </div>
+            </ScrollReveal>
 
             <div className="grid md:grid-cols-3 gap-6">
               {whyWeExist.map((item, index) => (
-                <Card key={index} className="border-0 shadow-sm hover-elevate">
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 rounded-lg bg-destructive/10 flex items-center justify-center mb-4">
-                      <item.icon className="h-6 w-6 text-destructive" />
-                    </div>
-                    <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                  </CardContent>
-                </Card>
+                <ScrollReveal key={index} delay={index * 100} direction="up">
+                  <Card className="border-0 shadow-sm hover-elevate h-full">
+                    <CardContent className="p-6">
+                      <div className="w-12 h-12 rounded-lg bg-destructive/10 flex items-center justify-center mb-4">
+                        <item.icon className="h-6 w-6 text-destructive" />
+                      </div>
+                      <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                    </CardContent>
+                  </Card>
+                </ScrollReveal>
               ))}
             </div>
 
-            <Card className="mt-8 border-primary/20 bg-primary/5">
-              <CardContent className="p-8">
-                <h3 className="font-bold text-xl mb-6 text-center">Notre Ambition</h3>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {ambitions.map((ambition, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <Rocket className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">{ambition}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <ScrollReveal>
+              <Card className="mt-8 border-primary/20 bg-primary/5">
+                <CardContent className="p-8">
+                  <h3 className="font-bold text-xl mb-6 text-center">Notre Ambition</h3>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {ambitions.map((ambition, index) => (
+                      <div key={index} className="flex items-start gap-3">
+                        <Rocket className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-sm">{ambition}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4" variant="secondary">
-              Triple Impact
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-impact-title">
-              Un impact à plusieurs dimensions
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              LearnXScience, à travers STEM FLOW, génère un impact positif mesurable 
-              sur l'éducation, la société et l'économie africaines.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <Badge className="mb-4" variant="secondary">
+                Triple Impact
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-impact-title">
+                Un impact à plusieurs dimensions
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                LearnXScience, à travers STEM FLOW, génère un impact positif mesurable 
+                sur l'éducation, la société et l'économie africaines.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {impacts.map((impact, index) => (
-              <Card key={index} className="border-0 shadow-sm">
-                <CardContent className="p-6">
-                  <div className={`w-14 h-14 rounded-xl ${impact.bgColor} flex items-center justify-center mb-6`}>
-                    <impact.icon className={`h-7 w-7 ${impact.color}`} />
-                  </div>
-                  <h3 className="font-semibold text-xl mb-4">{impact.title}</h3>
-                  <ul className="space-y-3">
-                    {impact.points.map((point, pointIndex) => (
-                      <li key={pointIndex} className="flex items-start gap-3 text-sm">
-                        <TrendingUp className={`h-4 w-4 ${impact.color} flex-shrink-0 mt-0.5`} />
-                        <span className="text-muted-foreground">{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+              <ScrollReveal key={index} delay={index * 100} direction="up">
+                <Card className="border-0 shadow-sm h-full">
+                  <CardContent className="p-6">
+                    <div className={`w-14 h-14 rounded-xl ${impact.bgColor} flex items-center justify-center mb-6`}>
+                      <impact.icon className={`h-7 w-7 ${impact.color}`} />
+                    </div>
+                    <h3 className="font-semibold text-xl mb-4">{impact.title}</h3>
+                    <ul className="space-y-3">
+                      {impact.points.map((point, pointIndex) => (
+                        <li key={pointIndex} className="flex items-start gap-3 text-sm">
+                          <TrendingUp className={`h-4 w-4 ${impact.color} flex-shrink-0 mt-0.5`} />
+                          <span className="text-muted-foreground">{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -350,25 +362,29 @@ export default function Vision() {
 
       <section className="py-20 lg:py-28 bg-gradient-to-br from-primary via-primary to-primary/90">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4" data-testid="text-stats-title">
-              L'opportunité africaine en chiffres
-            </h2>
-            <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg">
-              Des données qui démontrent l'immense potentiel du continent et l'urgence d'agir.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4" data-testid="text-stats-title">
+                L'opportunité africaine en chiffres
+              </h2>
+              <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg">
+                Des données qui démontrent l'immense potentiel du continent et l'urgence d'agir.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
-              <Card key={index} className="border-0 bg-primary-foreground/10 backdrop-blur">
-                <CardContent className="p-6 text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">
-                    {stat.value}
-                  </div>
-                  <p className="text-primary-foreground/80 text-sm">{stat.label}</p>
-                </CardContent>
-              </Card>
+              <ScrollReveal key={index} delay={index * 100} direction="up">
+                <Card className="border-0 bg-primary-foreground/10 backdrop-blur h-full">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">
+                      {stat.value}
+                    </div>
+                    <p className="text-primary-foreground/80 text-sm">{stat.label}</p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -377,33 +393,37 @@ export default function Vision() {
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge className="mb-4" variant="outline">
-                <Lightbulb className="h-3 w-3 mr-1" />
-                Objectifs de Développement Durable
-              </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-sdg-title">
-                Notre contribution aux ODD de l'ONU
-              </h2>
-              <p className="text-muted-foreground text-lg">
-                LearnXScience s'inscrit dans l'Agenda 2063 de l'Union Africaine et contribue 
-                directement à 6 Objectifs de Développement Durable.
-              </p>
-            </div>
+            <ScrollReveal>
+              <div className="text-center mb-12">
+                <Badge className="mb-4" variant="outline">
+                  <Lightbulb className="h-3 w-3 mr-1" />
+                  Objectifs de Développement Durable
+                </Badge>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-sdg-title">
+                  Notre contribution aux ODD de l'ONU
+                </h2>
+                <p className="text-muted-foreground text-lg">
+                  LearnXScience s'inscrit dans l'Agenda 2063 de l'Union Africaine et contribue 
+                  directement à 6 Objectifs de Développement Durable.
+                </p>
+              </div>
+            </ScrollReveal>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {sdgs.map((sdg, index) => (
-                <Card key={index} className="border-0 shadow-sm">
-                  <CardContent className="p-4 flex items-start gap-3">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
-                      {sdg.number}
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-sm">ODD {sdg.number} : {sdg.title}</h4>
-                      <p className="text-xs text-muted-foreground mt-1">{sdg.description}</p>
-                    </div>
-                  </CardContent>
-                </Card>
+                <ScrollReveal key={index} delay={index * 100} direction="up">
+                  <Card className="border-0 shadow-sm h-full">
+                    <CardContent className="p-4 flex items-start gap-3">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
+                        {sdg.number}
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-sm">ODD {sdg.number} : {sdg.title}</h4>
+                        <p className="text-xs text-muted-foreground mt-1">{sdg.description}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </ScrollReveal>
               ))}
             </div>
           </div>
@@ -413,78 +433,84 @@ export default function Vision() {
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <Badge className="mb-4" variant="secondary">
-                <Rocket className="h-3 w-3 mr-1" />
-                Notre Feuille de Route
-              </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-roadmap-title">
-                Un projet en marche depuis décembre 2025
-              </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                Nous ne sommes pas au stade de l'idée. Nous construisons, testons 
-                et améliorons chaque jour. Voici notre trajectoire.
-              </p>
-            </div>
+            <ScrollReveal>
+              <div className="text-center mb-16">
+                <Badge className="mb-4" variant="secondary">
+                  <Rocket className="h-3 w-3 mr-1" />
+                  Notre Feuille de Route
+                </Badge>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-roadmap-title">
+                  Un projet en marche depuis décembre 2025
+                </h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                  Nous ne sommes pas au stade de l'idée. Nous construisons, testons 
+                  et améliorons chaque jour. Voici notre trajectoire.
+                </p>
+              </div>
+            </ScrollReveal>
 
             <div className="space-y-8">
               {roadmapPhases.map((phase, index) => (
-                <Card key={index} className={`border ${phase.borderColor} overflow-visible`} data-testid={`roadmap-phase-${index}`}>
-                  <CardContent className="p-6 md:p-8">
-                    <div className="flex flex-col md:flex-row md:items-start gap-6">
-                      <div className="flex-shrink-0 flex flex-col items-center gap-2">
-                        <div className={`w-14 h-14 rounded-xl ${phase.bgColor} flex items-center justify-center`}>
-                          <phase.icon className={`h-7 w-7 ${phase.color}`} />
+                <ScrollReveal key={index} delay={index * 100} direction="up">
+                  <Card className={`border ${phase.borderColor} overflow-visible`} data-testid={`roadmap-phase-${index}`}>
+                    <CardContent className="p-6 md:p-8">
+                      <div className="flex flex-col md:flex-row md:items-start gap-6">
+                        <div className="flex-shrink-0 flex flex-col items-center gap-2">
+                          <div className={`w-14 h-14 rounded-xl ${phase.bgColor} flex items-center justify-center`}>
+                            <phase.icon className={`h-7 w-7 ${phase.color}`} />
+                          </div>
+                          <Badge 
+                            variant={phase.status === "done" ? "default" : "outline"} 
+                            className={`text-xs ${phase.status === "done" ? "bg-secondary text-secondary-foreground" : phase.status === "current" ? "border-primary text-primary" : ""}`}
+                          >
+                            {phase.status === "done" ? "Accompli" : phase.status === "current" ? "En cours" : "A venir"}
+                          </Badge>
                         </div>
-                        <Badge 
-                          variant={phase.status === "done" ? "default" : "outline"} 
-                          className={`text-xs ${phase.status === "done" ? "bg-secondary text-secondary-foreground" : phase.status === "current" ? "border-primary text-primary" : ""}`}
-                        >
-                          {phase.status === "done" ? "Accompli" : phase.status === "current" ? "En cours" : "A venir"}
-                        </Badge>
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex flex-wrap items-center gap-3 mb-1">
-                          <h3 className="text-xl font-bold">
-                            <span className={phase.color}>{phase.phase}</span> — {phase.title}
-                          </h3>
-                        </div>
-                        <p className="text-sm text-muted-foreground mb-4">
-                          {phase.timeline}
-                        </p>
-                        <ul className="space-y-2 mb-4">
-                          {phase.steps.map((step, stepIndex) => (
-                            <li key={stepIndex} className="flex items-start gap-3 text-sm">
-                              <CheckCircle2 className={`h-4 w-4 flex-shrink-0 mt-0.5 ${step.done ? "text-secondary" : "text-muted-foreground/40"}`} />
-                              <span className={step.done ? "font-medium" : "text-muted-foreground"}>{step.text}</span>
-                            </li>
-                          ))}
-                        </ul>
-                        <div className={`${phase.bgColor} rounded-md p-3`}>
-                          <p className="text-sm">
-                            <span className="font-semibold">{phase.status === "done" ? "Résultat :" : "Résultat attendu :"}</span>{" "}
-                            <span className="text-muted-foreground">{phase.result}</span>
+                        <div className="flex-1">
+                          <div className="flex flex-wrap items-center gap-3 mb-1">
+                            <h3 className="text-xl font-bold">
+                              <span className={phase.color}>{phase.phase}</span> — {phase.title}
+                            </h3>
+                          </div>
+                          <p className="text-sm text-muted-foreground mb-4">
+                            {phase.timeline}
                           </p>
+                          <ul className="space-y-2 mb-4">
+                            {phase.steps.map((step, stepIndex) => (
+                              <li key={stepIndex} className="flex items-start gap-3 text-sm">
+                                <CheckCircle2 className={`h-4 w-4 flex-shrink-0 mt-0.5 ${step.done ? "text-secondary" : "text-muted-foreground/40"}`} />
+                                <span className={step.done ? "font-medium" : "text-muted-foreground"}>{step.text}</span>
+                              </li>
+                            ))}
+                          </ul>
+                          <div className={`${phase.bgColor} rounded-md p-3`}>
+                            <p className="text-sm">
+                              <span className="font-semibold">{phase.status === "done" ? "Résultat :" : "Résultat attendu :"}</span>{" "}
+                              <span className="text-muted-foreground">{phase.result}</span>
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </ScrollReveal>
               ))}
             </div>
 
-            <Card className="mt-8 border-primary/20 bg-primary/5">
-              <CardContent className="p-6 md:p-8 text-center">
-                <Crosshair className="h-8 w-8 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">Notre Engagement</h3>
-                <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                  Nous avançons chaque jour. Chaque ligne de code, chaque test utilisateur, 
-                  chaque partenariat nous rapproche de notre objectif : faire de STEM FLOW 
-                  la plateforme de référence pour la démocratisation des sciences en Afrique, 
-                  en formant une génération capable d'innover et de résoudre les défis du continent.
-                </p>
-              </CardContent>
-            </Card>
+            <ScrollReveal>
+              <Card className="mt-8 border-primary/20 bg-primary/5">
+                <CardContent className="p-6 md:p-8 text-center">
+                  <Crosshair className="h-8 w-8 text-primary mx-auto mb-4" />
+                  <h3 className="text-xl font-bold mb-3">Notre Engagement</h3>
+                  <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                    Nous avançons chaque jour. Chaque ligne de code, chaque test utilisateur, 
+                    chaque partenariat nous rapproche de notre objectif : faire de STEM FLOW 
+                    la plateforme de référence pour la démocratisation des sciences en Afrique, 
+                    en formant une génération capable d'innover et de résoudre les défis du continent.
+                  </p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -492,36 +518,38 @@ export default function Vision() {
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8 md:p-12">
-                <div className="text-center mb-8">
-                  <Sparkles className="h-10 w-10 text-primary mx-auto mb-4" />
-                  <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                    L'Afrique, terre d'avenir pour l'EdTech
-                  </h2>
-                </div>
-                <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
-                  <p className="text-foreground font-medium">
-                    L'Afrique possède la population la plus jeune au monde, avec 60% 
-                    de sa population ayant moins de 25 ans. C'est un atout immense, 
-                    à condition de pouvoir former cette jeunesse aux compétences du futur.
-                  </p>
-                  <p>
-                    LearnXScience s'inscrit dans l'Agenda 2063 de l'Union Africaine et 
-                    contribue directement aux Objectifs de Développement Durable, 
-                    notamment l'ODD 4 (Éducation de qualité), l'ODD 5 (Égalité des genres) 
-                    et l'ODD 9 (Innovation).
-                  </p>
-                  <p>
-                    En formant les scientifiques, ingénieurs et innovateurs de demain 
-                    à travers STEM FLOW, nous participons à la construction d'une Afrique 
-                    plus prospère, plus résiliente et plus connectée au reste du monde.
-                    Notre approche mobile-first permet de toucher des populations 
-                    traditionnellement exclues des systèmes éducatifs formels.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            <ScrollReveal>
+              <Card className="border-0 shadow-lg">
+                <CardContent className="p-8 md:p-12">
+                  <div className="text-center mb-8">
+                    <Sparkles className="h-10 w-10 text-primary mx-auto mb-4" />
+                    <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                      L'Afrique, terre d'avenir pour l'EdTech
+                    </h2>
+                  </div>
+                  <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+                    <p className="text-foreground font-medium">
+                      L'Afrique possède la population la plus jeune au monde, avec 60% 
+                      de sa population ayant moins de 25 ans. C'est un atout immense, 
+                      à condition de pouvoir former cette jeunesse aux compétences du futur.
+                    </p>
+                    <p>
+                      LearnXScience s'inscrit dans l'Agenda 2063 de l'Union Africaine et 
+                      contribue directement aux Objectifs de Développement Durable, 
+                      notamment l'ODD 4 (Éducation de qualité), l'ODD 5 (Égalité des genres) 
+                      et l'ODD 9 (Innovation).
+                    </p>
+                    <p>
+                      En formant les scientifiques, ingénieurs et innovateurs de demain 
+                      à travers STEM FLOW, nous participons à la construction d'une Afrique 
+                      plus prospère, plus résiliente et plus connectée au reste du monde.
+                      Notre approche mobile-first permet de toucher des populations 
+                      traditionnellement exclues des systèmes éducatifs formels.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
           </div>
         </div>
       </section>

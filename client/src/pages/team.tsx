@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import ciraPhoto from "@assets/WhatsApp_Image_2026-02-11_at_18.28.14_1770832210656.jpeg";
 import narcissePhoto from "@assets/WhatsApp_Image_2026-02-11_at_13.55.57_1770832255727.jpeg";
 import souleymanePhoto from "@assets/WhatsApp_Image_2026-02-10_at_21.40.43_1770832294047.jpeg";
@@ -149,161 +150,169 @@ export default function Team() {
 
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="mb-4" variant="secondary">
-              <Star className="h-3 w-3 mr-1" />
-              Direction
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-ceo-title">
-              Notre CEO
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Mathématicien, Data Scientist et Ingénieur IA spécialisé en vision par ordinateur.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <Badge className="mb-4" variant="secondary">
+                <Star className="h-3 w-3 mr-1" />
+                Direction
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-ceo-title">
+                Notre CEO
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                Mathématicien, Data Scientist et Ingénieur IA spécialisé en vision par ordinateur.
+              </p>
+            </div>
+          </ScrollReveal>
 
-          <Card className="max-w-4xl mx-auto border-0 shadow-sm overflow-visible mb-8">
-            <CardContent className="p-0">
-              <div className="bg-primary p-8 text-center rounded-t-xl">
-                <Avatar className="h-28 w-28 mx-auto mb-4 border-4 border-primary-foreground/20">
-                  <AvatarImage src={ceo.photo} alt={ceo.name} className="object-cover" />
-                  <AvatarFallback className="text-3xl font-bold bg-primary-foreground/20 text-primary-foreground">
-                    {ceo.initials}
-                  </AvatarFallback>
-                </Avatar>
-                <h3 className="text-2xl font-bold text-primary-foreground" data-testid="text-ceo-name">
-                  {ceo.name}
-                </h3>
-                <div className="flex items-center justify-center gap-2 mt-2">
-                  <Brain className="h-4 w-4 text-primary-foreground/80" />
-                  <span className="text-primary-foreground/80">{ceo.role}</span>
+          <ScrollReveal>
+            <Card className="max-w-4xl mx-auto border-0 shadow-sm overflow-visible mb-8">
+              <CardContent className="p-0">
+                <div className="bg-primary p-8 text-center rounded-t-xl">
+                  <Avatar className="h-28 w-28 mx-auto mb-4 border-4 border-primary-foreground/20">
+                    <AvatarImage src={ceo.photo} alt={ceo.name} className="object-cover" />
+                    <AvatarFallback className="text-3xl font-bold bg-primary-foreground/20 text-primary-foreground">
+                      {ceo.initials}
+                    </AvatarFallback>
+                  </Avatar>
+                  <h3 className="text-2xl font-bold text-primary-foreground" data-testid="text-ceo-name">
+                    {ceo.name}
+                  </h3>
+                  <div className="flex items-center justify-center gap-2 mt-2">
+                    <Brain className="h-4 w-4 text-primary-foreground/80" />
+                    <span className="text-primary-foreground/80">{ceo.role}</span>
+                  </div>
                 </div>
-              </div>
-              <div className="p-8">
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  {ceo.bio}
-                </p>
-
-                <div className="space-y-4 mb-6">
-                  <h4 className="font-semibold flex items-center gap-2">
-                    <Award className="h-4 w-4 text-secondary" />
-                    Réalisations clés
-                  </h4>
-                  {ceo.achievements.map((achievement, index) => (
-                    <div key={index} className="flex gap-3 pl-2">
-                      <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-primary mt-2.5" />
-                      <p className="text-muted-foreground text-sm leading-relaxed">{achievement}</p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="font-semibold flex items-center gap-2 mb-3">
-                    <Eye className="h-4 w-4 text-primary" />
-                    Vision
-                  </h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {ceo.vision}
+                <div className="p-8">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    {ceo.bio}
                   </p>
-                </div>
 
-                <div className="flex flex-wrap gap-1 mb-6">
-                  {ceo.skills.map((skill, skillIndex) => (
-                    <Badge key={skillIndex} variant="secondary" className="text-xs">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
+                  <div className="space-y-4 mb-6">
+                    <h4 className="font-semibold flex items-center gap-2">
+                      <Award className="h-4 w-4 text-secondary" />
+                      Réalisations clés
+                    </h4>
+                    {ceo.achievements.map((achievement, index) => (
+                      <div key={index} className="flex gap-3 pl-2">
+                        <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-primary mt-2.5" />
+                        <p className="text-muted-foreground text-sm leading-relaxed">{achievement}</p>
+                      </div>
+                    ))}
+                  </div>
 
-                <div className="flex justify-center">
-                  <a
-                    href={ceo.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-testid="social-linkedin-ceo"
-                  >
-                    <Button variant="outline" size="sm">
-                      <Linkedin className="h-4 w-4 mr-2" />
-                      LinkedIn
-                    </Button>
-                  </a>
+                  <div className="mb-6">
+                    <h4 className="font-semibold flex items-center gap-2 mb-3">
+                      <Eye className="h-4 w-4 text-primary" />
+                      Vision
+                    </h4>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {ceo.vision}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-wrap gap-1 mb-6">
+                    {ceo.skills.map((skill, skillIndex) => (
+                      <Badge key={skillIndex} variant="secondary" className="text-xs">
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+
+                  <div className="flex justify-center">
+                    <a
+                      href={ceo.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-testid="social-linkedin-ceo"
+                    >
+                      <Button variant="outline" size="sm">
+                        <Linkedin className="h-4 w-4 mr-2" />
+                        LinkedIn
+                      </Button>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </ScrollReveal>
         </div>
       </section>
 
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4" variant="secondary">
-              Équipe Fondatrice
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-founders-title">
-              Les cofondateurs
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Des profils complémentaires, une même passion pour l'éducation, 
-              la technologie et l'innovation africaine.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <Badge className="mb-4" variant="secondary">
+                Équipe Fondatrice
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-founders-title">
+                Les cofondateurs
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                Des profils complémentaires, une même passion pour l'éducation, 
+                la technologie et l'innovation africaine.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {teamMembers.map((member, index) => (
-              <Card key={index} className="border-0 shadow-sm overflow-visible">
-                <CardContent className="p-0">
-                  <div className={`${member.color} p-8 text-center rounded-t-xl`}>
-                    <Avatar className="h-24 w-24 mx-auto mb-4 border-4 border-primary-foreground/20">
-                      {member.photo && (
-                        <AvatarImage src={member.photo} alt={member.name} className="object-cover" />
-                      )}
-                      <AvatarFallback className="text-2xl font-bold bg-primary-foreground/20 text-primary-foreground">
-                        {member.initials}
-                      </AvatarFallback>
-                    </Avatar>
-                    <h3 className="text-xl font-bold text-primary-foreground" data-testid={`text-member-name-${index}`}>
-                      {member.name}
-                    </h3>
-                    <div className="flex items-center justify-center gap-2 mt-2">
-                      <member.icon className="h-4 w-4 text-primary-foreground/80" />
-                      <span className="text-primary-foreground/80 text-sm">{member.role}</span>
+              <ScrollReveal key={index} delay={index * 100} direction="up">
+                <Card className="border-0 shadow-sm overflow-visible h-full">
+                  <CardContent className="p-0">
+                    <div className={`${member.color} p-8 text-center rounded-t-xl`}>
+                      <Avatar className="h-24 w-24 mx-auto mb-4 border-4 border-primary-foreground/20">
+                        {member.photo && (
+                          <AvatarImage src={member.photo} alt={member.name} className="object-cover" />
+                        )}
+                        <AvatarFallback className="text-2xl font-bold bg-primary-foreground/20 text-primary-foreground">
+                          {member.initials}
+                        </AvatarFallback>
+                      </Avatar>
+                      <h3 className="text-xl font-bold text-primary-foreground" data-testid={`text-member-name-${index}`}>
+                        {member.name}
+                      </h3>
+                      <div className="flex items-center justify-center gap-2 mt-2">
+                        <member.icon className="h-4 w-4 text-primary-foreground/80" />
+                        <span className="text-primary-foreground/80 text-sm">{member.role}</span>
+                      </div>
                     </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                      {member.bio}
-                    </p>
-                    <div className="flex flex-wrap gap-1 mb-4">
-                      {member.skills.map((skill, skillIndex) => (
-                        <Badge key={skillIndex} variant="secondary" className="text-xs">
-                          {skill}
-                        </Badge>
-                      ))}
+                    <div className="p-6">
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                        {member.bio}
+                      </p>
+                      <div className="flex flex-wrap gap-1 mb-4">
+                        {member.skills.map((skill, skillIndex) => (
+                          <Badge key={skillIndex} variant="secondary" className="text-xs">
+                            {skill}
+                          </Badge>
+                        ))}
+                      </div>
+                      <div className="flex gap-2">
+                        {member.linkedin && (
+                          <a
+                            href={member.linkedin}
+                            className="flex h-9 w-9 items-center justify-center rounded-md bg-muted hover-elevate transition-colors"
+                            data-testid={`social-linkedin-${index}`}
+                          >
+                            <Linkedin className="h-4 w-4" />
+                          </a>
+                        )}
+                        {member.website && (
+                          <a
+                            href={member.website}
+                            className="flex h-9 w-9 items-center justify-center rounded-md bg-muted hover-elevate transition-colors"
+                            data-testid={`social-website-${index}`}
+                          >
+                            <Globe className="h-4 w-4" />
+                          </a>
+                        )}
+                      </div>
                     </div>
-                    <div className="flex gap-2">
-                      {member.linkedin && (
-                        <a
-                          href={member.linkedin}
-                          className="flex h-9 w-9 items-center justify-center rounded-md bg-muted hover-elevate transition-colors"
-                          data-testid={`social-linkedin-${index}`}
-                        >
-                          <Linkedin className="h-4 w-4" />
-                        </a>
-                      )}
-                      {member.website && (
-                        <a
-                          href={member.website}
-                          className="flex h-9 w-9 items-center justify-center rounded-md bg-muted hover-elevate transition-colors"
-                          data-testid={`social-website-${index}`}
-                        >
-                          <Globe className="h-4 w-4" />
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -311,30 +320,34 @@ export default function Team() {
 
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4" variant="outline">
-              Notre Écosystème
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-ecosystem-title">
-              Un réseau de soutien panafricain
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Au-delà de l'équipe fondatrice, STEM FLOW s'appuie sur un écosystème 
-              d'experts et d'ambassadeurs.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <Badge className="mb-4" variant="outline">
+                Notre Écosystème
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-ecosystem-title">
+                Un réseau de soutien panafricain
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                Au-delà de l'équipe fondatrice, STEM FLOW s'appuie sur un écosystème 
+                d'experts et d'ambassadeurs.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {advisors.map((advisor, index) => (
-              <Card key={index} className="border-0 shadow-sm text-center">
-                <CardContent className="p-6">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <advisor.icon className="h-7 w-7 text-primary" />
-                  </div>
-                  <h3 className="font-semibold mb-2">{advisor.title}</h3>
-                  <p className="text-muted-foreground text-sm">{advisor.description}</p>
-                </CardContent>
-              </Card>
+              <ScrollReveal key={index} delay={index * 100} direction="up">
+                <Card className="border-0 shadow-sm text-center h-full">
+                  <CardContent className="p-6">
+                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                      <advisor.icon className="h-7 w-7 text-primary" />
+                    </div>
+                    <h3 className="font-semibold mb-2">{advisor.title}</h3>
+                    <p className="text-muted-foreground text-sm">{advisor.description}</p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -342,26 +355,30 @@ export default function Team() {
 
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4" variant="secondary">
-              Notre ADN
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-values-title">
-              Les valeurs qui nous guident
-            </h2>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <Badge className="mb-4" variant="secondary">
+                Notre ADN
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-values-title">
+                Les valeurs qui nous guident
+              </h2>
+            </div>
+          </ScrollReveal>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
-              <Card key={index} className="border-0 shadow-sm text-center">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-lg mb-2">{value.title}</h3>
-                  <p className="text-muted-foreground text-sm">{value.description}</p>
-                </CardContent>
-              </Card>
+              <ScrollReveal key={index} delay={index * 100} direction="up">
+                <Card className="border-0 shadow-sm text-center h-full">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                      <value.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-lg mb-2">{value.title}</h3>
+                    <p className="text-muted-foreground text-sm">{value.description}</p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -370,39 +387,43 @@ export default function Team() {
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge className="mb-4" variant="outline">
-                <Rocket className="h-3 w-3 mr-1" />
-                Rejoindre l'équipe
-              </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-hiring-title">
-                Nous recrutons des talents
-              </h2>
-              <p className="text-muted-foreground text-lg">
-                LearnXScience grandit et cherche des personnes passionnées pour rejoindre l'aventure.
-              </p>
-            </div>
+            <ScrollReveal>
+              <div className="text-center mb-12">
+                <Badge className="mb-4" variant="outline">
+                  <Rocket className="h-3 w-3 mr-1" />
+                  Rejoindre l'équipe
+                </Badge>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-hiring-title">
+                  Nous recrutons des talents
+                </h2>
+                <p className="text-muted-foreground text-lg">
+                  LearnXScience grandit et cherche des personnes passionnées pour rejoindre l'aventure.
+                </p>
+              </div>
+            </ScrollReveal>
 
-            <Card className="border-0 shadow-sm">
-              <CardContent className="p-6">
-                <div className="grid sm:grid-cols-2 gap-3">
-                  {hiring.map((role, index) => (
-                    <div key={index} className="flex items-center gap-3 p-3 rounded-lg bg-muted/50">
-                      <Code className="h-4 w-4 text-primary flex-shrink-0" />
-                      <span className="text-sm">{role}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-6 text-center">
-                  <Link href="/contact">
-                    <Button data-testid="button-apply">
-                      Postuler / Nous contacter
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
+            <ScrollReveal>
+              <Card className="border-0 shadow-sm">
+                <CardContent className="p-6">
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    {hiring.map((role, index) => (
+                      <div key={index} className="flex items-center gap-3 p-3 rounded-lg bg-muted/50">
+                        <Code className="h-4 w-4 text-primary flex-shrink-0" />
+                        <span className="text-sm">{role}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-6 text-center">
+                    <Link href="/contact">
+                      <Button data-testid="button-apply">
+                        Postuler / Nous contacter
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
           </div>
         </div>
       </section>

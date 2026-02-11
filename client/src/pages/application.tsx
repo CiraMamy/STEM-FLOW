@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import {
   Smartphone,
   Play,
@@ -230,34 +231,38 @@ export default function Application() {
 
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4" variant="secondary">
-              Fonctionnalités Principales
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-features-title">
-              Tout ce dont tu as besoin pour apprendre
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Une suite complète d'outils pour explorer, progresser et t'amuser 
-              dans toutes les disciplines STEM.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <Badge className="mb-4" variant="secondary">
+                Fonctionnalités Principales
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-features-title">
+                Tout ce dont tu as besoin pour apprendre
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                Une suite complète d'outils pour explorer, progresser et t'amuser 
+                dans toutes les disciplines STEM.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
-              <Card key={index} className="border-0 shadow-sm hover-elevate">
-                <CardContent className="p-6">
-                  <div className={`w-14 h-14 rounded-xl ${feature.bgColor} flex items-center justify-center mb-4`}>
-                    <feature.icon className={`h-7 w-7 ${feature.color}`} />
-                  </div>
-                  <h3 className="font-semibold text-lg mb-2" data-testid={`text-feature-title-${index}`}>
-                    {feature.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {feature.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <ScrollReveal key={index} delay={index * 100} direction="up">
+                <Card className="border-0 shadow-sm hover-elevate h-full">
+                  <CardContent className="p-6">
+                    <div className={`w-14 h-14 rounded-xl ${feature.bgColor} flex items-center justify-center mb-4`}>
+                      <feature.icon className={`h-7 w-7 ${feature.color}`} />
+                    </div>
+                    <h3 className="font-semibold text-lg mb-2" data-testid={`text-feature-title-${index}`}>
+                      {feature.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -265,32 +270,36 @@ export default function Application() {
 
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4" variant="outline">
-              <BookOpen className="h-3 w-3 mr-1" />
-              Disciplines
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-disciplines-title">
-              Toutes les disciplines STEM couvertes
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Du collège à l'université, explore chaque domaine à ton rythme.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <Badge className="mb-4" variant="outline">
+                <BookOpen className="h-3 w-3 mr-1" />
+                Disciplines
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-disciplines-title">
+                Toutes les disciplines STEM couvertes
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                Du collège à l'université, explore chaque domaine à ton rythme.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
             {disciplines.map((disc, index) => (
-              <Card key={index} className="border-0 shadow-sm">
-                <CardContent className="p-5 flex items-center gap-4">
-                  <div className={`w-12 h-12 rounded-lg ${disc.color} flex items-center justify-center`}>
-                    <Sparkles className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">{disc.name}</h3>
-                    <p className="text-xs text-muted-foreground">{disc.emoji_alt}</p>
-                  </div>
-                </CardContent>
-              </Card>
+              <ScrollReveal key={index} delay={index * 100} direction="up">
+                <Card className="border-0 shadow-sm h-full">
+                  <CardContent className="p-5 flex items-center gap-4">
+                    <div className={`w-12 h-12 rounded-lg ${disc.color} flex items-center justify-center`}>
+                      <Sparkles className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">{disc.name}</h3>
+                      <p className="text-xs text-muted-foreground">{disc.emoji_alt}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -298,26 +307,30 @@ export default function Application() {
 
       <section className="py-16 lg:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="mb-4" variant="secondary">
-              Spécifications
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-specs-title">
-              Conçue pour l'Afrique
-            </h2>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <Badge className="mb-4" variant="secondary">
+                Spécifications
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-specs-title">
+                Conçue pour l'Afrique
+              </h2>
+            </div>
+          </ScrollReveal>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
             {techSpecs.map((spec, index) => (
-              <div key={index} className="flex items-center gap-3 p-4 rounded-lg bg-background border">
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <spec.icon className="h-5 w-5 text-primary" />
+              <ScrollReveal key={index} delay={index * 100} direction="up">
+                <div className="flex items-center gap-3 p-4 rounded-lg bg-background border h-full">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <spec.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-medium text-sm">{spec.title}</div>
+                    <div className="text-xs text-muted-foreground">{spec.desc}</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="font-medium text-sm">{spec.title}</div>
-                  <div className="text-xs text-muted-foreground">{spec.desc}</div>
-                </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -325,41 +338,45 @@ export default function Application() {
 
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <Badge className="mb-4" variant="outline">
-              Parcours Utilisateur
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-journey-title">
-              Commence ton aventure STEM en 5 étapes
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              De l'inscription à la maîtrise, un parcours simple et engageant.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <Badge className="mb-4" variant="outline">
+                Parcours Utilisateur
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-journey-title">
+                Commence ton aventure STEM en 5 étapes
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                De l'inscription à la maîtrise, un parcours simple et engageant.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border hidden md:block" />
               <div className="space-y-8">
                 {userJourney.map((item, index) => (
-                  <div key={index} className="relative flex gap-6">
-                    <div className="hidden md:flex flex-shrink-0 w-16 h-16 rounded-full bg-primary text-primary-foreground items-center justify-center text-2xl font-bold z-10">
-                      {item.step}
+                  <ScrollReveal key={index} delay={index * 100} direction="up">
+                    <div className="relative flex gap-6">
+                      <div className="hidden md:flex flex-shrink-0 w-16 h-16 rounded-full bg-primary text-primary-foreground items-center justify-center text-2xl font-bold z-10">
+                        {item.step}
+                      </div>
+                      <Card className="flex-1 border-0 shadow-sm">
+                        <CardContent className="p-6">
+                          <div className="flex items-start gap-4">
+                            <div className="md:hidden flex-shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-lg font-bold">
+                              {item.step}
+                            </div>
+                            <div>
+                              <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+                              <p className="text-muted-foreground">{item.description}</p>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
                     </div>
-                    <Card className="flex-1 border-0 shadow-sm">
-                      <CardContent className="p-6">
-                        <div className="flex items-start gap-4">
-                          <div className="md:hidden flex-shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-lg font-bold">
-                            {item.step}
-                          </div>
-                          <div>
-                            <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                            <p className="text-muted-foreground">{item.description}</p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
+                  </ScrollReveal>
                 ))}
               </div>
             </div>

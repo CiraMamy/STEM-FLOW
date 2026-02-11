@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import {
   Target,
   Lightbulb,
@@ -73,8 +74,8 @@ const timeline = [
   { year: "Déc. 2025", event: "Création de LearnXScience — Constitution de l'équipe fondatrice", status: "done" },
   { year: "Jan. 2026", event: "Conception technique, design système et architecture de la plateforme STEM FLOW", status: "done" },
   { year: "Fév. 2026", event: "Site vitrine en ligne, version bêta de STEM FLOW fonctionnelle, premiers partenariats signés", status: "done" },
-  { year: "Mars — Août 2026", event: "Tests utilisateurs, itérations continues, intégration IA, lancement officiel au Tchad", status: "current" },
-  { year: "Sept. 2026 — 2027", event: "Déploiement mobile complet, expansion dans 5+ pays francophones, levée de fonds", status: "next" },
+  { year: "Mars — Août 2026", event: "Tests utilisateurs, itérations continues, intégration IA, lancement officiel dans les trois pays (Bénin, Tchad, Sénégal), levée de fonds", status: "current" },
+  { year: "Sept. 2026 — 2027", event: "Déploiement mobile complet, expansion dans 5+ pays francophones", status: "next" },
   { year: "2028+", event: "Impact continental — programmes certifiants, partenariats institutionnels, couverture panafricaine", status: "next" },
 ];
 
@@ -119,34 +120,38 @@ export default function Project() {
 
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <Badge className="mb-4" variant="secondary">
-              La Problématique
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-challenge-title">
-              Les défis de l'éducation STEM en Afrique
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              Malgré un potentiel immense et la population la plus jeune au monde, 
-              l'Afrique fait face à des obstacles majeurs dans le développement des compétences STEM.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <Badge className="mb-4" variant="secondary">
+                La Problématique
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-challenge-title">
+                Les défis de l'éducation STEM en Afrique
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                Malgré un potentiel immense et la population la plus jeune au monde, 
+                l'Afrique fait face à des obstacles majeurs dans le développement des compétences STEM.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-2 gap-6">
             {challenges.map((challenge, index) => (
-              <Card key={index} className="border-destructive/20 bg-destructive/5">
-                <CardContent className="p-6">
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-destructive/10 flex items-center justify-center text-destructive font-bold">
-                      {index + 1}
+              <ScrollReveal key={index} delay={index * 100} direction="up">
+                <Card className="border-destructive/20 bg-destructive/5 h-full">
+                  <CardContent className="p-6">
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-destructive/10 flex items-center justify-center text-destructive font-bold">
+                        {index + 1}
+                      </div>
+                      <div>
+                        <h3 className="font-semibold mb-2">{challenge.title}</h3>
+                        <p className="text-muted-foreground text-sm">{challenge.description}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-semibold mb-2">{challenge.title}</h3>
-                      <p className="text-muted-foreground text-sm">{challenge.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -154,31 +159,35 @@ export default function Project() {
 
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <Badge className="mb-4" variant="outline">
-              <Lightbulb className="h-3 w-3 mr-1" />
-              Notre Solution
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-solution-title">
-              Une approche innovante et adaptée
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              STEM FLOW combine technologie, pédagogie et compréhension culturelle 
-              pour créer une expérience d'apprentissage unique en son genre.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <Badge className="mb-4" variant="outline">
+                <Lightbulb className="h-3 w-3 mr-1" />
+                Notre Solution
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-solution-title">
+                Une approche innovante et adaptée
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                STEM FLOW combine technologie, pédagogie et compréhension culturelle 
+                pour créer une expérience d'apprentissage unique en son genre.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
-              <Card key={index} className="border-0 shadow-sm hover-elevate">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                    <solution.icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-xl mb-3">{solution.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{solution.description}</p>
-                </CardContent>
-              </Card>
+              <ScrollReveal key={index} delay={index * 100} direction="up">
+                <Card className="border-0 shadow-sm hover-elevate h-full">
+                  <CardContent className="p-8 text-center">
+                    <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                      <solution.icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-xl mb-3">{solution.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{solution.description}</p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -187,62 +196,66 @@ export default function Project() {
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <Badge className="mb-4" variant="secondary">
-                Ce qui nous distingue
-              </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6" data-testid="text-diff-title">
-                STEM FLOW vs plateformes classiques
-              </h2>
-              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                Contrairement aux plateformes classiques, STEM FLOW est conçu 
-                spécifiquement pour engager la génération Z africaine 
-                avec les codes qu'elle connaît et aime.
-              </p>
+            <ScrollReveal direction="left">
+              <div>
+                <Badge className="mb-4" variant="secondary">
+                  Ce qui nous distingue
+                </Badge>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6" data-testid="text-diff-title">
+                  STEM FLOW vs plateformes classiques
+                </h2>
+                <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+                  Contrairement aux plateformes classiques, STEM FLOW est conçu 
+                  spécifiquement pour engager la génération Z africaine 
+                  avec les codes qu'elle connaît et aime.
+                </p>
 
-              <div className="space-y-3 mb-8">
-                {differentiators.map((item, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">{item}</span>
-                  </div>
-                ))}
+                <div className="space-y-3 mb-8">
+                  {differentiators.map((item, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
 
-            <div className="space-y-6">
-              <h3 className="font-semibold text-lg mb-4">Pourquoi pas les plateformes existantes ?</h3>
-              {comparisons.map((comp, index) => (
-                <Card key={index} className="border-0 shadow-sm">
+            <ScrollReveal direction="right">
+              <div className="space-y-6">
+                <h3 className="font-semibold text-lg mb-4">Pourquoi pas les plateformes existantes ?</h3>
+                {comparisons.map((comp, index) => (
+                  <Card key={index} className="border-0 shadow-sm">
+                    <CardContent className="p-4">
+                      <div className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-8 h-8 rounded bg-muted flex items-center justify-center">
+                          <BarChart3 className="h-4 w-4 text-muted-foreground" />
+                        </div>
+                        <div>
+                          <h4 className="font-medium text-sm">{comp.platform}</h4>
+                          <p className="text-xs text-muted-foreground mt-1">{comp.weakness}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+                <Card className="border-primary/30 bg-primary/5">
                   <CardContent className="p-4">
                     <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-8 h-8 rounded bg-muted flex items-center justify-center">
-                        <BarChart3 className="h-4 w-4 text-muted-foreground" />
+                      <div className="flex-shrink-0 w-8 h-8 rounded bg-primary/20 flex items-center justify-center">
+                        <Zap className="h-4 w-4 text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-medium text-sm">{comp.platform}</h4>
-                        <p className="text-xs text-muted-foreground mt-1">{comp.weakness}</p>
+                        <h4 className="font-medium text-sm text-primary">STEM FLOW</h4>
+                        <p className="text-xs text-muted-foreground mt-1">
+                          Format court + gamification + IA + communauté + mobile-first + multilingue + adapté à l'Afrique
+                        </p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-              ))}
-              <Card className="border-primary/30 bg-primary/5">
-                <CardContent className="p-4">
-                  <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-8 h-8 rounded bg-primary/20 flex items-center justify-center">
-                      <Zap className="h-4 w-4 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-sm text-primary">STEM FLOW</h4>
-                      <p className="text-xs text-muted-foreground mt-1">
-                        Format court + gamification + IA + communauté + mobile-first + multilingue + adapté à l'Afrique
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -250,44 +263,48 @@ export default function Project() {
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge className="mb-4" variant="outline">
-                <Clock className="h-3 w-3 mr-1" />
-                Feuille de Route
-              </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-roadmap-title">
-                Un projet en marche depuis décembre 2025
-              </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                Nous avançons chaque jour : nous construisons, testons et améliorons continuellement.
-              </p>
-            </div>
+            <ScrollReveal>
+              <div className="text-center mb-12">
+                <Badge className="mb-4" variant="outline">
+                  <Clock className="h-3 w-3 mr-1" />
+                  Feuille de Route
+                </Badge>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-roadmap-title">
+                  Un projet en marche depuis décembre 2025
+                </h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                  Nous avançons chaque jour : nous construisons, testons et améliorons continuellement.
+                </p>
+              </div>
+            </ScrollReveal>
 
             <div className="relative">
               <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-border md:left-1/2 md:-translate-x-0.5" />
               <div className="space-y-8">
                 {timeline.map((item, index) => (
-                  <div key={index} className={`relative flex items-center gap-6 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
-                    <div className="flex-1 hidden md:block" />
-                    <div className={`relative z-10 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${
-                      item.status === "done" ? "bg-primary text-primary-foreground" :
-                      item.status === "current" ? "bg-secondary text-secondary-foreground" :
-                      "bg-muted text-muted-foreground"
-                    }`}>
-                      {item.status === "done" ? <CheckCircle2 className="h-4 w-4" /> : index + 1}
+                  <ScrollReveal key={index} delay={index * 100} direction="up">
+                    <div className={`relative flex items-center gap-6 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
+                      <div className="flex-1 hidden md:block" />
+                      <div className={`relative z-10 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${
+                        item.status === "done" ? "bg-primary text-primary-foreground" :
+                        item.status === "current" ? "bg-secondary text-secondary-foreground" :
+                        "bg-muted text-muted-foreground"
+                      }`}>
+                        {item.status === "done" ? <CheckCircle2 className="h-4 w-4" /> : index + 1}
+                      </div>
+                      <Card className={`flex-1 border-0 shadow-sm ${item.status === "current" ? "border-secondary/30 bg-secondary/5" : ""}`}>
+                        <CardContent className="p-4">
+                          <div className="flex items-center gap-3">
+                            <Badge variant={item.status === "current" ? "default" : "secondary"} className="text-xs">
+                              {item.year}
+                            </Badge>
+                            {item.status === "current" && <Badge variant="outline" className="text-xs">En cours</Badge>}
+                          </div>
+                          <p className="text-sm mt-2">{item.event}</p>
+                        </CardContent>
+                      </Card>
                     </div>
-                    <Card className={`flex-1 border-0 shadow-sm ${item.status === "current" ? "border-secondary/30 bg-secondary/5" : ""}`}>
-                      <CardContent className="p-4">
-                        <div className="flex items-center gap-3">
-                          <Badge variant={item.status === "current" ? "default" : "secondary"} className="text-xs">
-                            {item.year}
-                          </Badge>
-                          {item.status === "current" && <Badge variant="outline" className="text-xs">En cours</Badge>}
-                        </div>
-                        <p className="text-sm mt-2">{item.event}</p>
-                      </CardContent>
-                    </Card>
-                  </div>
+                  </ScrollReveal>
                 ))}
               </div>
             </div>

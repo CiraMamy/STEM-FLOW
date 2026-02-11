@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import {
   Form,
   FormControl,
@@ -151,260 +152,264 @@ export default function Contact() {
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <Badge className="mb-4" variant="secondary">
-                Formulaire de Contact
-              </Badge>
-              <h2 className="text-3xl font-bold mb-6" data-testid="text-form-title">
-                Envoyez-nous un message
-              </h2>
+            <ScrollReveal direction="left">
+              <div>
+                <Badge className="mb-4" variant="secondary">
+                  Formulaire de Contact
+                </Badge>
+                <h2 className="text-3xl font-bold mb-6" data-testid="text-form-title">
+                  Envoyez-nous un message
+                </h2>
 
-              {isSubmitted ? (
-                <Card className="border-0 shadow-sm">
-                  <CardContent className="p-8 text-center">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                      <CheckCircle2 className="h-8 w-8 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">Merci pour votre message !</h3>
-                    <p className="text-muted-foreground mb-4">
-                      Nous avons bien reçu votre demande et vous répondrons sous 48 à 72 heures.
-                    </p>
-                    <p className="text-sm text-muted-foreground mb-6">
-                      En attendant, découvrez notre application :
-                    </p>
-                    <div className="flex flex-col gap-3">
-                      <a href={APP_URL} target="_blank" rel="noopener noreferrer">
-                        <Button className="w-full" data-testid="button-app-after-submit">
-                          Tester l'Application
-                          <ExternalLink className="ml-2 h-4 w-4" />
-                        </Button>
-                      </a>
-                      <Button onClick={() => setIsSubmitted(false)} variant="outline" data-testid="button-new-message">
-                        Envoyer un autre message
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              ) : (
-                <Card className="border-0 shadow-sm">
-                  <CardContent className="p-6 md:p-8">
-                    <Form {...form}>
-                      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                        <div className="grid sm:grid-cols-2 gap-4">
-                          <FormField
-                            control={form.control}
-                            name="name"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>Nom complet *</FormLabel>
-                                <FormControl>
-                                  <Input
-                                    placeholder="Votre nom"
-                                    {...field}
-                                    data-testid="input-name"
-                                  />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
-                          <FormField
-                            control={form.control}
-                            name="email"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>Email *</FormLabel>
-                                <FormControl>
-                                  <Input
-                                    type="email"
-                                    placeholder="votre@email.com"
-                                    {...field}
-                                    data-testid="input-email"
-                                  />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
-                        </div>
-
-                        <div className="grid sm:grid-cols-2 gap-4">
-                          <FormField
-                            control={form.control}
-                            name="organization"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>Organisation</FormLabel>
-                                <FormControl>
-                                  <Input
-                                    placeholder="Votre entreprise / institution"
-                                    {...field}
-                                    value={field.value ?? ""}
-                                    data-testid="input-organization"
-                                  />
-                                </FormControl>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
-                          <FormField
-                            control={form.control}
-                            name="type"
-                            render={({ field }) => (
-                              <FormItem>
-                                <FormLabel>Type de demande *</FormLabel>
-                                <Select
-                                  onValueChange={field.onChange}
-                                  defaultValue={field.value}
-                                >
-                                  <FormControl>
-                                    <SelectTrigger data-testid="select-type">
-                                      <SelectValue placeholder="Sélectionnez..." />
-                                    </SelectTrigger>
-                                  </FormControl>
-                                  <SelectContent>
-                                    {contactTypes.map((type) => (
-                                      <SelectItem key={type.value} value={type.value}>
-                                        {type.label}
-                                      </SelectItem>
-                                    ))}
-                                  </SelectContent>
-                                </Select>
-                                <FormMessage />
-                              </FormItem>
-                            )}
-                          />
-                        </div>
-
-                        <FormField
-                          control={form.control}
-                          name="message"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Message *</FormLabel>
-                              <FormControl>
-                                <Textarea
-                                  placeholder="Décrivez votre demande, vos intérêts ou votre proposition..."
-                                  rows={5}
-                                  {...field}
-                                  data-testid="input-message"
-                                />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-
-                        <Button
-                          type="submit"
-                          size="lg"
-                          className="w-full"
-                          disabled={mutation.isPending}
-                          data-testid="button-submit"
-                        >
-                          {mutation.isPending ? (
-                            <>
-                              <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                              Envoi en cours...
-                            </>
-                          ) : (
-                            <>
-                              <Send className="mr-2 h-5 w-5" />
-                              Envoyer le message
-                            </>
-                          )}
-                        </Button>
-                      </form>
-                    </Form>
-                  </CardContent>
-                </Card>
-              )}
-            </div>
-
-            <div>
-              <Badge className="mb-4" variant="outline">
-                Coordonnées
-              </Badge>
-              <h2 className="text-3xl font-bold mb-6" data-testid="text-coords-title">
-                Autres moyens de nous contacter
-              </h2>
-
-              <div className="space-y-4">
-                {socialLinks.map((link, index) => (
-                  <a
-                    key={index}
-                    href={link.href}
-                    className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover-elevate transition-colors"
-                    data-testid={`contact-link-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
-                  >
-                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <link.icon className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-medium">{link.label}</div>
-                      <div className="text-sm text-muted-foreground">{link.value}</div>
-                    </div>
-                  </a>
-                ))}
-
-                <Card className="border-0 shadow-sm mt-6">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
-                        <MapPin className="h-5 w-5 text-secondary" />
+                {isSubmitted ? (
+                  <Card className="border-0 shadow-sm">
+                    <CardContent className="p-8 text-center">
+                      <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                        <CheckCircle2 className="h-8 w-8 text-primary" />
                       </div>
-                      <div>
-                        <div className="font-medium mb-2">Basés en Afrique</div>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                          STEM FLOW est une startup panafricaine avec des équipes 
-                          réparties sur le continent. Nous travaillons en remote-first 
-                          pour toucher le plus grand nombre de pays.
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-0 shadow-sm">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
-                        <Clock className="h-5 w-5 text-accent" />
-                      </div>
-                      <div>
-                        <div className="font-medium mb-2">Délai de réponse</div>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                          Nous répondons généralement sous 48 à 72 heures ouvrées. 
-                          Pour les demandes urgentes, précisez-le dans votre message.
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-primary/20 bg-primary/5 shadow-sm">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
-                        <Zap className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <div className="font-medium mb-2">Testez l'application</div>
-                        <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                          Découvrez STEM FLOW en action avant de nous contacter.
-                        </p>
+                      <h3 className="text-xl font-semibold mb-2">Merci pour votre message !</h3>
+                      <p className="text-muted-foreground mb-4">
+                        Nous avons bien reçu votre demande et vous répondrons sous 48 à 72 heures.
+                      </p>
+                      <p className="text-sm text-muted-foreground mb-6">
+                        En attendant, découvrez notre application :
+                      </p>
+                      <div className="flex flex-col gap-3">
                         <a href={APP_URL} target="_blank" rel="noopener noreferrer">
-                          <Button size="sm" variant="outline" data-testid="button-app-sidebar">
-                            Ouvrir l'App
-                            <ExternalLink className="ml-2 h-3 w-3" />
+                          <Button className="w-full" data-testid="button-app-after-submit">
+                            Tester l'Application
+                            <ExternalLink className="ml-2 h-4 w-4" />
                           </Button>
                         </a>
+                        <Button onClick={() => setIsSubmitted(false)} variant="outline" data-testid="button-new-message">
+                          Envoyer un autre message
+                        </Button>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                ) : (
+                  <Card className="border-0 shadow-sm">
+                    <CardContent className="p-6 md:p-8">
+                      <Form {...form}>
+                        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                          <div className="grid sm:grid-cols-2 gap-4">
+                            <FormField
+                              control={form.control}
+                              name="name"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel>Nom complet *</FormLabel>
+                                  <FormControl>
+                                    <Input
+                                      placeholder="Votre nom"
+                                      {...field}
+                                      data-testid="input-name"
+                                    />
+                                  </FormControl>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+                            <FormField
+                              control={form.control}
+                              name="email"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel>Email *</FormLabel>
+                                  <FormControl>
+                                    <Input
+                                      type="email"
+                                      placeholder="votre@email.com"
+                                      {...field}
+                                      data-testid="input-email"
+                                    />
+                                  </FormControl>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+                          </div>
+
+                          <div className="grid sm:grid-cols-2 gap-4">
+                            <FormField
+                              control={form.control}
+                              name="organization"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel>Organisation</FormLabel>
+                                  <FormControl>
+                                    <Input
+                                      placeholder="Votre entreprise / institution"
+                                      {...field}
+                                      value={field.value ?? ""}
+                                      data-testid="input-organization"
+                                    />
+                                  </FormControl>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+                            <FormField
+                              control={form.control}
+                              name="type"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel>Type de demande *</FormLabel>
+                                  <Select
+                                    onValueChange={field.onChange}
+                                    defaultValue={field.value}
+                                  >
+                                    <FormControl>
+                                      <SelectTrigger data-testid="select-type">
+                                        <SelectValue placeholder="Sélectionnez..." />
+                                      </SelectTrigger>
+                                    </FormControl>
+                                    <SelectContent>
+                                      {contactTypes.map((type) => (
+                                        <SelectItem key={type.value} value={type.value}>
+                                          {type.label}
+                                        </SelectItem>
+                                      ))}
+                                    </SelectContent>
+                                  </Select>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+                          </div>
+
+                          <FormField
+                            control={form.control}
+                            name="message"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Message *</FormLabel>
+                                <FormControl>
+                                  <Textarea
+                                    placeholder="Décrivez votre demande, vos intérêts ou votre proposition..."
+                                    rows={5}
+                                    {...field}
+                                    data-testid="input-message"
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <Button
+                            type="submit"
+                            size="lg"
+                            className="w-full"
+                            disabled={mutation.isPending}
+                            data-testid="button-submit"
+                          >
+                            {mutation.isPending ? (
+                              <>
+                                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                                Envoi en cours...
+                              </>
+                            ) : (
+                              <>
+                                <Send className="mr-2 h-5 w-5" />
+                                Envoyer le message
+                              </>
+                            )}
+                          </Button>
+                        </form>
+                      </Form>
+                    </CardContent>
+                  </Card>
+                )}
               </div>
-            </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right">
+              <div>
+                <Badge className="mb-4" variant="outline">
+                  Coordonnées
+                </Badge>
+                <h2 className="text-3xl font-bold mb-6" data-testid="text-coords-title">
+                  Autres moyens de nous contacter
+                </h2>
+
+                <div className="space-y-4">
+                  {socialLinks.map((link, index) => (
+                    <a
+                      key={index}
+                      href={link.href}
+                      className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover-elevate transition-colors"
+                      data-testid={`contact-link-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
+                    >
+                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <link.icon className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <div className="font-medium">{link.label}</div>
+                        <div className="text-sm text-muted-foreground">{link.value}</div>
+                      </div>
+                    </a>
+                  ))}
+
+                  <Card className="border-0 shadow-sm mt-6">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
+                          <MapPin className="h-5 w-5 text-secondary" />
+                        </div>
+                        <div>
+                          <div className="font-medium mb-2">Basés en Afrique</div>
+                          <p className="text-sm text-muted-foreground leading-relaxed">
+                            STEM FLOW est une startup panafricaine avec des équipes 
+                            réparties sur le continent. Nous travaillons en remote-first 
+                            pour toucher le plus grand nombre de pays.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-0 shadow-sm">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
+                          <Clock className="h-5 w-5 text-accent" />
+                        </div>
+                        <div>
+                          <div className="font-medium mb-2">Délai de réponse</div>
+                          <p className="text-sm text-muted-foreground leading-relaxed">
+                            Nous répondons généralement sous 48 à 72 heures ouvrées. 
+                            Pour les demandes urgentes, précisez-le dans votre message.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-primary/20 bg-primary/5 shadow-sm">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
+                          <Zap className="h-5 w-5 text-primary" />
+                        </div>
+                        <div>
+                          <div className="font-medium mb-2">Testez l'application</div>
+                          <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                            Découvrez STEM FLOW en action avant de nous contacter.
+                          </p>
+                          <a href={APP_URL} target="_blank" rel="noopener noreferrer">
+                            <Button size="sm" variant="outline" data-testid="button-app-sidebar">
+                              Ouvrir l'App
+                              <ExternalLink className="ml-2 h-3 w-3" />
+                            </Button>
+                          </a>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -412,24 +417,28 @@ export default function Contact() {
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge className="mb-4" variant="outline">
-                <Globe className="h-3 w-3 mr-1" />
-                FAQ
-              </Badge>
-              <h2 className="text-3xl font-bold mb-4" data-testid="text-faq-title">
-                Questions fréquentes
-              </h2>
-            </div>
+            <ScrollReveal>
+              <div className="text-center mb-12">
+                <Badge className="mb-4" variant="outline">
+                  <Globe className="h-3 w-3 mr-1" />
+                  FAQ
+                </Badge>
+                <h2 className="text-3xl font-bold mb-4" data-testid="text-faq-title">
+                  Questions fréquentes
+                </h2>
+              </div>
+            </ScrollReveal>
 
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <Card key={index} className="border-0 shadow-sm">
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold mb-2" data-testid={`text-faq-q-${index}`}>{faq.q}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
-                  </CardContent>
-                </Card>
+                <ScrollReveal key={index} delay={index * 100} direction="up">
+                  <Card className="border-0 shadow-sm">
+                    <CardContent className="p-6">
+                      <h3 className="font-semibold mb-2" data-testid={`text-faq-q-${index}`}>{faq.q}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
+                    </CardContent>
+                  </Card>
+                </ScrollReveal>
               ))}
             </div>
           </div>
