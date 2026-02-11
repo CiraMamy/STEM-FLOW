@@ -13,6 +13,7 @@ import {
   TrendingUp,
   Lightbulb,
   Globe,
+  Zap,
   ExternalLink,
   Smartphone,
   BookOpen,
@@ -276,15 +277,23 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6" data-testid="text-why-title">
                 Pourquoi LearnXScience ?
               </h2>
-              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                L'\u00e9ducation traditionnelle ne tient pas compte des usages num\u00e9riques r\u00e9els des jeunes, 
-                de la personnalisation cognitive, de l'engagement comportemental, ni de la data 
-                comme levier d'am\u00e9lioration.
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                L'\u00e9ducation traditionnelle ne tient pas compte des usages num\u00e9riques r\u00e9els 
+                des jeunes, de la personnalisation cognitive, de l'engagement comportemental, 
+                ni de la data comme levier d'am\u00e9lioration.
               </p>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed font-medium text-foreground">
-                Pendant que les jeunes passent des heures \u00e0 scroller, le syst\u00e8me \u00e9ducatif reste statique. 
-                Nous existons pour transformer les usages num\u00e9riques en leviers d'apprentissage intelligent.
-              </p>
+              <Card className="border-primary/20 bg-primary/5 mb-8">
+                <CardContent className="p-6 flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mt-1">
+                    <Zap className="h-5 w-5 text-primary" />
+                  </div>
+                  <p className="text-lg leading-relaxed font-medium text-foreground">
+                    Pendant que les jeunes passent des heures \u00e0 scroller, le syst\u00e8me \u00e9ducatif 
+                    reste statique. Nous existons pour transformer les usages num\u00e9riques en 
+                    leviers d'apprentissage intelligent.
+                  </p>
+                </CardContent>
+              </Card>
 
               <div className="space-y-6">
                 {problems.map((problem, index) => (

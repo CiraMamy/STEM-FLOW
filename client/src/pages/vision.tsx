@@ -195,8 +195,13 @@ export default function Vision() {
                 Pourquoi LearnXScience existe
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Pendant que les jeunes passent des heures \u00e0 scroller, le syst\u00e8me \u00e9ducatif reste statique. 
-                Nous existons pour combler ce foss\u00e9.
+                L'\u00e9ducation traditionnelle ne tient pas compte des usages num\u00e9riques r\u00e9els 
+                des jeunes, de la personnalisation cognitive, de l'engagement comportemental, 
+                ni de la data comme levier d'am\u00e9lioration.
+              </p>
+              <p className="text-lg font-medium text-foreground max-w-2xl mx-auto mt-4 leading-relaxed">
+                Pendant que les jeunes passent des heures \u00e0 scroller, le syst\u00e8me \u00e9ducatif 
+                reste statique. Nous existons pour combler ce foss\u00e9.
               </p>
             </div>
 
