@@ -18,6 +18,7 @@ import {
   Shield,
   Heart,
   Zap,
+  Code,
 } from "lucide-react";
 
 const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
@@ -277,11 +278,113 @@ export default function Partnerships() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Badge className="mb-4" variant="outline">
+              <Handshake className="h-3 w-3 mr-1" />
+              Nos Partenaires
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-current-partners-title">
+              Ils nous font d\u00e9j\u00e0 confiance
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              STEM FLOW s'appuie sur un r\u00e9seau de partenaires engag\u00e9s dans l'\u00e9ducation 
+              num\u00e9rique et le d\u00e9veloppement des comp\u00e9tences en Afrique.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card className="border-0 shadow-lg hover-elevate">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Code className="h-7 w-7 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl" data-testid="text-partner-cfc">Code For Chad</h3>
+                    <Badge variant="secondary" className="text-xs mt-1">Communaut\u00e9 Tech</Badge>
+                  </div>
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Communaut\u00e9 des d\u00e9veloppeurs tchadiens fond\u00e9e par Souleymane Mahamat Saleh. 
+                  Code For Chad forme les jeunes au codage informatique, favorise l'innovation 
+                  technologique et cr\u00e9e un \u00e9cosyst\u00e8me num\u00e9rique dynamique au Tchad. 
+                  Un partenaire cl\u00e9 pour le d\u00e9ploiement de STEM FLOW en Afrique centrale.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start gap-2 text-sm">
+                    <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Formation aux comp\u00e9tences num\u00e9riques et au codage</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">R\u00e9seau de d\u00e9veloppeurs et mentors au Tchad</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Partenariat avec l'Ambassade des \u00c9tats-Unis au Tchad</span>
+                  </li>
+                </ul>
+                <a href="https://www.codeforchad.net" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="w-full" data-testid="button-cfc-website">
+                    <Globe className="mr-2 h-4 w-4" />
+                    Visiter codeforchad.net
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover-elevate">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center">
+                    <GraduationCap className="h-7 w-7 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl" data-testid="text-partner-60credits">60 Cr\u00e9dits</h3>
+                    <Badge variant="secondary" className="text-xs mt-1">Communaut\u00e9 \u00c9ducative</Badge>
+                  </div>
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Communaut\u00e9 d'\u00e9ducation financi\u00e8re et d'autonomisation des jeunes, 
+                  anim\u00e9e par Cira Mamy Sow. 60 Cr\u00e9dits forme les \u00e9tudiants \u00e0 la gestion 
+                  financi\u00e8re et \u00e0 l'autonomisation intellectuelle et \u00e9conomique. 
+                  Un partenaire essentiel pour l'impact social de STEM FLOW au S\u00e9n\u00e9gal.
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start gap-2 text-sm">
+                    <CheckCircle2 className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">\u00c9ducation financi\u00e8re pour les \u00e9tudiants</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <CheckCircle2 className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Autonomisation intellectuelle et \u00e9conomique des jeunes</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm">
+                    <CheckCircle2 className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">R\u00e9seau d'\u00e9tudiants engag\u00e9s au S\u00e9n\u00e9gal</span>
+                  </li>
+                </ul>
+                <a href="https://www.facebook.com/share/1ac1GqCAG2/" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="w-full" data-testid="button-60credits-page">
+                    <Globe className="mr-2 h-4 w-4" />
+                    D\u00e9couvrir 60 Cr\u00e9dits
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
+                </a>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 lg:py-28 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge className="mb-4" variant="outline">
               <Zap className="h-3 w-3 mr-1" />
-              Partenaires Cibl\u00e9s
+              Partenaires Recherch\u00e9s
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-target-partners-title">
-              Les types de partenaires que nous recherchons
+              Les partenaires que nous recherchons aussi
             </h2>
           </div>
 
