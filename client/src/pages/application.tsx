@@ -10,83 +10,110 @@ import {
   Brain,
   Swords,
   ArrowRight,
-  CheckCircle2,
+  ExternalLink,
   Zap,
   Star,
   Target,
+  Wifi,
+  Shield,
+  Languages,
+  BarChart3,
+  BookOpen,
+  Users,
+  Sparkles,
 } from "lucide-react";
+
+const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
 
 const features = [
   {
     icon: Play,
-    title: "Feed vidéo STEM",
-    description: "Un flux de vidéos éducatives courtes (30-90 secondes) style TikTok. Swipe pour apprendre, like pour sauvegarder, commente pour échanger.",
+    title: "Feed vid\u00e9o STEM",
+    description: "Un flux de vid\u00e9os \u00e9ducatives courtes (30-90 secondes) style TikTok. Swipe pour apprendre, like pour sauvegarder, commente pour \u00e9changer. Algorithme IA pour des recommandations personnalis\u00e9es.",
     color: "text-primary",
     bgColor: "bg-primary/10",
   },
   {
     icon: MessageCircle,
     title: "Salons communautaires",
-    description: "Des espaces de discussion thématiques inspirés de Discord. Rejoins des communautés de matheux, de codeurs, de scientifiques.",
+    description: "Des espaces de discussion th\u00e9matiques inspir\u00e9s de Discord. Rejoins des communaut\u00e9s de math\u00e9maticiens, de codeurs, de scientifiques. Pose tes questions, partage tes d\u00e9couvertes.",
     color: "text-secondary",
     bgColor: "bg-secondary/10",
   },
   {
     icon: Trophy,
-    title: "Gamification complète",
-    description: "Gagne des XP à chaque vidéo, débloque des badges, monte en niveau. Participe à des challenges quotidiens et hebdomadaires.",
+    title: "Gamification compl\u00e8te",
+    description: "Syst\u00e8me XP \u00e0 chaque vid\u00e9o, badges de comp\u00e9tences, niveaux progressifs. Challenges quotidiens, s\u00e9ries d'apprentissage (streaks) et classements par \u00e9cole, ville et pays.",
     color: "text-accent",
     bgColor: "bg-accent/10",
   },
   {
     icon: Brain,
     title: "IA de personnalisation",
-    description: "Notre algorithme apprend tes préférences et ton niveau pour te proposer le contenu parfait. Plus tu utilises l'app, plus elle te connaît.",
+    description: "Notre algorithme apprend tes pr\u00e9f\u00e9rences et ton niveau pour te proposer le contenu parfait. Plus tu utilises l'app, mieux elle te conna\u00eet. Parcours adaptatif en temps r\u00e9el.",
     color: "text-chart-4",
     bgColor: "bg-chart-4/10",
   },
   {
     icon: Swords,
-    title: "Battles & Compétitions",
-    description: "Affronte d'autres élèves ou d'autres écoles dans des quiz chronométrés. Représente ton établissement dans les classements nationaux.",
+    title: "Battles & Comp\u00e9titions",
+    description: "Affronte d'autres \u00e9l\u00e8ves ou d'autres \u00e9coles dans des quiz chronom\u00e9tr\u00e9s. Repr\u00e9sente ton \u00e9tablissement dans les classements nationaux et panafricains.",
     color: "text-chart-5",
     bgColor: "bg-chart-5/10",
   },
   {
     icon: Target,
-    title: "Parcours structurés",
-    description: "Des parcours d'apprentissage progressifs pour chaque discipline STEM. Du débutant à l'expert, avance à ton rythme.",
+    title: "Parcours structur\u00e9s",
+    description: "Des parcours d'apprentissage progressifs pour chaque discipline STEM : math\u00e9matiques, physique, chimie, biologie, informatique, ing\u00e9nierie. Du d\u00e9butant \u00e0 l'expert.",
     color: "text-chart-2",
     bgColor: "bg-chart-2/10",
   },
 ];
 
+const techSpecs = [
+  { icon: Smartphone, title: "Mobile-First", desc: "Android & iOS, APK l\u00e9ger (<30 Mo)" },
+  { icon: Wifi, title: "Mode Hors-ligne", desc: "T\u00e9l\u00e9charge et apprends sans connexion" },
+  { icon: Languages, title: "Multilingue", desc: "Fran\u00e7ais, Anglais, langues locales" },
+  { icon: Shield, title: "S\u00e9curis\u00e9", desc: "Mod\u00e9ration et protection des donn\u00e9es" },
+  { icon: BarChart3, title: "Analytics", desc: "Tableau de bord de progression d\u00e9taill\u00e9" },
+  { icon: BookOpen, title: "Contenu v\u00e9rifi\u00e9", desc: "Valid\u00e9 par des \u00e9ducateurs certifi\u00e9s" },
+];
+
 const userJourney = [
   {
     step: 1,
-    title: "Télécharge l'app",
-    description: "Disponible sur Android et iOS. Inscription gratuite en 30 secondes.",
+    title: "T\u00e9l\u00e9charge l'app",
+    description: "Disponible sur Android et iOS. Inscription gratuite en 30 secondes avec email ou num\u00e9ro de t\u00e9l\u00e9phone.",
   },
   {
     step: 2,
-    title: "Personnalise ton profil",
-    description: "Choisis tes disciplines préférées et ton niveau actuel.",
+    title: "Choisis ta langue et tes int\u00e9r\u00eats",
+    description: "S\u00e9lectionne ta langue pr\u00e9f\u00e9r\u00e9e et les disciplines STEM qui te passionnent. L'IA s'adapte imm\u00e9diatement.",
   },
   {
     step: 3,
-    title: "Explore le feed",
-    description: "Commence à scroller et découvre des contenus passionnants.",
+    title: "Explore le feed vid\u00e9o",
+    description: "Commence \u00e0 scroller et d\u00e9couvre des micro-le\u00e7ons passionnantes. Chaque vid\u00e9o te rapporte des XP.",
   },
   {
     step: 4,
-    title: "Rejoins des communautés",
-    description: "Trouve des groupes qui partagent tes intérêts.",
+    title: "Rejoins des communaut\u00e9s",
+    description: "Int\u00e8gre des groupes th\u00e9matiques, pose des questions, aide les autres et gagne des badges.",
   },
   {
     step: 5,
-    title: "Progresse et gagne",
-    description: "Accumule XP, badges et monte dans les classements.",
+    title: "Progresse et comp\u00e9tionne",
+    description: "Accumule XP, monte en niveau, d\u00e9fie tes amis et repr\u00e9sente ton \u00e9cole dans les classements.",
   },
+];
+
+const disciplines = [
+  { name: "Math\u00e9matiques", emoji_alt: "Alg\u00e8bre, g\u00e9om\u00e9trie, statistiques", color: "bg-primary/10 text-primary" },
+  { name: "Physique", emoji_alt: "M\u00e9canique, optique, quantique", color: "bg-secondary/10 text-secondary" },
+  { name: "Chimie", emoji_alt: "Organique, mol\u00e9culaire, r\u00e9actions", color: "bg-accent/10 text-accent" },
+  { name: "Informatique", emoji_alt: "Python, algorithmes, web", color: "bg-chart-4/10 text-chart-4" },
+  { name: "Biologie", emoji_alt: "G\u00e9n\u00e9tique, \u00e9cologie, anatomie", color: "bg-chart-5/10 text-chart-5" },
+  { name: "Ing\u00e9nierie", emoji_alt: "\u00c9lectronique, m\u00e9canique, civil", color: "bg-chart-2/10 text-chart-2" },
 ];
 
 export default function Application() {
@@ -101,22 +128,29 @@ export default function Application() {
             <div>
               <Badge className="mb-6" variant="outline" data-testid="badge-app">
                 <Smartphone className="h-3 w-3 mr-1" />
-                L'Application
+                L'Application STEM FLOW
               </Badge>
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-testid="text-app-title">
                 L'apprentissage STEM dans ta{" "}
                 <span className="text-primary">poche</span>
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+              <p className="text-xl text-muted-foreground leading-relaxed mb-4">
                 STEM FLOW est une application mobile qui transforme chaque moment 
-                libre en opportunité d'apprentissage. Interface intuitive, 
+                libre en opportunit\u00e9 d'apprentissage. Interface intuitive, 
                 contenu captivant, progression visible.
               </p>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Con\u00e7ue pour fonctionner m\u00eame avec une connexion limit\u00e9e, 
+                disponible en fran\u00e7ais et en anglais, et totalement gratuite.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-base" data-testid="button-coming-soon" disabled>
-                  <Zap className="mr-2 h-5 w-5" />
-                  Bientôt disponible
-                </Button>
+                <a href={APP_URL} target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="text-base" data-testid="button-launch-app">
+                    <Zap className="mr-2 h-5 w-5" />
+                    Tester l'Application
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
+                </a>
                 <Link href="/contact">
                   <Button size="lg" variant="outline" className="text-base" data-testid="button-waitlist-app">
                     Rejoindre la liste d'attente
@@ -149,6 +183,7 @@ export default function Application() {
                             <Play className="h-3 w-3 text-chart-2" />
                           </div>
                           <span className="text-xs font-medium">Physique quantique</span>
+                          <Badge variant="secondary" className="text-[8px] ml-auto">+15 XP</Badge>
                         </div>
                         <div className="h-20 bg-muted rounded flex items-center justify-center">
                           <Play className="h-8 w-8 text-muted-foreground/50" />
@@ -159,7 +194,8 @@ export default function Application() {
                           <div className="w-6 h-6 rounded bg-primary/20 flex items-center justify-center">
                             <Brain className="h-3 w-3 text-primary" />
                           </div>
-                          <span className="text-xs font-medium">Algèbre linéaire</span>
+                          <span className="text-xs font-medium">Alg\u00e8bre lin\u00e9aire</span>
+                          <Badge variant="secondary" className="text-[8px] ml-auto">+10 XP</Badge>
                         </div>
                         <div className="h-20 bg-muted rounded flex items-center justify-center">
                           <Play className="h-8 w-8 text-muted-foreground/50" />
@@ -196,13 +232,14 @@ export default function Application() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4" variant="secondary">
-              Fonctionnalités
+              Fonctionnalit\u00e9s Principales
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-features-title">
-              Tout ce dont tu as besoin
+              Tout ce dont tu as besoin pour apprendre
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Une suite complète d'outils pour apprendre, progresser et t'amuser.
+              Une suite compl\u00e8te d'outils pour explorer, progresser et t'amuser 
+              dans toutes les disciplines STEM.
             </p>
           </div>
 
@@ -228,15 +265,75 @@ export default function Application() {
 
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-4" variant="outline">
+              <BookOpen className="h-3 w-3 mr-1" />
+              Disciplines
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-disciplines-title">
+              Toutes les disciplines STEM couvertes
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Du coll\u00e8ge \u00e0 l'universit\u00e9, explore chaque domaine \u00e0 ton rythme.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {disciplines.map((disc, index) => (
+              <Card key={index} className="border-0 shadow-sm">
+                <CardContent className="p-5 flex items-center gap-4">
+                  <div className={`w-12 h-12 rounded-lg ${disc.color} flex items-center justify-center`}>
+                    <Sparkles className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">{disc.name}</h3>
+                    <p className="text-xs text-muted-foreground">{disc.emoji_alt}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 lg:py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge className="mb-4" variant="secondary">
+              Sp\u00e9cifications
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-specs-title">
+              Con\u00e7ue pour l'Afrique
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {techSpecs.map((spec, index) => (
+              <div key={index} className="flex items-center gap-3 p-4 rounded-lg bg-background border">
+                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <spec.icon className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <div className="font-medium text-sm">{spec.title}</div>
+                  <div className="text-xs text-muted-foreground">{spec.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 lg:py-28">
+        <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <Badge className="mb-4" variant="outline">
               Parcours Utilisateur
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-journey-title">
-              Commence ton aventure STEM
+              Commence ton aventure STEM en 5 \u00e9tapes
             </h2>
             <p className="text-muted-foreground text-lg">
-              En 5 étapes simples, deviens un explorateur STEM accompli.
+              De l'inscription \u00e0 la ma\u00eetrise, un parcours simple et engageant.
             </p>
           </div>
 
@@ -273,17 +370,26 @@ export default function Application() {
       <section className="py-20 lg:py-28 bg-gradient-to-br from-accent via-accent to-accent/90">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-6">
-            Sois parmi les premiers à tester STEM FLOW
+            Teste STEM FLOW maintenant
           </h2>
           <p className="text-accent-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
-            Inscris-toi à notre liste d'attente et sois notifié dès le lancement de l'application.
+            L'application est disponible en version d\u00e9mo. D\u00e9couvre l'exp\u00e9rience 
+            d'apprentissage STEM FLOW d\u00e8s aujourd'hui.
           </p>
-          <Link href="/contact">
-            <Button size="lg" variant="secondary" className="text-base px-8">
-              Rejoindre la liste d'attente
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={APP_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="secondary" className="text-base px-8" data-testid="button-cta-app-bottom">
+                Lancer l'Application
+                <ExternalLink className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <Link href="/contact">
+              <Button size="lg" variant="outline" className="text-base px-8 border-accent-foreground/30 text-accent-foreground bg-accent-foreground/5" data-testid="button-waitlist-bottom">
+                Liste d'attente
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
     </div>

@@ -35,13 +35,19 @@ import {
   MapPin,
   CheckCircle2,
   Loader2,
+  ExternalLink,
+  Clock,
+  Globe,
+  Zap,
 } from "lucide-react";
 
+const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
+
 const contactFormSchema = insertContactSchema.extend({
-  name: z.string().min(2, "Le nom doit contenir au moins 2 caractères"),
+  name: z.string().min(2, "Le nom doit contenir au moins 2 caract\u00e8res"),
   email: z.string().email("Veuillez entrer une adresse email valide"),
-  type: z.string().min(1, "Veuillez sélectionner un type de demande"),
-  message: z.string().min(10, "Le message doit contenir au moins 10 caractères"),
+  type: z.string().min(1, "Veuillez s\u00e9lectionner un type de demande"),
+  message: z.string().min(10, "Le message doit contenir au moins 10 caract\u00e8res"),
 });
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
@@ -49,18 +55,26 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 const contactTypes = [
   { value: "waitlist", label: "Rejoindre la liste d'attente" },
   { value: "partnership", label: "Proposition de partenariat" },
-  { value: "investment", label: "Opportunité d'investissement" },
-  { value: "incubator", label: "Programme d'incubation" },
-  { value: "education", label: "Institution éducative" },
-  { value: "media", label: "Presse / Médias" },
+  { value: "investment", label: "Opportunit\u00e9 d'investissement" },
+  { value: "incubator", label: "Programme d'incubation / acc\u00e9l\u00e9ration" },
+  { value: "education", label: "Institution \u00e9ducative / ONG" },
+  { value: "media", label: "Presse / M\u00e9dias / Interview" },
+  { value: "talent", label: "Candidature / Rejoindre l'\u00e9quipe" },
   { value: "other", label: "Autre demande" },
 ];
 
 const socialLinks = [
   { icon: Mail, label: "Email", href: "mailto:contact@stemflow.africa", value: "contact@stemflow.africa" },
   { icon: Linkedin, label: "LinkedIn", href: "#", value: "linkedin.com/company/stemflow" },
-  { icon: Twitter, label: "Twitter", href: "#", value: "@stemflow_africa" },
+  { icon: Twitter, label: "Twitter / X", href: "#", value: "@stemflow_africa" },
   { icon: Instagram, label: "Instagram", href: "#", value: "@stemflow.africa" },
+];
+
+const faqs = [
+  { q: "STEM FLOW est-il gratuit ?", a: "Oui, l'application est enti\u00e8rement gratuite pour les apprenants. Nous proposons des mod\u00e8les B2B et sponsoring pour les institutions et entreprises." },
+  { q: "Dans quels pays l'app est-elle disponible ?", a: "STEM FLOW est actuellement en phase de b\u00eata test et sera lanc\u00e9 d'abord en Afrique de l'Ouest francophone (2026), puis \u00e0 l'\u00e9chelle panafricaine." },
+  { q: "Comment devenir cr\u00e9ateur de contenu ?", a: "Contactez-nous via le formulaire en s\u00e9lectionnant 'Candidature'. Nous recherchons des enseignants et experts STEM pour cr\u00e9er des micro-le\u00e7ons." },
+  { q: "Quel est le d\u00e9lai de r\u00e9ponse ?", a: "Nous r\u00e9pondons g\u00e9n\u00e9ralement sous 48 \u00e0 72 heures ouvr\u00e9es. Pour les demandes urgentes, \u00e9crivez-nous directement par email." },
 ];
 
 export default function Contact() {
@@ -86,15 +100,15 @@ export default function Contact() {
     onSuccess: () => {
       setIsSubmitted(true);
       toast({
-        title: "Message envoyé !",
-        description: "Nous vous répondrons dans les plus brefs délais.",
+        title: "Message envoy\u00e9 !",
+        description: "Nous vous r\u00e9pondrons dans les plus brefs d\u00e9lais.",
       });
       form.reset();
     },
-    onError: (error) => {
+    onError: () => {
       toast({
         title: "Erreur",
-        description: "Une erreur s'est produite. Veuillez réessayer.",
+        description: "Une erreur s'est produite. Veuillez r\u00e9essayer.",
         variant: "destructive",
       });
     },
@@ -114,16 +128,22 @@ export default function Contact() {
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-6" variant="outline" data-testid="badge-contact">
               <Mail className="h-3 w-3 mr-1" />
-              Contact
+              Contact & Collaboration
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-testid="text-contact-title">
               Rejoignez l'aventure{" "}
               <span className="text-primary">STEM FLOW</span>
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Que vous souhaitiez tester l'application, devenir partenaire ou simplement 
-              en savoir plus, nous serions ravis d'échanger avec vous.
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+              Que vous souhaitiez tester l'application, devenir partenaire, investir, 
+              rejoindre l'\u00e9quipe ou simplement en savoir plus, nous serions ravis d'\u00e9changer avec vous.
             </p>
+            <a href={APP_URL} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" data-testid="button-demo-contact">
+                Tester l'App en attendant
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -146,12 +166,23 @@ export default function Contact() {
                       <CheckCircle2 className="h-8 w-8 text-primary" />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">Merci pour votre message !</h3>
-                    <p className="text-muted-foreground mb-6">
-                      Nous avons bien reçu votre demande et vous répondrons dans les plus brefs délais.
+                    <p className="text-muted-foreground mb-4">
+                      Nous avons bien re\u00e7u votre demande et vous r\u00e9pondrons sous 48 \u00e0 72 heures.
                     </p>
-                    <Button onClick={() => setIsSubmitted(false)} variant="outline">
-                      Envoyer un autre message
-                    </Button>
+                    <p className="text-sm text-muted-foreground mb-6">
+                      En attendant, d\u00e9couvrez notre application :
+                    </p>
+                    <div className="flex flex-col gap-3">
+                      <a href={APP_URL} target="_blank" rel="noopener noreferrer">
+                        <Button className="w-full" data-testid="button-app-after-submit">
+                          Tester l'Application
+                          <ExternalLink className="ml-2 h-4 w-4" />
+                        </Button>
+                      </a>
+                      <Button onClick={() => setIsSubmitted(false)} variant="outline" data-testid="button-new-message">
+                        Envoyer un autre message
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               ) : (
@@ -228,7 +259,7 @@ export default function Contact() {
                                 >
                                   <FormControl>
                                     <SelectTrigger data-testid="select-type">
-                                      <SelectValue placeholder="Sélectionnez..." />
+                                      <SelectValue placeholder="S\u00e9lectionnez..." />
                                     </SelectTrigger>
                                   </FormControl>
                                   <SelectContent>
@@ -253,7 +284,7 @@ export default function Contact() {
                               <FormLabel>Message *</FormLabel>
                               <FormControl>
                                 <Textarea
-                                  placeholder="Décrivez votre demande..."
+                                  placeholder="D\u00e9crivez votre demande, vos int\u00e9r\u00eats ou votre proposition..."
                                   rows={5}
                                   {...field}
                                   data-testid="input-message"
@@ -292,19 +323,19 @@ export default function Contact() {
 
             <div>
               <Badge className="mb-4" variant="outline">
-                Coordonnées
+                Coordonn\u00e9es
               </Badge>
               <h2 className="text-3xl font-bold mb-6" data-testid="text-coords-title">
                 Autres moyens de nous contacter
               </h2>
 
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {socialLinks.map((link, index) => (
                   <a
                     key={index}
                     href={link.href}
                     className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover-elevate transition-colors"
-                    data-testid={`contact-link-${link.label.toLowerCase()}`}
+                    data-testid={`contact-link-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
                   >
                     <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                       <link.icon className="h-5 w-5 text-primary" />
@@ -316,24 +347,90 @@ export default function Contact() {
                   </a>
                 ))}
 
-                <Card className="border-0 shadow-sm mt-8">
+                <Card className="border-0 shadow-sm mt-6">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
                         <MapPin className="h-5 w-5 text-secondary" />
                       </div>
                       <div>
-                        <div className="font-medium mb-2">Basés en Afrique</div>
+                        <div className="font-medium mb-2">Bas\u00e9s en Afrique</div>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                          STEM FLOW est une startup panafricaine avec des équipes 
-                          réparties sur le continent. Nous travaillons en remote-first 
-                          pour toucher le plus grand nombre.
+                          STEM FLOW est une startup panafricaine avec des \u00e9quipes 
+                          r\u00e9parties sur le continent. Nous travaillons en remote-first 
+                          pour toucher le plus grand nombre de pays.
                         </p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
+
+                <Card className="border-0 shadow-sm">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
+                        <Clock className="h-5 w-5 text-accent" />
+                      </div>
+                      <div>
+                        <div className="font-medium mb-2">D\u00e9lai de r\u00e9ponse</div>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          Nous r\u00e9pondons g\u00e9n\u00e9ralement sous 48 \u00e0 72 heures ouvr\u00e9es. 
+                          Pour les demandes urgentes, pr\u00e9cisez-le dans votre message.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-primary/20 bg-primary/5 shadow-sm">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
+                        <Zap className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <div className="font-medium mb-2">Testez l'application</div>
+                        <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                          D\u00e9couvrez STEM FLOW en action avant de nous contacter.
+                        </p>
+                        <a href={APP_URL} target="_blank" rel="noopener noreferrer">
+                          <Button size="sm" variant="outline" data-testid="button-app-sidebar">
+                            Ouvrir l'App
+                            <ExternalLink className="ml-2 h-3 w-3" />
+                          </Button>
+                        </a>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 lg:py-28 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge className="mb-4" variant="outline">
+                <Globe className="h-3 w-3 mr-1" />
+                FAQ
+              </Badge>
+              <h2 className="text-3xl font-bold mb-4" data-testid="text-faq-title">
+                Questions fr\u00e9quentes
+              </h2>
+            </div>
+
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <Card key={index} className="border-0 shadow-sm">
+                  <CardContent className="p-6">
+                    <h3 className="font-semibold mb-2" data-testid={`text-faq-q-${index}`}>{faq.q}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </div>
@@ -345,12 +442,20 @@ export default function Contact() {
             Rejoignez le mouvement STEM FLOW
           </h2>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
-            Ensemble, transformons l'éducation STEM en Afrique et 
-            créons des opportunités pour des millions de jeunes.
+            Ensemble, transformons l'\u00e9ducation STEM en Afrique et 
+            cr\u00e9ons des opportunit\u00e9s pour des millions de jeunes.
           </p>
-          <Badge variant="secondary" className="text-base px-6 py-2">
-            Scroll. Learn. Level Up.
-          </Badge>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={APP_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="secondary" className="text-base px-8" data-testid="button-cta-final-app">
+                Tester l'Application
+                <ExternalLink className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+            <Badge variant="outline" className="text-base px-6 py-2 border-primary-foreground/30 text-primary-foreground">
+              Scroll. Learn. Level Up.
+            </Badge>
+          </div>
         </div>
       </section>
     </div>

@@ -1,5 +1,8 @@
 import { Link } from "wouter";
-import { Zap, Mail, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Zap, Mail, Linkedin, Twitter, Instagram, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
 
 const footerLinks = {
   navigation: [
@@ -8,7 +11,7 @@ const footerLinks = {
     { href: "/vision", label: "Vision & Impact" },
     { href: "/equipe", label: "L'Équipe" },
   ],
-  legal: [
+  ressources: [
     { href: "/partenariats", label: "Partenariats" },
     { href: "/contact", label: "Contact" },
   ],
@@ -29,11 +32,17 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Transformer le scroll en savoir, la curiosité en compétence et le temps en progression.
+              Le premier r\u00e9seau social \u00e9ducatif STEM d'Afrique. Transformer le scroll en savoir, la curiosit\u00e9 en comp\u00e9tence et le temps en progression.
             </p>
             <p className="text-lg font-semibold text-primary">
               Scroll. Learn. Level Up.
             </p>
+            <a href={APP_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="sm" className="mt-2" data-testid="footer-button-app">
+                Tester l'App
+                <ExternalLink className="ml-2 h-3 w-3" />
+              </Button>
+            </a>
           </div>
 
           <div>
@@ -56,7 +65,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Ressources</h3>
             <ul className="space-y-2">
-              {footerLinks.legal.map((link) => (
+              {footerLinks.ressources.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -67,6 +76,18 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href={APP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground underline-offset-4 hover:underline transition-colors inline-flex items-center gap-1"
+                  data-testid="footer-ressource-app"
+                >
+                  Acc\u00e9der \u00e0 l'App
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -102,11 +123,15 @@ export function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
+            <p className="text-xs text-muted-foreground mt-4">
+              contact@stemflow.africa
+            </p>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} STEM FLOW. Tous droits réservés.</p>
+        <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} STEM FLOW. Tous droits r\u00e9serv\u00e9s.</p>
+          <p>Fait avec passion depuis l'Afrique</p>
         </div>
       </div>
     </footer>

@@ -2,7 +2,9 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, Zap, ExternalLink } from "lucide-react";
+
+const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
 
 const navLinks = [
   { href: "/", label: "Accueil" },
@@ -46,9 +48,12 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-2">
-          <Link href="/contact">
-            <Button data-testid="button-cta-header">Rejoindre la liste</Button>
-          </Link>
+          <a href={APP_URL} target="_blank" rel="noopener noreferrer">
+            <Button data-testid="button-cta-header">
+              Tester l'App
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </Button>
+          </a>
         </div>
 
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -72,11 +77,12 @@ export function Header() {
                 </Link>
               ))}
               <div className="mt-4 pt-4 border-t">
-                <Link href="/contact" onClick={() => setIsOpen(false)}>
+                <a href={APP_URL} target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
                   <Button className="w-full" data-testid="button-cta-mobile">
-                    Rejoindre la liste
+                    Tester l'App
+                    <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
-                </Link>
+                </a>
               </div>
             </nav>
           </SheetContent>

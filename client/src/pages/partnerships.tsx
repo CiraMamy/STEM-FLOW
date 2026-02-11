@@ -12,22 +12,30 @@ import {
   Rocket,
   Users,
   Globe,
+  ExternalLink,
+  BarChart3,
+  Sparkles,
+  Shield,
+  Heart,
+  Zap,
 } from "lucide-react";
+
+const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
 
 const programs = [
   {
-    title: "Programmes d'incubation",
-    description: "Nous recherchons activement des incubateurs et accélérateurs pour nous accompagner dans notre croissance.",
+    title: "Programmes d'incubation & acc\u00e9l\u00e9ration",
+    description: "Nous recherchons des incubateurs et acc\u00e9l\u00e9rateurs en Afrique et \u00e0 l'international pour nous accompagner dans notre phase de scaling. STEM FLOW offre un fort potentiel de croissance sur le march\u00e9 EdTech africain.",
     icon: Rocket,
   },
   {
-    title: "Financement",
-    description: "STEM FLOW est ouvert aux investisseurs partageant notre vision d'impact éducatif en Afrique.",
+    title: "Investissement & financement",
+    description: "STEM FLOW est ouvert aux investisseurs d'impact, business angels et fonds de venture capital partageant notre vision d'\u00e9ducation STEM accessible pour l'Afrique. Ticket d'entr\u00e9e flexible.",
     icon: TrendingUp,
   },
   {
-    title: "Appels à projets",
-    description: "Nous répondons aux appels à projets dans les domaines de l'éducation et de l'innovation sociale.",
+    title: "Appels \u00e0 projets & subventions",
+    description: "Nous r\u00e9pondons activement aux appels \u00e0 projets dans les domaines de l'\u00e9ducation, de l'innovation sociale et du d\u00e9veloppement num\u00e9rique en Afrique (AFD, UE, BAD, fondations priv\u00e9es).",
     icon: Globe,
   },
 ];
@@ -35,52 +43,62 @@ const programs = [
 const audiences = [
   {
     icon: Building2,
-    title: "Incubateurs & Accélérateurs",
+    title: "Incubateurs & Acc\u00e9l\u00e9rateurs",
     color: "bg-primary",
     points: [
-      "Startup EdTech à fort potentiel de croissance",
-      "Équipe expérimentée et complémentaire",
-      "Marché africain de 1+ milliard de personnes",
-      "Modèle économique viable et scalable",
-      "Impact social mesurable",
+      "Startup EdTech \u00e0 fort potentiel sur un march\u00e9 de 1.4 milliard de personnes",
+      "\u00c9quipe fondatrice compl\u00e9mentaire et exp\u00e9riment\u00e9e",
+      "Produit fonctionnel avec premiers utilisateurs actifs",
+      "Mod\u00e8le \u00e9conomique viable : freemium + B2B + sponsoring",
+      "Impact social mesurable align\u00e9 avec les ODD de l'ONU",
+      "Technologie IA propri\u00e9taire de personnalisation",
     ],
     cta: "Nous incuber",
   },
   {
     icon: TrendingUp,
-    title: "Investisseurs",
+    title: "Investisseurs & Business Angels",
     color: "bg-secondary",
     points: [
-      "Opportunité d'impact investing unique",
-      "Marché EdTech africain en forte croissance",
-      "Équipe avec track record prouvé",
-      "Technologie IA propriétaire",
-      "Vision long terme et ambitieuse",
+      "Opportunit\u00e9 unique d'impact investing en EdTech africaine",
+      "March\u00e9 EdTech africain en croissance de 25% par an",
+      "Mod\u00e8le scalable : 54 pays, 1.4 milliard de personnes",
+      "Avantage first-mover sur le segment STEM mobile en Afrique",
+      "Retour social sur investissement mesurable (ODD 4, 5, 9)",
+      "Strat\u00e9gie de sortie claire : acquisition ou introduction en bourse",
     ],
     cta: "Investir dans STEM FLOW",
   },
   {
     icon: GraduationCap,
-    title: "Institutions Éducatives",
+    title: "Institutions \u00c9ducatives & ONG",
     color: "bg-accent",
     points: [
-      "Partenariat pédagogique win-win",
-      "Accès privilégié à notre contenu",
-      "Co-création de parcours certifiants",
-      "Données d'apprentissage anonymisées",
-      "Visibility et reconnaissance",
+      "Partenariat p\u00e9dagogique gagnant-gagnant",
+      "Int\u00e9gration de STEM FLOW dans vos programmes scolaires",
+      "Co-cr\u00e9ation de parcours certifiants STEM",
+      "Tableaux de bord de suivi des \u00e9l\u00e8ves pour les enseignants",
+      "Donn\u00e9es d'apprentissage anonymis\u00e9es pour la recherche",
+      "Visibilit\u00e9 et reconnaissance sur la plateforme",
     ],
     cta: "Devenir partenaire",
   },
 ];
 
 const benefits = [
-  "Accès exclusif aux données d'impact",
-  "Visibilité sur notre plateforme",
-  "Participation à nos événements",
-  "Réseau de partenaires de qualité",
-  "Contribution à l'éducation africaine",
-  "Rapports d'impact personnalisés",
+  { icon: BarChart3, text: "Acc\u00e8s exclusif aux donn\u00e9es d'impact et rapports d\u00e9taill\u00e9s" },
+  { icon: Globe, text: "Visibilit\u00e9 aupr\u00e8s de millions d'apprenants africains" },
+  { icon: Users, text: "R\u00e9seau exclusif de partenaires \u00e9ducatifs et tech" },
+  { icon: Sparkles, text: "Co-branding et mentions sur tous les supports" },
+  { icon: Shield, text: "Contribution concr\u00e8te aux ODD de l'ONU" },
+  { icon: Heart, text: "Rapports d'impact personnalis\u00e9s trimestriels" },
+];
+
+const partnerLogos = [
+  { name: "Universit\u00e9s africaines", desc: "Partenariats acad\u00e9miques pour la validation des contenus" },
+  { name: "Organisations internationales", desc: "AFD, UE, BAD pour le financement de l'impact" },
+  { name: "Entreprises tech", desc: "Google, Microsoft, Meta pour le soutien technologique" },
+  { name: "Fondations", desc: "Fondation Gates, Mastercard Foundation pour l'\u00e9ducation" },
 ];
 
 export default function Partnerships() {
@@ -94,16 +112,23 @@ export default function Partnerships() {
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-6" variant="outline" data-testid="badge-partnerships">
               <Handshake className="h-3 w-3 mr-1" />
-              Partenariats & Opportunités
+              Partenariats & Investissement
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6" data-testid="text-partnerships-title">
               Construisons ensemble l'avenir de l'
-              <span className="text-primary">éducation STEM</span>
+              <span className="text-primary">\u00e9ducation STEM</span> en Afrique
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              STEM FLOW recherche des partenaires stratégiques pour accélérer 
-              son développement et maximiser son impact en Afrique.
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+              STEM FLOW recherche des partenaires strat\u00e9giques pour acc\u00e9l\u00e9rer 
+              son d\u00e9veloppement et toucher 10 millions d'apprenants d'ici 2030. 
+              Incubateurs, investisseurs, institutions \u00e9ducatives : rejoignez le mouvement.
             </p>
+            <a href={APP_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" data-testid="button-demo-partners">
+                Voir la d\u00e9mo de l'App
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -118,7 +143,8 @@ export default function Partnerships() {
               Ce que nous recherchons
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              STEM FLOW est en phase de croissance et recherche activement du soutien.
+              STEM FLOW est en phase de croissance et recherche activement 
+              du soutien strat\u00e9gique et financier pour atteindre l'\u00e9chelle panafricaine.
             </p>
           </div>
 
@@ -146,7 +172,7 @@ export default function Partnerships() {
               Pour Qui ?
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-audiences-title">
-              Pourquoi partnorer avec STEM FLOW ?
+              Pourquoi s'associer \u00e0 STEM FLOW ?
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               Des avantages concrets selon votre profil de partenaire.
@@ -174,7 +200,7 @@ export default function Partnerships() {
                     ))}
                   </ul>
                   <Link href="/contact">
-                    <Button className="w-full" variant="outline">
+                    <Button className="w-full" variant="outline" data-testid={`button-partner-${index}`}>
                       {audience.cta}
                     </Button>
                   </Link>
@@ -197,14 +223,17 @@ export default function Partnerships() {
               </h2>
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
                 Devenir partenaire de STEM FLOW, c'est rejoindre un mouvement 
-                éducatif d'ampleur continentale et bénéficier d'avantages concrets.
+                \u00e9ducatif d'ampleur continentale et b\u00e9n\u00e9ficier d'avantages concrets 
+                tout en contribuant \u00e0 un impact social majeur.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span className="text-sm">{benefit}</span>
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-8 h-8 rounded bg-primary/10 flex items-center justify-center">
+                      <benefit.icon className="h-4 w-4 text-primary" />
+                    </div>
+                    <span className="text-sm mt-1">{benefit.text}</span>
                   </div>
                 ))}
               </div>
@@ -218,21 +247,56 @@ export default function Partnerships() {
                     <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center mx-auto mb-6">
                       <Handshake className="h-10 w-10 text-primary-foreground" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-4">Prêt à nous rejoindre ?</h3>
+                    <h3 className="text-2xl font-bold mb-4">Pr\u00eat \u00e0 nous rejoindre ?</h3>
                     <p className="text-muted-foreground leading-relaxed mb-6">
-                      Contactez-nous pour discuter des opportunités de partenariat 
-                      et découvrir comment nous pouvons collaborer.
+                      Contactez-nous pour discuter des opportunit\u00e9s de partenariat 
+                      et d\u00e9couvrir comment ensemble nous pouvons transformer 
+                      l'\u00e9ducation STEM en Afrique.
                     </p>
                     <Link href="/contact">
-                      <Button size="lg" className="w-full">
+                      <Button size="lg" className="w-full mb-3" data-testid="button-contact-partner">
                         Nous contacter
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </Button>
                     </Link>
+                    <a href={APP_URL} target="_blank" rel="noopener noreferrer">
+                      <Button size="lg" variant="outline" className="w-full" data-testid="button-demo-partner">
+                        Tester l'application
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </Button>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 lg:py-28">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge className="mb-4" variant="outline">
+              <Zap className="h-3 w-3 mr-1" />
+              Partenaires Cibl\u00e9s
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-target-partners-title">
+              Les types de partenaires que nous recherchons
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {partnerLogos.map((partner, index) => (
+              <Card key={index} className="border-0 shadow-sm text-center">
+                <CardContent className="p-5">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                    <Globe className="h-6 w-6 text-primary" />
+                  </div>
+                  <h4 className="font-semibold text-sm mb-1">{partner.name}</h4>
+                  <p className="text-xs text-muted-foreground">{partner.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -243,8 +307,9 @@ export default function Partnerships() {
             Collaborer avec STEM FLOW
           </h2>
           <p className="text-secondary-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
-            Que vous soyez incubateur, investisseur ou institution éducative, 
-            nous avons hâte d'explorer les synergies possibles.
+            Que vous soyez incubateur, investisseur, institution \u00e9ducative ou entreprise tech, 
+            nous avons h\u00e2te d'explorer les synergies possibles pour transformer 
+            l'\u00e9ducation STEM en Afrique.
           </p>
           <Link href="/contact">
             <Button size="lg" variant="outline" className="text-base px-8 border-secondary-foreground/30 text-secondary-foreground bg-secondary-foreground/5">
