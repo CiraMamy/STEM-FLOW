@@ -66,7 +66,7 @@ const contactTypes = [
 ];
 
 const socialLinks = [
-  { icon: Mail, label: "Email", href: "mailto:contact@learnxscience.com", value: "contact@learnxscience.com" },
+  { icon: Mail, label: "Email", href: "mailto:contact.equipe.learnxscience@gmail.com", value: "contact.equipe.learnxscience@gmail.com" },
   { icon: Linkedin, label: "LinkedIn", href: "#", value: "linkedin.com/company/learnxscience" },
   { icon: Twitter, label: "Twitter / X", href: "#", value: "@learnxscience" },
   { icon: Instagram, label: "Instagram", href: "#", value: "@learnxscience" },

@@ -25,6 +25,7 @@ import {
   Brain,
   Award,
   Eye,
+  Mail,
 } from "lucide-react";
 
 const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
@@ -44,6 +45,7 @@ const ceo = {
   vision: "En tant que CEO de LearnXScience, il porte la vision technologique de l'entreprise : concevoir des algorithmes éducatifs intelligents et des solutions numériques capables de transformer l'apprentissage grâce à l'intelligence artificielle. Son ambition à long terme est de devenir ingénieur-chercheur en IA appliquée à la robotique et de développer des systèmes intelligents à fort impact scientifique et sociétal.",
   skills: ["Mathématiques appliquées", "Intelligence Artificielle", "Vision par ordinateur", "Machine Learning", "Data Science", "Modélisation mathématique"],
   linkedin: "https://www.linkedin.com/in/kotcholé-narcisse-attiou-9b6641285",
+  email: "alidossou123456789@gmail.com",
 };
 
 const teamMembers = [
@@ -58,6 +60,7 @@ const teamMembers = [
     skills: ["Génie Logiciel", "Formation STEM", "Leadership communautaire", "Innovation éducative", "Entrepreneuriat"],
     linkedin: "#",
     website: "https://www.codeforchad.net",
+    email: "souleymanemahamatsaleh2000@gmail.com",
   },
   {
     name: "Cira Mamy Sow",
@@ -69,6 +72,7 @@ const teamMembers = [
     bio: "De formation en mathématiques appliquées et informatique (Master 2 en modélisation et calcul scientifique) avec une spécialisation en Big Data, Cira Mamy Sow s'engage activement pour la promotion des STEM au Sénégal et en Afrique. Formée au sein du programme FORCE-N, elle a développé des compétences en création de contenus de vulgarisation scientifique et en conception d'évaluations académiques. Elle dispense également des cours d'éducation financière via la communauté 60 Crédits. L'idée de STEM FLOW est née lors d'un bootcamp en intelligence artificielle organisé en partenariat avec le PNUD et UNIPOD Guinée. Aujourd'hui, elle coordonne STEM FLOW avec l'ambition de transformer les usages numériques en leviers d'apprentissage durable.",
     skills: ["Mathématiques appliquées", "Big Data", "Vulgarisation scientifique", "Pédagogie STEM", "Éducation financière"],
     linkedin: "#",
+    email: "ciramamys@gmail.com",
   },
 ];
 
@@ -225,7 +229,7 @@ export default function Team() {
                     ))}
                   </div>
 
-                  <div className="flex justify-center">
+                  <div className="flex justify-center gap-3">
                     <a
                       href={ceo.linkedin}
                       target="_blank"
@@ -235,6 +239,15 @@ export default function Team() {
                       <Button variant="outline" size="sm">
                         <Linkedin className="h-4 w-4 mr-2" />
                         LinkedIn
+                      </Button>
+                    </a>
+                    <a
+                      href={`mailto:${ceo.email}`}
+                      data-testid="social-email-ceo"
+                    >
+                      <Button variant="outline" size="sm">
+                        <Mail className="h-4 w-4 mr-2" />
+                        Email
                       </Button>
                     </a>
                   </div>
@@ -308,10 +321,21 @@ export default function Team() {
                         {member.website && (
                           <a
                             href={member.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="flex h-9 w-9 items-center justify-center rounded-md bg-muted hover-elevate transition-colors"
                             data-testid={`social-website-${index}`}
                           >
                             <Globe className="h-4 w-4" />
+                          </a>
+                        )}
+                        {member.email && (
+                          <a
+                            href={`mailto:${member.email}`}
+                            className="flex h-9 w-9 items-center justify-center rounded-md bg-muted hover-elevate transition-colors"
+                            data-testid={`social-email-${index}`}
+                          >
+                            <Mail className="h-4 w-4" />
                           </a>
                         )}
                       </div>
