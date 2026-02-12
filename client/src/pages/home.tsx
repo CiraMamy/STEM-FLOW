@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useAnimatedCounter } from "@/hooks/use-scroll-reveal";
+import { useSEO } from "@/hooks/use-seo";
 import {
   Play,
   Users,
@@ -142,6 +143,11 @@ function AnimatedStat({ value, suffix, label, icon: Icon, isDecimal }: {
 }
 
 export default function Home() {
+  useSEO({
+    title: "Technologies Éducatives Intelligentes — STEM FLOW Africa",
+    description: "LearnXScience développe des systèmes d'IA appliqués à l'éducation en Afrique. STEM FLOW est un réseau social éducatif STEM avec vidéos courtes, gamification et IA personnalisée. Scroll. Learn. Level Up.",
+  });
+
   return (
     <div className="flex flex-col">
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5 min-h-[90vh] flex items-center">

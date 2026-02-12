@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { useSEO } from "@/hooks/use-seo";
 import ciraPhoto from "@assets/WhatsApp_Image_2026-02-11_at_18.28.14_1770832210656.jpeg";
 import narcissePhoto from "@assets/WhatsApp_Image_2026-02-11_at_13.55.57_1770832255727.jpeg";
 import souleymanePhoto from "@assets/WhatsApp_Image_2026-02-10_at_21.40.43_1770832294047.jpeg";
@@ -122,6 +123,11 @@ const hiring = [
 ];
 
 export default function Team() {
+  useSEO({
+    title: "L'Équipe Fondatrice — LearnXScience & STEM FLOW",
+    description: "Découvrez l'équipe panafricaine derrière LearnXScience et STEM FLOW : ATTIOU K. Narcisse (CEO), Souleymane Mahamat Saleh et Cira Mamy Sow. Mathématiques, IA, génie logiciel et éducation.",
+  });
+
   return (
     <div className="flex flex-col">
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-20 lg:py-28">

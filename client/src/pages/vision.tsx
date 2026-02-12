@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { useSEO } from "@/hooks/use-seo";
 import {
   Eye,
   GraduationCap,
@@ -208,6 +209,11 @@ const ambitions = [
 ];
 
 export default function Vision() {
+  useSEO({
+    title: "Vision & Impact — Éducation STEM Intelligente pour l'Afrique",
+    description: "LearnXScience vise à construire les technologies éducatives intelligentes de demain. Notre impact : éducatif, social et économique pour des millions de jeunes africains via STEM FLOW.",
+  });
+
   return (
     <div className="flex flex-col">
       <section className="relative overflow-hidden bg-gradient-to-br from-secondary/5 via-background to-primary/5 py-20 lg:py-28">

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { useSEO } from "@/hooks/use-seo";
 import {
   Handshake,
   Building2,
@@ -104,6 +105,11 @@ const partnerLogos = [
 ];
 
 export default function Partnerships() {
+  useSEO({
+    title: "Partenariats & Investissement — LearnXScience STEM FLOW",
+    description: "Rejoignez LearnXScience comme partenaire ou investisseur. Incubateurs, business angels, institutions éducatives : construisons ensemble l'avenir de l'éducation STEM en Afrique.",
+  });
+
   return (
     <div className="flex flex-col">
       <section className="relative overflow-hidden bg-gradient-to-br from-accent/5 via-background to-secondary/5 py-20 lg:py-28">

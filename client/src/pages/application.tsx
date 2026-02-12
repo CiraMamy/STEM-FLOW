@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { useSEO } from "@/hooks/use-seo";
 import {
   Smartphone,
   Play,
@@ -118,6 +119,11 @@ const disciplines = [
 ];
 
 export default function Application() {
+  useSEO({
+    title: "L'Application STEM FLOW — Apprendre les Sciences sur Mobile",
+    description: "Découvrez STEM FLOW : feed vidéo STEM, salons communautaires, gamification complète, IA de personnalisation et battles entre écoles. Application mobile gratuite pour l'éducation scientifique en Afrique.",
+  });
+
   return (
     <div className="flex flex-col">
       <section className="relative overflow-hidden bg-gradient-to-br from-accent/5 via-background to-primary/5 py-20 lg:py-28">

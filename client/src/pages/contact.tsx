@@ -3,6 +3,7 @@ import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { useSEO } from "@/hooks/use-seo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -79,6 +80,11 @@ const faqs = [
 ];
 
 export default function Contact() {
+  useSEO({
+    title: "Contact & Collaboration — LearnXScience STEM FLOW",
+    description: "Contactez LearnXScience pour tester STEM FLOW, devenir partenaire, investir ou rejoindre l'équipe. Formulaire de contact et liste d'attente disponibles.",
+  });
+
   const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
 

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { useSEO } from "@/hooks/use-seo";
 import {
   Target,
   Lightbulb,
@@ -87,6 +88,11 @@ const comparisons = [
 ];
 
 export default function Project() {
+  useSEO({
+    title: "Le Projet STEM FLOW — Réseau Social Éducatif STEM en Afrique",
+    description: "STEM FLOW combine vidéos courtes éducatives, gamification, communautés STEM et intelligence artificielle pour transformer l'apprentissage des sciences en Afrique. Disponible au Bénin, Tchad et Sénégal.",
+  });
+
   return (
     <div className="flex flex-col">
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 py-20 lg:py-28">

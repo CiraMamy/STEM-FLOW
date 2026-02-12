@@ -8,6 +8,42 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
+  const SITE_URL = "https://learnxscience.replit.app";
+
+  app.get("/sitemap.xml", (_req, res) => {
+    const pages = [
+      { loc: "/", priority: "1.0", changefreq: "weekly" },
+      { loc: "/projet", priority: "0.9", changefreq: "weekly" },
+      { loc: "/application", priority: "0.9", changefreq: "weekly" },
+      { loc: "/vision", priority: "0.8", changefreq: "monthly" },
+      { loc: "/equipe", priority: "0.7", changefreq: "monthly" },
+      { loc: "/partenariats", priority: "0.8", changefreq: "monthly" },
+      { loc: "/contact", priority: "0.7", changefreq: "monthly" },
+    ];
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(p => `  <url>
+    <loc>${SITE_URL}${p.loc}</loc>
+    <lastmod>${new Date().toISOString().split("T")[0]}</lastmod>
+    <changefreq>${p.changefreq}</changefreq>
+    <priority>${p.priority}</priority>
+  </url>`).join("\n")}
+</urlset>`;
+
+    res.header("Content-Type", "application/xml");
+    res.send(xml);
+  });
+
+  app.get("/robots.txt", (_req, res) => {
+    const robots = `User-agent: *
+Allow: /
+
+Sitemap: ${SITE_URL}/sitemap.xml`;
+
+    res.header("Content-Type", "text/plain");
+    res.send(robots);
+  });
   app.post("/api/contacts", async (req, res) => {
     try {
       const validatedData = insertContactSchema.parse(req.body);
