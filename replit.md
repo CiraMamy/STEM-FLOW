@@ -11,7 +11,7 @@ The website serves as the official corporate showcase for LearnXScience and its 
 **Company relationship:** LearnXScience → STEM FLOW (like OpenAI → ChatGPT)
 
 **Slogan:** Scroll. Learn. Level Up.
-**Live App URL:** https://attached-assets-souleymanemaha2.replit.app
+**Live App URL:** https://steamflow-wxw3.onrender.com/auth
 **Partners:** Code For Chad (codeforchad.net), 60 Crédits
 
 ## User Preferences
