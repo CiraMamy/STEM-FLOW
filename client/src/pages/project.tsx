@@ -21,7 +21,7 @@ import {
   Clock,
 } from "lucide-react";
 
-const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
+const APP_URL = "https://steamflow-wxw3.onrender.com/auth";
 
 const challenges = [
   {
@@ -98,7 +98,7 @@ export default function Project() {
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 py-20 lg:py-28">
         <div className="absolute top-10 right-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
         <div className="absolute bottom-10 left-20 w-80 h-80 bg-accent/20 rounded-full blur-3xl" />
-        
+
         <div className="container relative mx-auto px-4">
           <div className="max-w-3xl">
             <Badge className="mb-6" variant="outline" data-testid="badge-project">
@@ -110,8 +110,8 @@ export default function Project() {
               <span className="text-primary">innovation</span> de LearnXScience
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              STEM FLOW est la première application développée par LearnXScience. 
-              Un réseau social éducatif mobile-first qui combine les codes des réseaux sociaux, 
+              STEM FLOW est la première application développée par LearnXScience.
+              Un réseau social éducatif mobile-first qui combine les codes des réseaux sociaux,
               la puissance de nos algorithmes d'IA et la gamification pour rendre l'apprentissage irrésistible.
             </p>
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">
@@ -135,7 +135,7 @@ export default function Project() {
                 Les défis de l'éducation STEM en Afrique
               </h2>
               <p className="text-muted-foreground text-lg">
-                Malgré un potentiel immense et la population la plus jeune au monde, 
+                Malgré un potentiel immense et la population la plus jeune au monde,
                 l'Afrique fait face à des obstacles majeurs dans le développement des compétences STEM.
               </p>
             </div>
@@ -175,7 +175,7 @@ export default function Project() {
                 Une approche innovante et adaptée
               </h2>
               <p className="text-muted-foreground text-lg">
-                STEM FLOW combine technologie, pédagogie et compréhension culturelle 
+                STEM FLOW combine technologie, pédagogie et compréhension culturelle
                 pour créer une expérience d'apprentissage unique en son genre.
               </p>
             </div>
@@ -211,8 +211,8 @@ export default function Project() {
                   STEM FLOW vs plateformes classiques
                 </h2>
                 <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                  Contrairement aux plateformes classiques, STEM FLOW est conçu 
-                  spécifiquement pour engager la génération Z africaine 
+                  Contrairement aux plateformes classiques, STEM FLOW est conçu
+                  spécifiquement pour engager la génération Z africaine
                   avec les codes qu'elle connaît et aime.
                 </p>
 
@@ -291,11 +291,10 @@ export default function Project() {
                   <ScrollReveal key={index} delay={index * 100} direction="up">
                     <div className={`relative flex items-center gap-6 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
                       <div className="flex-1 hidden md:block" />
-                      <div className={`relative z-10 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${
-                        item.status === "done" ? "bg-primary text-primary-foreground" :
-                        item.status === "current" ? "bg-secondary text-secondary-foreground" :
-                        "bg-muted text-muted-foreground"
-                      }`}>
+                      <div className={`relative z-10 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${item.status === "done" ? "bg-primary text-primary-foreground" :
+                          item.status === "current" ? "bg-secondary text-secondary-foreground" :
+                            "bg-muted text-muted-foreground"
+                        }`}>
                         {item.status === "done" ? <CheckCircle2 className="h-4 w-4" /> : index + 1}
                       </div>
                       <Card className={`flex-1 border-0 shadow-sm ${item.status === "current" ? "border-secondary/30 bg-secondary/5" : ""}`}>

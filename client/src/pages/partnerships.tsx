@@ -23,7 +23,7 @@ import {
   Code,
 } from "lucide-react";
 
-const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
+const APP_URL = "https://steamflow-wxw3.onrender.com/auth";
 
 const programs = [
   {
@@ -115,7 +115,7 @@ export default function Partnerships() {
       <section className="relative overflow-hidden bg-gradient-to-br from-accent/5 via-background to-secondary/5 py-20 lg:py-28">
         <div className="absolute top-10 right-10 w-80 h-80 bg-accent/20 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl" />
-        
+
         <div className="container relative mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-6" variant="outline" data-testid="badge-partnerships">
@@ -127,8 +127,8 @@ export default function Partnerships() {
               <span className="text-primary">technologies éducatives</span> en Afrique
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              LearnXScience recherche des partenaires stratégiques pour accélérer 
-              le déploiement de STEM FLOW et toucher 10 millions d'apprenants d'ici 2030. 
+              LearnXScience recherche des partenaires stratégiques pour accélérer
+              le déploiement de STEM FLOW et toucher 10 millions d'apprenants d'ici 2030.
               Incubateurs, investisseurs, institutions éducatives : rejoignez le mouvement.
             </p>
             <a href={APP_URL} target="_blank" rel="noopener noreferrer">
@@ -152,7 +152,7 @@ export default function Partnerships() {
                 Ce que nous recherchons
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                STEM FLOW est en phase de croissance et recherche activement 
+                STEM FLOW est en phase de croissance et recherche activement
                 du soutien stratégique et financier pour atteindre l'échelle panafricaine.
               </p>
             </div>
@@ -239,8 +239,8 @@ export default function Partnerships() {
                   Ce que vous gagnez
                 </h2>
                 <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                  Devenir partenaire de STEM FLOW, c'est rejoindre un mouvement 
-                  éducatif d'ampleur continentale et bénéficier d'avantages concrets 
+                  Devenir partenaire de STEM FLOW, c'est rejoindre un mouvement
+                  éducatif d'ampleur continentale et bénéficier d'avantages concrets
                   tout en contribuant à un impact social majeur.
                 </p>
 
@@ -268,8 +268,8 @@ export default function Partnerships() {
                       </div>
                       <h3 className="text-2xl font-bold mb-4">Prêt à nous rejoindre ?</h3>
                       <p className="text-muted-foreground leading-relaxed mb-6">
-                        Contactez-nous pour discuter des opportunités de partenariat 
-                        et découvrir comment ensemble nous pouvons transformer 
+                        Contactez-nous pour discuter des opportunités de partenariat
+                        et découvrir comment ensemble nous pouvons transformer
                         l'éducation STEM en Afrique.
                       </p>
                       <Link href="/contact">
@@ -305,7 +305,7 @@ export default function Partnerships() {
                 Ils nous font déjà confiance
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                STEM FLOW s'appuie sur un réseau de partenaires engagés dans l'éducation 
+                STEM FLOW s'appuie sur un réseau de partenaires engagés dans l'éducation
                 numérique et le développement des compétences en Afrique.
               </p>
             </div>
@@ -325,9 +325,9 @@ export default function Partnerships() {
                     </div>
                   </div>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    Communauté des développeurs tchadiens fondée par Souleymane Mahamat Saleh. 
-                    Code For Chad forme les jeunes au codage informatique, favorise l'innovation 
-                    technologique et crée un écosystème numérique dynamique au Tchad. 
+                    Communauté des développeurs tchadiens fondée par Souleymane Mahamat Saleh.
+                    Code For Chad forme les jeunes au codage informatique, favorise l'innovation
+                    technologique et crée un écosystème numérique dynamique au Tchad.
                     Un partenaire clé pour le déploiement de STEM FLOW en Afrique centrale.
                   </p>
                   <ul className="space-y-2 mb-6">
@@ -368,9 +368,9 @@ export default function Partnerships() {
                     </div>
                   </div>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    Communauté d'éducation financière et d'autonomisation des jeunes, 
-                    animée par Cira Mamy Sow. 60 Crédits forme les étudiants à la gestion 
-                    financière et à l'autonomisation intellectuelle et économique. 
+                    Communauté d'éducation financière et d'autonomisation des jeunes,
+                    animée par Cira Mamy Sow. 60 Crédits forme les étudiants à la gestion
+                    financière et à l'autonomisation intellectuelle et économique.
                     Un partenaire essentiel pour l'impact social de STEM FLOW au Sénégal.
                   </p>
                   <ul className="space-y-2 mb-6">
@@ -439,8 +439,8 @@ export default function Partnerships() {
             Collaborer avec LearnXScience
           </h2>
           <p className="text-secondary-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
-            Que vous soyez incubateur, investisseur, institution éducative ou entreprise tech, 
-            nous avons hâte d'explorer les synergies possibles pour transformer 
+            Que vous soyez incubateur, investisseur, institution éducative ou entreprise tech,
+            nous avons hâte d'explorer les synergies possibles pour transformer
             l'éducation STEM en Afrique.
           </p>
           <Link href="/contact">

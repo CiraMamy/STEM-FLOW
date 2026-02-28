@@ -25,7 +25,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
+const APP_URL = "https://steamflow-wxw3.onrender.com/auth";
 
 const features = [
   {
@@ -129,7 +129,7 @@ export default function Application() {
       <section className="relative overflow-hidden bg-gradient-to-br from-accent/5 via-background to-primary/5 py-20 lg:py-28">
         <div className="absolute top-20 left-20 w-72 h-72 bg-accent/20 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
-        
+
         <div className="container relative mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -142,12 +142,12 @@ export default function Application() {
                 <span className="text-primary">poche</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed mb-4">
-                STEM FLOW est une application mobile qui transforme chaque moment 
-                libre en opportunité d'apprentissage. Interface intuitive, 
+                STEM FLOW est une application mobile qui transforme chaque moment
+                libre en opportunité d'apprentissage. Interface intuitive,
                 contenu captivant, progression visible.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Conçue pour fonctionner même avec une connexion limitée, 
+                Conçue pour fonctionner même avec une connexion limitée,
                 disponible en français et en anglais, et totalement gratuite.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -246,7 +246,7 @@ export default function Application() {
                 Tout ce dont tu as besoin pour apprendre
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                Une suite complète d'outils pour explorer, progresser et t'amuser 
+                Une suite complète d'outils pour explorer, progresser et t'amuser
                 dans toutes les disciplines STEM.
               </p>
             </div>
@@ -396,7 +396,7 @@ export default function Application() {
             Teste STEM FLOW maintenant
           </h2>
           <p className="text-accent-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
-            L'application est disponible en version démo. Découvre l'expérience 
+            L'application est disponible en version démo. Découvre l'expérience
             d'apprentissage STEM FLOW dès aujourd'hui.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

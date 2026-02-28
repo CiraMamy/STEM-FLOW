@@ -31,7 +31,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
+const APP_URL = "https://steamflow-wxw3.onrender.com/auth";
 
 const pillars = [
   {
@@ -156,7 +156,7 @@ export default function Home() {
         <div className="absolute top-20 right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: "4s" }} />
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: "6s" }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: "8s" }} />
-        
+
         <div className="container relative mx-auto px-4 py-20 lg:py-32">
           <div className="max-w-4xl mx-auto text-center">
             <div className="animate-fade-in">
@@ -165,7 +165,7 @@ export default function Home() {
                 LearnXScience — Technologies Éducatives Intelligentes
               </Badge>
             </div>
-            
+
             <h1
               className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-6 animate-slide-up"
               data-testid="text-hero-title"
@@ -175,17 +175,17 @@ export default function Home() {
               <span className="text-secondary">progression</span>{" "}
               <span className="text-accent">académique</span>
             </h1>
-            
+
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6 leading-relaxed animate-slide-up" style={{ animationDelay: "200ms" }}>
-              <span className="font-semibold text-foreground">LearnXScience</span> développe des systèmes d'intelligence artificielle 
-              appliqués à l'éducation. Nous concevons des algorithmes éducatifs capables de personnaliser 
+              <span className="font-semibold text-foreground">LearnXScience</span> développe des systèmes d'intelligence artificielle
+              appliqués à l'éducation. Nous concevons des algorithmes éducatifs capables de personnaliser
               l'apprentissage, d'analyser les progrès et de transformer l'engagement numérique en progression académique réelle.
             </p>
 
             <p className="text-2xl md:text-3xl font-semibold text-primary mb-8 animate-slide-up" style={{ animationDelay: "400ms" }} data-testid="text-slogan">
               Scroll. Learn. Level Up.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: "600ms" }}>
               <a href={APP_URL} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="text-base px-8" data-testid="button-try-app">
@@ -219,8 +219,8 @@ export default function Home() {
                 À l'intersection de l'IA, des maths et de la pédagogie
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                LearnXScience est une entreprise technologique spécialisée dans le développement 
-                de solutions numériques éducatives et d'algorithmes d'apprentissage intelligents. 
+                LearnXScience est une entreprise technologique spécialisée dans le développement
+                de solutions numériques éducatives et d'algorithmes d'apprentissage intelligents.
                 Nous concevons des plateformes propulsées par l'IA, la science des données et les sciences cognitives.
               </p>
             </div>
@@ -256,10 +256,10 @@ export default function Home() {
                 STEM FLOW — Le réseau social éducatif
               </h2>
               <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-                STEM FLOW est la première application développée par LearnXScience. 
-                Un réseau social éducatif mobile-first qui combine un feed vidéo interactif, 
-                des salons communautaires STEM, un système de gamification, une IA de personnalisation 
-                et des battles entre élèves et écoles. STEM FLOW transforme le temps de scrolling 
+                STEM FLOW est la première application développée par LearnXScience.
+                Un réseau social éducatif mobile-first qui combine un feed vidéo interactif,
+                des salons communautaires STEM, un système de gamification, une IA de personnalisation
+                et des battles entre élèves et écoles. STEM FLOW transforme le temps de scrolling
                 en acquisition de compétences STEM mesurable.
               </p>
             </div>
@@ -331,8 +331,8 @@ export default function Home() {
                   Pourquoi LearnXScience ?
                 </h2>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  L'éducation traditionnelle ne tient pas compte des usages numériques réels 
-                  des jeunes, de la personnalisation cognitive, de l'engagement comportemental, 
+                  L'éducation traditionnelle ne tient pas compte des usages numériques réels
+                  des jeunes, de la personnalisation cognitive, de l'engagement comportemental,
                   ni de la data comme levier d'amélioration.
                 </p>
                 <Card className="border-primary/20 bg-primary/5 mb-8">
@@ -341,8 +341,8 @@ export default function Home() {
                       <Zap className="h-5 w-5 text-primary" />
                     </div>
                     <p className="text-lg leading-relaxed font-medium text-foreground">
-                      Pendant que les jeunes passent des heures à scroller, le système éducatif 
-                      reste statique. Nous existons pour transformer les usages numériques en 
+                      Pendant que les jeunes passent des heures à scroller, le système éducatif
+                      reste statique. Nous existons pour transformer les usages numériques en
                       leviers d'apprentissage intelligent.
                     </p>
                   </CardContent>
@@ -459,7 +459,7 @@ export default function Home() {
               Construire les technologies éducatives de demain
             </h2>
             <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
-              LearnXScience développe des algorithmes éducatifs exportables à l'international. 
+              LearnXScience développe des algorithmes éducatifs exportables à l'international.
               Découvrez STEM FLOW, notre première innovation, et rejoignez le mouvement.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

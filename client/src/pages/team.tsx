@@ -28,7 +28,7 @@ import {
   Mail,
 } from "lucide-react";
 
-const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
+const APP_URL = "https://steamflow-wxw3.onrender.com/auth";
 
 const ceo = {
   name: "ATTIOU K. Narcisse",
@@ -137,7 +137,7 @@ export default function Team() {
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-20 lg:py-28">
         <div className="absolute top-20 right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl" />
         <div className="absolute bottom-10 left-20 w-64 h-64 bg-secondary/20 rounded-full blur-3xl" />
-        
+
         <div className="container relative mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-6" variant="outline" data-testid="badge-team">
@@ -149,9 +149,9 @@ export default function Team() {
               <span className="text-primary">LearnXScience</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Née lors d'un bootcamp en intelligence artificielle organisé en partenariat avec le PNUD 
-              et UNIPOD Guinée, LearnXScience réunit une équipe panafricaine passionnée 
-              qui unit mathématiques, intelligence artificielle, ingénierie logicielle et éducation numérique 
+              Née lors d'un bootcamp en intelligence artificielle organisé en partenariat avec le PNUD
+              et UNIPOD Guinée, LearnXScience réunit une équipe panafricaine passionnée
+              qui unit mathématiques, intelligence artificielle, ingénierie logicielle et éducation numérique
               pour construire les technologies éducatives intelligentes de demain.
             </p>
           </div>
@@ -269,7 +269,7 @@ export default function Team() {
                 Les cofondateurs
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                Des profils complémentaires, une même passion pour l'éducation, 
+                Des profils complémentaires, une même passion pour l'éducation,
                 la technologie et l'innovation africaine.
               </p>
             </div>
@@ -359,7 +359,7 @@ export default function Team() {
                 Un réseau de soutien panafricain
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                Au-delà de l'équipe fondatrice, STEM FLOW s'appuie sur un écosystème 
+                Au-delà de l'équipe fondatrice, STEM FLOW s'appuie sur un écosystème
                 d'experts et d'ambassadeurs.
               </p>
             </div>
@@ -464,7 +464,7 @@ export default function Team() {
             Envie de collaborer avec nous ?
           </h2>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
-            Nous cherchons des partenaires qui partagent notre vision d'une éducation STEM 
+            Nous cherchons des partenaires qui partagent notre vision d'une éducation STEM
             accessible, engageante et de qualité pour tous les jeunes africains.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

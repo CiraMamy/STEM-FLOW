@@ -27,7 +27,7 @@ import {
   Crosshair,
 } from "lucide-react";
 
-const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
+const APP_URL = "https://steamflow-wxw3.onrender.com/auth";
 
 const visionPoints = [
   {
@@ -219,7 +219,7 @@ export default function Vision() {
       <section className="relative overflow-hidden bg-gradient-to-br from-secondary/5 via-background to-primary/5 py-20 lg:py-28">
         <div className="absolute top-10 left-10 w-80 h-80 bg-secondary/20 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl" />
-        
+
         <div className="container relative mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-6" variant="outline" data-testid="badge-vision">
@@ -232,9 +232,9 @@ export default function Vision() {
               intelligentes de demain
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              LearnXScience existe pour transformer les usages numériques en leviers 
-              d'apprentissage intelligent. Notre ambition : devenir un acteur majeur 
-              des technologies éducatives intelligentes en Afrique et développer 
+              LearnXScience existe pour transformer les usages numériques en leviers
+              d'apprentissage intelligent. Notre ambition : devenir un acteur majeur
+              des technologies éducatives intelligentes en Afrique et développer
               des algorithmes éducatifs exportables à l'international.
             </p>
           </div>
@@ -278,12 +278,12 @@ export default function Vision() {
                   Pourquoi LearnXScience existe
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                  L'éducation traditionnelle ne tient pas compte des usages numériques réels 
-                  des jeunes, de la personnalisation cognitive, de l'engagement comportemental, 
+                  L'éducation traditionnelle ne tient pas compte des usages numériques réels
+                  des jeunes, de la personnalisation cognitive, de l'engagement comportemental,
                   ni de la data comme levier d'amélioration.
                 </p>
                 <p className="text-lg font-medium text-foreground max-w-2xl mx-auto mt-4 leading-relaxed">
-                  Pendant que les jeunes passent des heures à scroller, le système éducatif 
+                  Pendant que les jeunes passent des heures à scroller, le système éducatif
                   reste statique. Nous existons pour combler ce fossé.
                 </p>
               </div>
@@ -335,7 +335,7 @@ export default function Vision() {
                 Un impact à plusieurs dimensions
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                LearnXScience, à travers STEM FLOW, génère un impact positif mesurable 
+                LearnXScience, à travers STEM FLOW, génère un impact positif mesurable
                 sur l'éducation, la société et l'économie africaines.
               </p>
             </div>
@@ -409,7 +409,7 @@ export default function Vision() {
                   Notre contribution aux ODD de l'ONU
                 </h2>
                 <p className="text-muted-foreground text-lg">
-                  LearnXScience s'inscrit dans l'Agenda 2063 de l'Union Africaine et contribue 
+                  LearnXScience s'inscrit dans l'Agenda 2063 de l'Union Africaine et contribue
                   directement à 6 Objectifs de Développement Durable.
                 </p>
               </div>
@@ -449,7 +449,7 @@ export default function Vision() {
                   Un projet en marche depuis décembre 2025
                 </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                  Nous ne sommes pas au stade de l'idée. Nous construisons, testons 
+                  Nous ne sommes pas au stade de l'idée. Nous construisons, testons
                   et améliorons chaque jour. Voici notre trajectoire.
                 </p>
               </div>
@@ -465,8 +465,8 @@ export default function Vision() {
                           <div className={`w-14 h-14 rounded-xl ${phase.bgColor} flex items-center justify-center`}>
                             <phase.icon className={`h-7 w-7 ${phase.color}`} />
                           </div>
-                          <Badge 
-                            variant={phase.status === "done" ? "default" : "outline"} 
+                          <Badge
+                            variant={phase.status === "done" ? "default" : "outline"}
                             className={`text-xs ${phase.status === "done" ? "bg-secondary text-secondary-foreground" : phase.status === "current" ? "border-primary text-primary" : ""}`}
                           >
                             {phase.status === "done" ? "Accompli" : phase.status === "current" ? "En cours" : "A venir"}
@@ -509,9 +509,9 @@ export default function Vision() {
                   <Crosshair className="h-8 w-8 text-primary mx-auto mb-4" />
                   <h3 className="text-xl font-bold mb-3">Notre Engagement</h3>
                   <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                    Nous avançons chaque jour. Chaque ligne de code, chaque test utilisateur, 
-                    chaque partenariat nous rapproche de notre objectif : faire de STEM FLOW 
-                    la plateforme de référence pour la démocratisation des sciences en Afrique, 
+                    Nous avançons chaque jour. Chaque ligne de code, chaque test utilisateur,
+                    chaque partenariat nous rapproche de notre objectif : faire de STEM FLOW
+                    la plateforme de référence pour la démocratisation des sciences en Afrique,
                     en formant une génération capable d'innover et de résoudre les défis du continent.
                   </p>
                 </CardContent>
@@ -535,21 +535,21 @@ export default function Vision() {
                   </div>
                   <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
                     <p className="text-foreground font-medium">
-                      L'Afrique possède la population la plus jeune au monde, avec 60% 
-                      de sa population ayant moins de 25 ans. C'est un atout immense, 
+                      L'Afrique possède la population la plus jeune au monde, avec 60%
+                      de sa population ayant moins de 25 ans. C'est un atout immense,
                       à condition de pouvoir former cette jeunesse aux compétences du futur.
                     </p>
                     <p>
-                      LearnXScience s'inscrit dans l'Agenda 2063 de l'Union Africaine et 
-                      contribue directement aux Objectifs de Développement Durable, 
-                      notamment l'ODD 4 (Éducation de qualité), l'ODD 5 (Égalité des genres) 
+                      LearnXScience s'inscrit dans l'Agenda 2063 de l'Union Africaine et
+                      contribue directement aux Objectifs de Développement Durable,
+                      notamment l'ODD 4 (Éducation de qualité), l'ODD 5 (Égalité des genres)
                       et l'ODD 9 (Innovation).
                     </p>
                     <p>
-                      En formant les scientifiques, ingénieurs et innovateurs de demain 
-                      à travers STEM FLOW, nous participons à la construction d'une Afrique 
+                      En formant les scientifiques, ingénieurs et innovateurs de demain
+                      à travers STEM FLOW, nous participons à la construction d'une Afrique
                       plus prospère, plus résiliente et plus connectée au reste du monde.
-                      Notre approche mobile-first permet de toucher des populations 
+                      Notre approche mobile-first permet de toucher des populations
                       traditionnellement exclues des systèmes éducatifs formels.
                     </p>
                   </div>
@@ -566,7 +566,7 @@ export default function Vision() {
             Découvrez l'équipe derrière LearnXScience
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg">
-            Des passionnés d'éducation et de technologie, unis par une vision commune 
+            Des passionnés d'éducation et de technologie, unis par une vision commune
             de transformer l'Afrique par le savoir.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
