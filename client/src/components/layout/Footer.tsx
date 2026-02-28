@@ -3,7 +3,7 @@ import { Mail, Linkedin, Twitter, Instagram, ExternalLink } from "lucide-react";
 import learnxLogo from "@assets/WhatsApp_Image_2026-02-11_at_19.45.03_1770835532970.jpeg";
 import { Button } from "@/components/ui/button";
 
-const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
+const APP_URL = "https://steamflow-wxw3.onrender.com/auth";
 
 const footerLinks = {
   navigation: [
@@ -34,8 +34,8 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              LearnXScience développe des systèmes d'intelligence artificielle appliqués à l'éducation. 
-              Notre première application, STEM FLOW, est un réseau social éducatif qui rend les sciences accessibles, 
+              LearnXScience développe des systèmes d'intelligence artificielle appliqués à l'éducation.
+              Notre première application, STEM FLOW, est un réseau social éducatif qui rend les sciences accessibles,
               interactives et mesurables.
             </p>
             <p className="text-lg font-semibold text-primary">

@@ -5,7 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, ExternalLink } from "lucide-react";
 import learnxLogo from "@assets/WhatsApp_Image_2026-02-11_at_19.45.03_1770835532970.jpeg";
 
-const APP_URL = "https://attached-assets-souleymanemaha2.replit.app";
+const APP_URL = "https://steamflow-wxw3.onrender.com/auth";
 
 const navLinks = [
   { href: "/", label: "Accueil" },
