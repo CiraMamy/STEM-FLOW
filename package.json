@@ -1,5 +1,5 @@
 {
-  "name": "rest-express",
+  "name": "learnxscience-site",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
@@ -108,5 +108,9 @@
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.8"
+  },
+  "description": "Site officiel de LearnXScience et de son application STEM FLOW.",
+  "engines": {
+    "node": ">=20"
   }
 }

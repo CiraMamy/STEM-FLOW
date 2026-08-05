@@ -130,6 +130,7 @@ export default function Team() {
   useSEO({
     title: "L'Équipe Fondatrice — LearnXScience & STEM FLOW",
     description: "Découvrez l'équipe panafricaine derrière LearnXScience et STEM FLOW : ATTIOU K. Narcisse (CEO), Souleymane Mahamat Saleh et Cira Mamy Sow. Mathématiques, IA, génie logiciel et éducation.",
+    path: "/equipe",
   });
 
   return (

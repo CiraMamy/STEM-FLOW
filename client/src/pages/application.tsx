@@ -122,6 +122,7 @@ export default function Application() {
   useSEO({
     title: "L'Application STEM FLOW — Apprendre les Sciences sur Mobile",
     description: "Découvrez STEM FLOW : feed vidéo STEM, salons communautaires, gamification complète, IA de personnalisation et battles entre écoles. Application mobile gratuite pour l'éducation scientifique en Afrique.",
+    path: "/application",
   });
 
   return (

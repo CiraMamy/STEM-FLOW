@@ -212,6 +212,7 @@ export default function Vision() {
   useSEO({
     title: "Vision & Impact — Éducation STEM Intelligente pour l'Afrique",
     description: "LearnXScience vise à construire les technologies éducatives intelligentes de demain. Notre impact : éducatif, social et économique pour des millions de jeunes africains via STEM FLOW.",
+    path: "/vision",
   });
 
   return (

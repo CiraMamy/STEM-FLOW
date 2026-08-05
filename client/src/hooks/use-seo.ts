@@ -1,40 +1,47 @@
 import { useEffect } from "react";
+import { SITE_URL } from "@/lib/site";
 
 interface SEOProps {
   title: string;
   description: string;
+  /** Chemin canonique de la page, ex. "/projet". */
+  path?: string;
+  /** Image de partage absolue ou relative a la racine du site. */
+  image?: string;
 }
 
 const BASE_TITLE = "LearnXScience";
 
-export function useSEO({ title, description }: SEOProps) {
+function setMeta(selector: string, content: string) {
+  document.querySelector(selector)?.setAttribute("content", content);
+}
+
+export function useSEO({ title, description, path, image }: SEOProps) {
   useEffect(() => {
-    const fullTitle = `${title} | ${BASE_TITLE}`;
+    const fullTitle = title.includes(BASE_TITLE) ? title : `${title} | ${BASE_TITLE}`;
     document.title = fullTitle;
 
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", description);
-    }
+    setMeta('meta[name="description"]', description);
+    setMeta('meta[property="og:title"]', fullTitle);
+    setMeta('meta[property="og:description"]', description);
+    setMeta('meta[name="twitter:title"]', fullTitle);
+    setMeta('meta[name="twitter:description"]', description);
 
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) {
-      ogTitle.setAttribute("content", fullTitle);
-    }
+    const url = `${SITE_URL}${path ?? window.location.pathname}`.replace(/\/+$/, "") || SITE_URL;
+    setMeta('meta[property="og:url"]', url);
 
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) {
-      ogDescription.setAttribute("content", description);
+    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
     }
+    canonical.href = url;
 
-    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
-    if (twitterTitle) {
-      twitterTitle.setAttribute("content", fullTitle);
+    if (image) {
+      const absolute = image.startsWith("http") ? image : `${SITE_URL}${image}`;
+      setMeta('meta[property="og:image"]', absolute);
+      setMeta('meta[name="twitter:image"]', absolute);
     }
-
-    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
-    if (twitterDescription) {
-      twitterDescription.setAttribute("content", description);
-    }
-  }, [title, description]);
+  }, [title, description, path, image]);
 }

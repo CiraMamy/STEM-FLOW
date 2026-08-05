@@ -4,6 +4,11 @@ export default {
   darkMode: ["class"],
   content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    container: {
+      center: true,
+      padding: { DEFAULT: "1.25rem", lg: "2rem" },
+      screens: { "2xl": "1280px" },
+    },
     extend: {
       borderRadius: {
         lg: ".5625rem", /* 9px */
@@ -84,8 +89,12 @@ export default {
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
+        display: ["var(--font-display)"],
         serif: ["var(--font-serif)"],
         mono: ["var(--font-mono)"],
+      },
+      maxWidth: {
+        "8xl": "88rem",
       },
       keyframes: {
         "accordion-down": {
@@ -100,6 +109,14 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      boxShadow: {
+        soft: "var(--shadow)",
+        elevated: "var(--shadow-lg)",
+        dramatic: "var(--shadow-xl)",
+      },
+      transitionTimingFunction: {
+        spring: "cubic-bezier(.22,1,.36,1)",
       },
     },
   },

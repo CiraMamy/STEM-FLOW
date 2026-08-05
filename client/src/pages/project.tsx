@@ -91,6 +91,7 @@ export default function Project() {
   useSEO({
     title: "Le Projet STEM FLOW — Réseau Social Éducatif STEM en Afrique",
     description: "STEM FLOW combine vidéos courtes éducatives, gamification, communautés STEM et intelligence artificielle pour transformer l'apprentissage des sciences en Afrique. Disponible au Bénin, Tchad et Sénégal.",
+    path: "/projet",
   });
 
   return (

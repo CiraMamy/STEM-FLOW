@@ -108,6 +108,7 @@ export default function Partnerships() {
   useSEO({
     title: "Partenariats & Investissement — LearnXScience STEM FLOW",
     description: "Rejoignez LearnXScience comme partenaire ou investisseur. Incubateurs, business angels, institutions éducatives : construisons ensemble l'avenir de l'éducation STEM en Afrique.",
+    path: "/partenariats",
   });
 
   return (

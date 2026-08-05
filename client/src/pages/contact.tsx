@@ -83,6 +83,7 @@ export default function Contact() {
   useSEO({
     title: "Contact & Collaboration — LearnXScience STEM FLOW",
     description: "Contactez LearnXScience pour tester STEM FLOW, devenir partenaire, investir ou rejoindre l'équipe. Formulaire de contact et liste d'attente disponibles.",
+    path: "/contact",
   });
 
   const { toast } = useToast();
