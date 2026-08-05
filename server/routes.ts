@@ -1,7 +1,7 @@
 import { Router, type NextFunction, type Request, type Response } from "express";
 import { z } from "zod";
 import { fromZodError } from "zod-validation-error";
-import { insertContactSchema, insertWaitlistSchema } from "@shared/schema";
+import { insertContactSchema, insertWaitlistSchema } from "../shared/schema";
 import { storage } from "./storage";
 
 const contactPayload = insertContactSchema.extend({

@@ -9,7 +9,7 @@ import {
   type InsertContact,
   type InsertWaitlist,
   type Waitlist,
-} from "@shared/schema";
+} from "../shared/schema";
 
 export interface IStorage {
   createContact(data: InsertContact): Promise<Contact>;
@@ -95,10 +95,20 @@ class PostgresStorage implements IStorage {
 function createStorage(): IStorage {
   const url = process.env.DATABASE_URL;
   if (!url) {
-    console.warn(
-      "[storage] DATABASE_URL absent - stockage en memoire. " +
-        "Les soumissions seront perdues au redemarrage.",
-    );
+    if (process.env.NODE_ENV === "production") {
+      // En serverless (Vercel), chaque appel demarre une instance neuve :
+      // le stockage en memoire perdrait silencieusement chaque message.
+      console.error(
+        "[storage] DATABASE_URL absent en production. Les messages de contact " +
+          "et les inscriptions NE SERONT PAS conserves. Configurez une base " +
+          "PostgreSQL (Vercel Postgres, Neon, Supabase...).",
+      );
+    } else {
+      console.warn(
+        "[storage] DATABASE_URL absent - stockage en memoire. " +
+          "Les soumissions seront perdues au redemarrage.",
+      );
+    }
     return new MemoryStorage();
   }
   const pool = new pg.Pool({

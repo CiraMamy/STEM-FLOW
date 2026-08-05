@@ -59,6 +59,35 @@ shared/          Schéma Drizzle et types partagés client/serveur
 Le projet ne dépend d'aucune plateforme en particulier. Les plugins Replit ne
 se chargent qu'en développement et uniquement si `REPL_ID` est défini.
 
+### Vercel
+
+Le dépôt est prêt pour Vercel : `vercel.json` est déjà configuré et `api/index.ts`
+expose l'API sous forme de fonction serverless.
+
+1. Sur vercel.com, **Add New → Project**, importez `CiraMamy/STEM-FLOW`.
+2. Ne touchez à aucun réglage de build : `vercel.json` s'en charge.
+3. Ajoutez les variables d'environnement puis déployez.
+
+| Variable | Obligatoire | Rôle |
+| --- | --- | --- |
+| `DATABASE_URL` | **oui** | PostgreSQL (Vercel Postgres, Neon, Supabase…) |
+| `ADMIN_TOKEN` | oui | Protège `GET /api/contacts` |
+
+> **`DATABASE_URL` n'est pas optionnelle sur Vercel.** En serverless, chaque
+> appel démarre une instance neuve : le stockage de repli en mémoire perdrait
+> silencieusement chaque message de contact. Le serveur le signale par une
+> erreur dans les logs. Même remarque pour la limitation de débit, dont le
+> compteur est par instance — passez à Vercel KV ou Upstash si le volume
+> le justifie.
+
+Une fois la base créée, appliquez le schéma depuis votre machine :
+
+```bash
+DATABASE_URL="postgres://..." npm run db:push
+```
+
+### Hébergeur Node classique (Render, Railway, VPS)
+
 ```bash
 npm ci && npm run build && npm start
 ```
