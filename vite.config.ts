@@ -33,20 +33,11 @@ export default defineConfig(async () => ({
     cssTarget: "chrome87",
     sourcemap: false,
     chunkSizeWarningLimit: 900,
-    rollupOptions: {
-      output: {
-        // On isole les grosses libs pour maximiser le cache navigateur.
-        manualChunks(id) {
-          if (!id.includes("node_modules")) return;
-          if (/[\\/](react|react-dom|scheduler|wouter)[\\/]/.test(id)) return "vendor-react";
-          if (id.includes("@tanstack")) return "vendor-query";
-          if (id.includes("@radix-ui")) return "vendor-radix";
-          if (id.includes("lucide-react") || id.includes("react-icons")) return "vendor-icons";
-          if (id.includes("recharts") || id.includes("d3-")) return "vendor-charts";
-          return "vendor";
-        },
-      },
-    },
+    // Pas de manualChunks ici : decouper react/react-dom a la main casse
+    // l'ordre d'initialisation des modules CommonJS interoperes et produit
+    // une page blanche ("Cannot set properties of undefined"). Le decoupage
+    // automatique de Vite respecte le graphe de dependances, et le vrai gain
+    // vient deja du chargement des routes a la demande (React.lazy).
   },
   server: {
     fs: { strict: true, deny: ["**/.*"] },
